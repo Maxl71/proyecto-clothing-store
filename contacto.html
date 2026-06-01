@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R&R | Tienda de Ropa</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="imagenes/logo-transparente.png" alt="Logo de la Tienda">
+            </a>
+        </div>
+
+        <input type="checkbox" id="menu-toggle">
+
+        <label for="menu-toggle" class="menu-icono">
+            <i class="bi bi-list icono-abrir"></i>
+            <i class="bi bi-x-lg icono-cerrar"></i>
+        </label>
+
+        <nav class="navegador">
+            <ul class="menu">
+
+                <li class="menu__item">
+                    <a class="menu__link" href="index.html">INICIO<i class="bi bi-house-door"></i></a>
+                </li>
+
+                <li class="menu__item">
+                    <input type="checkbox" id="submenu-hombre" class="submenu-toggle">
+
+                    <label for="submenu-hombre" class="menu__link">
+                        HOMBRE
+                        <span>
+                            <i class="bi bi-person"></i>
+                            <i class="bi bi-chevron-right"></i>
+                        </span>
+                    </label>
+
+                    <div class="submenu-mobile">
+                        <label for="submenu-hombre" class="submenu-back">
+                            <i class="bi bi-chevron-left"></i>
+                            HOMBRE
+                        </label>
+
+                        <ul class="submenu">
+                            <li class="submenu__item"><a class="submenu__link" href="hombre.html#polos-hombre">Polos</a></li>
+                            <li class="submenu__item"><a class="submenu__link" href="hombre.html#camisas-hombre">Camisas</a></li>
+                            <li class="submenu__item"><a class="submenu__link" href="hombre.html#pantalones-hombre">Pantalones</a></li>
+                            <li class="submenu__item"><a class="submenu__link" href="#">Casacas</a></li>
+                            <li class="submenu__item"><a class="submenu__link" href="hombre.html#shorts-hombre">Shorts</a></li>
+                            <li class="submenu__item"><a class="submenu__link" href="#">Calzados</a></li>
+                        </ul>
+                    </div>
+
+                </li>
+
+                <li class="menu__item">
+
+                    <input type="checkbox" id="submenu-mujer" class="submenu-toggle">
+                    <label for="submenu-mujer" class="menu__link">
+                        MUJER
+                        <span>
+                            <i class="bi bi-person-standing-dress"></i>
+                            <i class="bi bi-chevron-right"></i>
+                        </span>
+                    </label>
+
+                    <div class="submenu-mobile">
+
+                        <label for="submenu-mujer" class="submenu-back">
+                            <i class="bi bi-chevron-left"></i>
+                            MUJER
+                        </label>
+
+                        <ul class="submenu">
+                            <li class="submenu__item"><a class="submenu__link" href="mujer.html#blusas-mujer">Blusas</a></li>
+                            <li class="submenu__item"><a class="submenu__link" href="mujer.html#faldas-mujer">Falda</a></li>
+                            <li class="submenu__item"><a class="submenu__link" href="mujer.html#jeans-mujer">Jeans</a></li>
+                            <li class="submenu__item"><a class="submenu__link" href="mujer.html#vestidos-mujer">Vestidos</a></li>
+                            <li class="submenu__item"><a class="submenu__link" href="mujer.html#bikinis-mujer">Bikinis</a></li>
+                        </ul>
+
+                    </div>
+
+                </li>
+
+                <li class="menu__item">
+
+                    <input type="checkbox" id="submenu-ninos" class="submenu-toggle">
+                    <label for="submenu-ninos" class="menu__link">
+                        NIÑOS
+                        <span>
+                            <i class="bi bi-emoji-smile"></i>
+                            <i class="bi bi-chevron-right"></i>
+                        </span>
+                    </label>
+
+                    <div class="submenu-mobile">
+
+                        <label for="submenu-ninos" class="submenu-back">
+                            <i class="bi bi-chevron-left"></i>
+                            NIÑOS
+                        </label>
+
+                        <ul class="submenu">
+                            <li class="submenu__item"><a class="submenu__link" href="ninos.html#polos-ninos">Polos</a></li>
+                            <li class="submenu__item"><a class="submenu__link" href="ninos.html#conjuntos-ninos">Conjuntos</a></li>
+                            <li class="submenu__item"><a class="submenu__link" href="ninos.html#shorts-ninos">Shorts</a></li>
+                            <li class="submenu__item"><a class="submenu__link" href="ninos.html#buzos-ninos">Buzos</a></li>
+                        </ul>
+
+                    </div>
+                </li>
+
+                <li class="menu__item">
+                    <a class="menu__link" href="nosotros.html">NOSOTROS<i class="bi bi-people"></i></a>
+                </li>
+
+                <li class="menu__item">
+                    <a class="menu__link" href="contacto.html">CONTACTO<i class="bi bi-envelope"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contacto">
+            <h1>Contáctanos</h1>
+
+            <p>
+                ¿Tienes alguna consulta sobre nuestros productos, tallas, precios o envíos?
+                Escríbenos directamente por WhatsApp o Facebook.
+            </p>
+
+            <div class="contacto__info">
+                <h2>Datos de la tienda</h2>
+                <p><strong>Dirección:</strong> Jr. Lima Pst 8 parada municipal, Bagua, Amazonas, Perú</p>
+                <p><strong>Correo:</strong> clothingstore.rr@gmail.com</p>
+                <p><strong>Teléfono:</strong> +51 916 408 971</p>
+            </div>
+
+            <div class="contacto__botones">
+                <a class="boton-whatsapp"
+                href="https://wa.me/51916408971?text=Hola%20R%26R%20Clothing%20Store,%20quiero%20hacer%20una%20consulta"
+                target="_blank">Contactar por WhatsApp</a>
+
+                <a class="boton-facebook"
+                href="https://www.facebook.com/RyRClothingstore?locale=es_LA"
+                target="_blank">Contactar por Facebook</a>
+            </div>
+
+            <form class="formulario-contacto">
+                <h2>Envíanos un mensaje</h2>
+
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" name="correo" placeholder="Escribe tu correo" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje" required></textarea>
+
+                <button type="submit">Enviar mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <section>
+            <h3 class="datos-tienda">Tienda</h3>
+            <address>
+                <p>Jr. Lima Pst 8 parada municipal</p>
+                <p>Bagua, Amazonas, Perú, 15004</p>
+                <p>clothingstore.rr@gmail.com</p>
+                <p>+51 916 408 971</p>
+            </address>
+        </section>
+
+        <section class="atencion-cliente">
+            <h3>ATENCIÓN AL CLIENTE</h3>
+            <p>Formas de Pago</p>
+            <p>Métodos de Envío</p>
+            <p>Cambios y Devoluciones</p>
+            <p>Guía de Tallas</p>
+            <p>Preguntas Frecuentes</p>
+        </section>
+
+        <section class="terminos">
+            <h3>TÉRMINOS Y CONDICIONES</h3>
+            <p>Términos y Condiciones</p>
+            <p>Tratamiento de Datos</p>
+            <p>Política de Cookies</p>
+            <p class="libro-reclamaciones">Libro de Reclamaciones</p>
+            <figure>
+                <img class="libro-reclamaciones-img" src="imagenes/libro-de-reclamaciones.jpg" alt="Libro de Reclamaciones">
+            </figure>
+        </section>
+
+        <section class="formulario-suscripcion">
+            <h3>NEWSLETTER</h3>
+            <p>Regístrate para mantenerte al tanto de nuestros lanzamientos, descuentos y más.</p>
+
+            <form class="newsletter-form">
+                <input type="email" placeholder="Correo Electrónico" required>
+                <button type="submit">SUSCRIBIRSE</button>
+            </form>
+        </section>
+
+        <div class="redes">
+            <p>¡Síguenos en nuestras <strong>REDES SOCIALES!</strong></p>
+
+            <div class="redes__link">
+                <a href="https://web.facebook.com/RyRClothingstore/about">Facebook</a>
+                <a href="#">Tiktok</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2026 R&R Clothing Store - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
