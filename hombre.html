@@ -1,403 +1,1960 @@
 <!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>R&R | Ropa y accesorio de hombre</title>
-    <link rel="stylesheet" href="css/estilos.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"/>
-</head>
-<body>
-    <header>
-        <div class="logo">
-            <a href="index.html">
-                <img src="imagenes/logo-transparente.png" alt="Logo de la Tienda">
-            </a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>R&R | Ropa para hombre</title>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+
+        <!-- CSS Propio -->
+        <link rel="stylesheet" href="./css/estilos.css">
+
+    </head>
+
+    <body>
+        <header class="site-header sticky-top">
+            <nav class="navbar navbar-expand-lg navbar-dark container py-2" aria-label="Navegación principal">
+                <a class="navbar-brand site-logo" href="index.html" aria-label="R&R Clothing Store">
+                    <img src="imagenes/logo/logo-transparente.png" alt="Logo de R&R Clothing Store">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-label="Abrir menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="menuPrincipal" aria-labelledby="menuPrincipalLabel">
+                    <input class="mobile-submenu-toggle" type="checkbox" id="submenu-panel-hombre">
+                    <input class="mobile-submenu-toggle" type="checkbox" id="submenu-panel-mujer">
+                    <input class="mobile-submenu-toggle" type="checkbox" id="submenu-panel-ninos">
+
+                    <div class="offcanvas-header">
+                        <h2 class="offcanvas-title fs-5" id="menuPrincipalLabel">R&R Clothing Store</h2>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar menú"></button>
+                    </div>
+
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">
+                                    Inicio <i class="bi bi-house-door ms-1"></i>
+                                </a>
+                            </li>
+
+                            <li class="nav-item dropdown menu-con-submenu">
+                                <label class="nav-link submenu-open d-lg-none" for="submenu-panel-hombre">
+                                    Hombre
+                                    <span>
+                                        <i class="bi bi-person"></i>
+                                        <i class="bi bi-chevron-right"></i>
+                                    </span>
+                                </label>
+                                <a class="nav-link d-none d-lg-flex align-items-center gap-1"
+                                href="hombre.html">
+                                    Hombre <i class="bi bi-person ms-1"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="hombre.html#polos-hombre">Polos</a></li>
+                                    <li><a class="dropdown-item" href="hombre.html#camisas-hombre">Camisas</a></li>
+                                    <li><a class="dropdown-item" href="hombre.html#pantalones-hombre">Pantalones</a></li>
+                                    <li><a class="dropdown-item" href="hombre.html#shorts-hombre">Shorts</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown menu-con-submenu">
+                                <label class="nav-link submenu-open d-lg-none" for="submenu-panel-mujer">
+                                    Mujer
+                                    <span>
+                                        <i class="bi bi-person-standing-dress"></i>
+                                        <i class="bi bi-chevron-right"></i>
+                                    </span>
+                                </label>
+                                <a class="nav-link d-none d-lg-flex align-items-center gap-1" href="mujer.html">
+                                    Mujer <i class="bi bi-person-standing-dress ms-1"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="mujer.html#blusas-mujer">Blusas</a></li>
+                                    <li><a class="dropdown-item" href="mujer.html#faldas-mujer">Faldas</a></li>
+                                    <li><a class="dropdown-item" href="mujer.html#jeans-mujer">Jeans</a></li>
+                                    <li><a class="dropdown-item" href="mujer.html#vestidos-mujer">Vestidos</a></li>
+                                    <li><a class="dropdown-item" href="mujer.html#bikinis-mujer">Bikinis</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown menu-con-submenu">
+                                <label class="nav-link submenu-open d-lg-none" for="submenu-panel-ninos">
+                                    Niños
+                                    <span>
+                                        <i class="bi bi-emoji-smile"></i>
+                                        <i class="bi bi-chevron-right"></i>
+                                    </span>
+                                </label>
+                                <a class="nav-link d-none d-lg-flex align-items-center gap-1" href="ninos.html">
+                                    Niños <i class="bi bi-emoji-smile ms-1"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="ninos.html#polos-ninos">Polos</a></li>
+                                    <li><a class="dropdown-item" href="ninos.html#conjuntos-ninos">Conjuntos</a></li>
+                                    <li><a class="dropdown-item" href="ninos.html#shorts-ninos">Shorts</a></li>
+                                    <li><a class="dropdown-item" href="ninos.html#buzos-ninos">Buzos</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="nosotros.html">Nosotros <i class="bi bi-people ms-1"></i></a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="contacto.html">Contacto <i class="bi bi-envelope ms-1"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <section class="mobile-submenu-panel mobile-submenu-panel--hombre" aria-label="Categorías de hombre">
+                        <div class="mobile-submenu-panel__header">
+                            <h3>Hombre</h3>
+                            <label class="mobile-submenu-close" for="submenu-panel-hombre" aria-label="Cerrar submenú hombre">
+                                <i class="bi bi-x-lg"></i>
+                            </label>
+                        </div>
+                        <ul class="mobile-submenu-list">
+                            <li><a href="hombre.html#polos-hombre">Polos</a></li>
+                            <li><a href="hombre.html#camisas-hombre">Camisas</a></li>
+                            <li><a href="hombre.html#pantalones-hombre">Pantalones</a></li>
+                            <li><a href="hombre.html#shorts-hombre">Shorts</a></li>
+                        </ul>
+                    </section>
+
+                    <section class="mobile-submenu-panel mobile-submenu-panel--mujer" aria-label="Categorías de mujer">
+                        <div class="mobile-submenu-panel__header">
+                            <h3>Mujer</h3>
+                            <label class="mobile-submenu-close" for="submenu-panel-mujer" aria-label="Cerrar submenú mujer">
+                                <i class="bi bi-x-lg"></i>
+                            </label>
+                        </div>
+                        <ul class="mobile-submenu-list">
+                            <li><a href="mujer.html#blusas-mujer">Blusas</a></li>
+                            <li><a href="mujer.html#faldas-mujer">Faldas</a></li>
+                            <li><a href="mujer.html#jeans-mujer">Jeans</a></li>
+                            <li><a href="mujer.html#vestidos-mujer">Vestidos</a></li>
+                            <li><a href="mujer.html#bikinis-mujer">Bikinis</a></li>
+                        </ul>
+                    </section>
+
+                    <section class="mobile-submenu-panel mobile-submenu-panel--ninos" aria-label="Categorías de niños">
+                        <div class="mobile-submenu-panel__header">
+                            <h3>Niños</h3>
+                            <label class="mobile-submenu-close" for="submenu-panel-ninos" aria-label="Cerrar submenú niños">
+                                <i class="bi bi-x-lg"></i>
+                            </label>
+                        </div>
+                        <ul class="mobile-submenu-list">
+                            <li><a href="ninos.html#polos-ninos">Polos</a></li>
+                            <li><a href="ninos.html#conjuntos-ninos">Conjuntos</a></li>
+                            <li><a href="ninos.html#shorts-ninos">Shorts</a></li>
+                            <li><a href="ninos.html#buzos-ninos">Buzos</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </nav>
+        </header>        
+        
+        <div class="container-fluid py-3">
+            <!-- Contenido principal -->
+            <div class="row">
+                
+                <!-- FILTRO PARA ESCRITORIO -->
+                <aside class="col-lg-3">
+
+                    <div class="desktop-filter"> 
+                        <h4 class="mb-4">
+                            Filtrar
+                        </h4>
+
+                        <!-- PRECIO -->
+                        <div class="mb-4">
+
+                            <label class="form-label">
+                                Precio
+                            </label>
+
+                            <select class="form-select">
+
+                                <option>Todos</option>
+                                <option>Menos de S/50</option>
+                                <option>S/50 - S/100</option>
+                                <option>S/100 - S/150</option>
+                                <option>Más de S/150</option>
+
+                            </select>
+
+                        </div>
+
+                        <!-- TALLA -->
+                        <div class="mb-4">
+
+                            <label class="form-label">
+                                Talla
+                            </label>
+
+                            <select class="form-select">
+
+                                <option>Todas</option>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+
+                            </select>
+
+                        </div>
+
+                        <!-- COLOR -->
+                        <div>
+
+                            <label class="form-label">
+                                Color
+                            </label>
+
+                            <select class="form-select">
+
+                                <option>Todos</option>
+                                <option>Negro</option>
+                                <option>Blanco</option>
+                                <option>Gris</option>
+                                <option>Azul</option>
+
+                            </select>
+
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- PRODUCTOS --> 
+                <main class="col-12 col-lg-9">
+                    <!-- Titulo de la página -->
+                    <h1 class="page-title text-center">
+                        Ropa para Hombres
+                    </h1>
+
+                    <!-- POLOS -->
+                    <section id="polos-hombre" class="mb-5">
+                        <h2 class="section-title">
+                            Polos
+                        </h2>
+
+                        <div class="row g-3">
+                            <!-- PRODUCTOS -->
+                            <!-- Polo 1 -->
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                                <div class="product-card">
+                                    <img
+                                        src="./imagenes/hombre/polo-hombre/Polo-Oversize-Urban-Restricted.png"
+                                        class="img-fluid product-image"
+                                        alt="Polo">
+                                    <div class="product-info">
+                                        <div class="product-name">Polo Oversize Urban Restricted</div>
+                                        <div class="color-title">Color:</div>
+                                        <div class="colors">
+                                            <span
+                                                class="color-circle"
+                                                style="background:#6c757d;">
+                                            </span>
+                                            <span
+                                                class="color-circle"
+                                                style="background:#000;">
+                                            </span>
+                                        </div>
+                                        <div class="price">S/ 49.90</div>
+                                        <div class="d-grid mt-3">
+                                            <button
+                                                class="btn btn-outline-dark btn-product"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#modalPolo1">
+                                                Ver más
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Polo 2 -->
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                                <div class="product-card">
+                                    <img
+                                        src="./imagenes/hombre/polo-hombre/Polo-Drifit-Jordan-blanco-con-rayas-negras.png"
+                                        class="img-fluid product-image"
+                                        alt="Polo">
+                                    <div class="product-info">
+                                        <div class="product-name">Polo Drifit Jordan</div>
+                                        <div class="color-title">Color:</div>
+                                        <div class="colors">
+                                            <span
+                                                class="color-circle"
+                                                style="background:#6c757d;">
+                                            </span>
+                                            <span
+                                                class="color-circle"
+                                                style="background:#000;">
+                                            </span>
+                                        </div>
+                                        <div class="price">S/ 49.90</div>
+                                        <div class="d-grid mt-3">
+                                            <button
+                                                class="btn btn-outline-dark btn-product"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#modalPolo2">
+                                                Ver más
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Polo 3 -->
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                                <div class="product-card">
+                                    <img
+                                        src="./imagenes/hombre/polo-hombre/Polo-Oversize-Estampado-Urbano-color-beige-con-negro.png"
+                                        class="img-fluid product-image"
+                                        alt="Polo">
+                                    <div class="product-info">
+                                        <div class="product-name">Polo Oversize Estampado Urbano</div>
+                                        <div class="color-title">Color:</div>
+                                        <div class="colors">
+                                            <span
+                                                class="color-circle"
+                                                style="background:#6c757d;">
+                                            </span>
+                                            <span
+                                                class="color-circle"
+                                                style="background:#000;">
+                                            </span>
+                                        </div>
+                                        <div class="price">S/ 49.90</div>
+                                        <div class="d-grid mt-3">
+                                            <button
+                                                class="btn btn-outline-dark btn-product"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#modalPolo3">
+                                                Ver más
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Polo 4 -->
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                                <div class="product-card">
+                                    <img
+                                        src="./imagenes/hombre/polo-hombre/polo-overzide/Polo-oversize-realking.jpg"
+                                        class="img-fluid product-image"
+                                        alt="Polo">
+                                    <div class="product-info">
+                                        <div class="product-name">Polo Oversize Real King</div>
+                                        <div class="color-title">Color:</div>
+                                        <div class="colors">
+                                            <span
+                                                class="color-circle"
+                                                style="background:#6c757d;">
+                                            </span>
+                                            <span
+                                                class="color-circle"
+                                                style="background:#000;">
+                                            </span>
+                                        </div>
+                                        <div class="price">S/ 49.90</div>
+                                        <div class="d-grid mt-3">
+                                            <button
+                                                class="btn btn-outline-dark btn-product"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#modalPolo4">
+                                                Ver más
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Polo 5 -->
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                                <div class="product-card">
+                                    <img
+                                        src="./imagenes/hombre/polo-hombre/polo-overzide/Polo-oversize-amiri.jpg"
+                                        class="img-fluid product-image"
+                                        alt="Polo">
+                                    <div class="product-info">
+                                        <div class="product-name">Polo Oversize Amiri</div>
+                                        <div class="color-title">Color:</div>
+                                        <div class="colors">
+                                            <span
+                                                class="color-circle"
+                                                style="background:#6c757d;">
+                                            </span>
+                                            <span
+                                                class="color-circle"
+                                                style="background:#000;">
+                                            </span>
+                                        </div>
+                                        <div class="price">S/ 49.90</div>
+                                        <div class="d-grid mt-3">
+                                            <button
+                                                class="btn btn-outline-dark btn-product"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#modalPolo5">
+                                                Ver más
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Polo 6 -->
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                                <div class="product-card">
+                                    <img
+                                        src="./imagenes/hombre/polo-hombre/polo-overzide/Polo-oversize-arts.jpg"
+                                        class="img-fluid product-image"
+                                        alt="Polo">
+                                    <div class="product-info">
+                                        <div class="product-name">Polo Oversize Arts</div>
+                                        <div class="color-title">Color:</div>
+                                        <div class="colors">
+                                            <span
+                                                class="color-circle"
+                                                style="background:#6c757d;">
+                                            </span>
+                                            <span
+                                                class="color-circle"
+                                                style="background:#000;">
+                                            </span>
+                                        </div>
+                                        <div class="price">S/ 49.90</div>
+                                        <div class="d-grid mt-3">
+                                            <button
+                                                class="btn btn-outline-dark btn-product"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#modalPolo6">
+                                                Ver más
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Polo 7 -->
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                                <div class="product-card">
+                                    <img
+                                        src="./imagenes/hombre/polo-hombre/polo-overzide/Polo-escorpion.jpg"
+                                        class="img-fluid product-image"
+                                        alt="Polo">
+                                    <div class="product-info">
+                                        <div class="product-name">Polo Oversize Escorpión</div>
+                                        <div class="color-title">Color:</div>
+                                        <div class="colors">
+                                            <span
+                                                class="color-circle"
+                                                style="background:#6c757d;">
+                                            </span>
+                                            <span
+                                                class="color-circle"
+                                                style="background:#000;">
+                                            </span>
+                                        </div>
+                                        <div class="price">S/ 49.90</div>
+                                        <div class="d-grid mt-3">
+                                            <button
+                                                class="btn btn-outline-dark btn-product"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#modalPolo7">
+                                                Ver más
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <!-- CAMISAS -->
+                    <section id="camisas-hombre" class="mb-5">
+                        <h2 class="section-title">
+                            Camisas
+                        </h2>
+
+                        <div class="row g-3">
+                            <!-- PRODUCTOS -->
+                            <!-- Camisa 1 -->
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                                <div class="product-card">
+                                    <img
+                                        src="./imagenes/hombre/camisas-hombre/camisa-maga-corta/camisa-1.webp"
+                                        class="img-fluid product-image"
+                                        alt="Camisa">
+                                    <div class="product-info">
+                                        <div class="product-name">Camisa Casual</div>
+                                        <div class="color-title">Color:</div>
+                                        <div class="colors">
+                                            <span
+                                                class="color-circle"
+                                                style="background:#6c757d;">
+                                            </span>
+                                            <span
+                                                class="color-circle"
+                                                style="background:#000;">
+                                            </span>
+                                        </div>
+                                        <div class="price">S/ 49.90</div>
+                                        <div class="d-grid mt-3">
+                                            <button
+                                                class="btn btn-outline-dark btn-product"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#modalPolo1">
+                                                Ver más
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Camisa 2 -->
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                                <div class="product-card">
+                                    <img
+                                        src="./imagenes/hombre/camisas-hombre/camisa-maga-corta/camisa-2.jpg"
+                                        class="img-fluid product-image"
+                                        alt="Camisa">
+                                    <div class="product-info">
+                                        <div class="product-name">Camisa Casual</div>
+                                        <div class="color-title">Color:</div>
+                                        <div class="colors">
+                                            <span
+                                                class="color-circle"
+                                                style="background:#6c757d;">
+                                            </span>
+                                            <span
+                                                class="color-circle"
+                                                style="background:#000;">
+                                            </span>
+                                        </div>
+                                        <div class="price">S/ 49.90</div>
+                                        <div class="d-grid mt-3">
+                                            <button
+                                                class="btn btn-outline-dark btn-product"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#modalPolo1">
+                                                Ver más
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Camisa 3 -->
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                                <div class="product-card">
+                                    <img
+                                        src="./imagenes/hombre/camisas-hombre/camisa-maga-corta/camisa-3.jpg"
+                                        class="img-fluid product-image"
+                                        alt="Camisa">
+                                    <div class="product-info">
+                                        <div class="product-name">Camisa Casual</div>
+                                        <div class="color-title">Color:</div>
+                                        <div class="colors">
+                                            <span
+                                                class="color-circle"
+                                                style="background:#6c757d;">
+                                            </span>
+                                            <span
+                                                class="color-circle"
+                                                style="background:#000;">
+                                            </span>
+                                        </div>
+                                        <div class="price">S/ 49.90</div>
+                                        <div class="d-grid mt-3">
+                                            <button
+                                                class="btn btn-outline-dark btn-product"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#modalPolo1">
+                                                Ver más
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Camisa 4 -->
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                                <div class="product-card">
+                                    <img
+                                        src="./imagenes/hombre/camisas-hombre/camisa-maga-corta/camisa-4.jpg"
+                                        class="img-fluid product-image"
+                                        alt="Camisa">
+                                    <div class="product-info">
+                                        <div class="product-name">Camisa Casual</div>
+                                        <div class="color-title">Color:</div>
+                                        <div class="colors">
+                                            <span
+                                                class="color-circle"
+                                                style="background:#6c757d;">
+                                            </span>
+                                            <span
+                                                class="color-circle"
+                                                style="background:#000;">
+                                            </span>
+                                        </div>
+                                        <div class="price">S/ 49.90</div>
+                                        <div class="d-grid mt-3">
+                                            <button
+                                                class="btn btn-outline-dark btn-product"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#modalPolo1">
+                                                Ver más
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Camisa 5 -->
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                                <div class="product-card">
+                                    <img
+                                        src="./imagenes/hombre/camisas-hombre/camisa-maga-corta/camisa-5.jpg"
+                                        class="img-fluid product-image"
+                                        alt="Camisa">
+                                    <div class="product-info">
+                                        <div class="product-name">Camisa Casual</div>
+                                        <div class="color-title">Color:</div>
+                                        <div class="colors">
+                                            <span
+                                                class="color-circle"
+                                                style="background:#6c757d;">
+                                            </span>
+                                            <span
+                                                class="color-circle"
+                                                style="background:#000;">
+                                            </span>
+                                        </div>
+                                        <div class="price">S/ 49.90</div>
+                                        <div class="d-grid mt-3">
+                                            <button
+                                                class="btn btn-outline-dark btn-product"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#modalPolo1">
+                                                Ver más
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Camisa 6 -->
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                                <div class="product-card">
+                                    <img
+                                        src="./imagenes/hombre/camisas-hombre/Camisa-Casual-Italiana.png"
+                                        class="img-fluid product-image"
+                                        alt="Camisa">
+                                    <div class="product-info">
+                                        <div class="product-name">Camisa Casual Italiana</div>
+                                        <div class="color-title">Color:</div>
+                                        <div class="colors">
+                                            <span
+                                                class="color-circle"
+                                                style="background:#6c757d;">
+                                            </span>
+                                            <span
+                                                class="color-circle"
+                                                style="background:#000;">
+                                            </span>
+                                        </div>
+                                        <div class="price">S/ 49.90</div>
+                                        <div class="d-grid mt-3">
+                                            <button
+                                                class="btn btn-outline-dark btn-product"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#modalPolo1">
+                                                Ver más
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <!-- SHORTS -->
+                    <section id="shorts-hombre" class="mb-5">
+                        <h2 class="section-title">
+                            Shorts
+                        </h2>
+
+                        <div class="row g-3">
+                            <!-- PRODUCTOS -->
+                            <!-- Short 1 -->
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                                <div class="product-card">
+                                    <img
+                                        src="./imagenes/hombre/shorts-hombre/short-1.jpg"
+                                        class="img-fluid product-image"
+                                        alt="Short">
+                                    <div class="product-info">
+                                        <div class="product-name">Short Jean Element</div>
+                                        <div class="color-title">Color:</div>
+                                        <div class="colors">
+                                            <span
+                                                class="color-circle"
+                                                style="background:#6c757d;">
+                                            </span>
+                                            <span
+                                                class="color-circle"
+                                                style="background:#000;">
+                                            </span>
+                                        </div>
+                                        <div class="price">S/ 49.90</div>
+                                        <div class="d-grid mt-3">
+                                            <button
+                                                class="btn btn-outline-dark btn-product"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#modalPolo1">
+                                                Ver más
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Short 2 -->
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                                <div class="product-card">
+                                    <img
+                                        src="./imagenes/hombre/shorts-hombre/short-2.jpg"
+                                        class="img-fluid product-image"
+                                        alt="Short">
+                                    <div class="product-info">
+                                        <div class="product-name">Short Jean Foulger</div>
+                                        <div class="color-title">Color:</div>
+                                        <div class="colors">
+                                            <span
+                                                class="color-circle"
+                                                style="background:#6c757d;">
+                                            </span>
+                                            <span
+                                                class="color-circle"
+                                                style="background:#000;">
+                                            </span>
+                                        </div>
+                                        <div class="price">S/ 49.90</div>
+                                        <div class="d-grid mt-3">
+                                            <button
+                                                class="btn btn-outline-dark btn-product"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#modalPolo1">
+                                                Ver más
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Short 3 -->
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                                <div class="product-card">
+                                    <img
+                                        src="./imagenes/hombre/shorts-hombre/short-3.jpg"
+                                        class="img-fluid product-image"
+                                        alt="Short">
+                                    <div class="product-info">
+                                        <div class="product-name">Short Playero Floreado</div>
+                                        <div class="color-title">Color:</div>
+                                        <div class="colors">
+                                            <span
+                                                class="color-circle"
+                                                style="background:#6c757d;">
+                                            </span>
+                                            <span
+                                                class="color-circle"
+                                                style="background:#000;">
+                                            </span>
+                                        </div>
+                                        <div class="price">S/ 49.90</div>
+                                        <div class="d-grid mt-3">
+                                            <button
+                                                class="btn btn-outline-dark btn-product"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#modalPolo1">
+                                                Ver más
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Short 4 -->
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                                <div class="product-card">
+                                    <img
+                                        src="./imagenes/hombre/shorts-hombre/short-4.jpg"
+                                        class="img-fluid product-image"
+                                        alt="Short">
+                                    <div class="product-info">
+                                        <div class="product-name">Short Deportivo</div>
+                                        <div class="color-title">Color:</div>
+                                        <div class="colors">
+                                            <span
+                                                class="color-circle"
+                                                style="background:#6c757d;">
+                                            </span>
+                                            <span
+                                                class="color-circle"
+                                                style="background:#000;">
+                                            </span>
+                                        </div>
+                                        <div class="price">S/ 49.90</div>
+                                        <div class="d-grid mt-3">
+                                            <button
+                                                class="btn btn-outline-dark btn-product"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#modalPolo1">
+                                                Ver más
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- PANTALONES -->
+                    <section id="pantalones-hombre" class="mb-5">
+                        <h2 class="section-title">
+                            Pantalones
+                        </h2>
+
+                        <div class="row g-3">
+                            <!-- PRODUCTOS -->
+                            <!-- Pantalon 1 -->
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                                <div class="product-card">
+                                    <img
+                                        src="./imagenes/hombre/pantalones-hombre/pantalon-1.jpg"
+                                        class="img-fluid product-image"
+                                        alt="Pantalon">
+                                    <div class="product-info">
+                                        <div class="product-name">Pantalón Jean Clásico</div>
+                                        <div class="color-title">Color:</div>
+                                        <div class="colors">
+                                            <span
+                                                class="color-circle"
+                                                style="background:#6c757d;">
+                                            </span>
+                                            <span
+                                                class="color-circle"
+                                                style="background:#000;">
+                                            </span>
+                                        </div>
+                                        <div class="price">S/ 49.90</div>
+                                        <div class="d-grid mt-3">
+                                            <button
+                                                class="btn btn-outline-dark btn-product"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#modalPolo1">
+                                                Ver más
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Pantalon 2 -->
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                                <div class="product-card">
+                                    <img
+                                        src="./imagenes/hombre/pantalones-hombre/pantalon-2.jpg"
+                                        class="img-fluid product-image"
+                                        alt="Pantalon">
+                                    <div class="product-info">
+                                        <div class="product-name">Pantalón Casual</div>
+                                        <div class="color-title">Color:</div>
+                                        <div class="colors">
+                                            <span
+                                                class="color-circle"
+                                                style="background:#6c757d;">
+                                            </span>
+                                            <span
+                                                class="color-circle"
+                                                style="background:#000;">
+                                            </span>
+                                        </div>
+                                        <div class="price">S/ 49.90</div>
+                                        <div class="d-grid mt-3">
+                                            <button
+                                                class="btn btn-outline-dark btn-product"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#modalPolo1">
+                                                Ver más
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Pantalon 3 -->
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                                <div class="product-card">
+                                    <img
+                                        src="./imagenes/hombre/pantalones-hombre/pantalon-3.jpg"
+                                        class="img-fluid product-image"
+                                        alt="Pantalon">
+                                    <div class="product-info">
+                                        <div class="product-name">Pantalón Cargo</div>
+                                        <div class="color-title">Color:</div>
+                                        <div class="colors">
+                                            <span
+                                                class="color-circle"
+                                                style="background:#6c757d;">
+                                            </span>
+                                            <span
+                                                class="color-circle"
+                                                style="background:#000;">
+                                            </span>
+                                        </div>
+                                        <div class="price">S/ 49.90</div>
+                                        <div class="d-grid mt-3">
+                                            <button
+                                                class="btn btn-outline-dark btn-product"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#modalPolo1">
+                                                Ver más
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Pantalon 4 -->
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                                <div class="product-card">
+                                    <img
+                                        src="./imagenes/hombre/pantalones-hombre/pantalon-4.jpg"
+                                        class="img-fluid product-image"
+                                        alt="Pantalon">
+                                    <div class="product-info">
+                                        <div class="product-name">Pantalón Buso</div>
+                                        <div class="color-title">Color:</div>
+                                        <div class="colors">
+                                            <span
+                                                class="color-circle"
+                                                style="background:#6c757d;">
+                                            </span>
+                                            <span
+                                                class="color-circle"
+                                                style="background:#000;">
+                                            </span>
+                                        </div>
+                                        <div class="price">S/ 49.90</div>
+                                        <div class="d-grid mt-3">
+                                            <button
+                                                class="btn btn-outline-dark btn-product"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#modalPolo1">
+                                                Ver más
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- CASACAS -->
+                    <section id="casacas-hombre" class="mb-5">
+                        <h2 class="section-title">
+                            Casacas
+                        </h2>
+
+                        <div class="row g-3">
+                            <!-- PRODUCTOS -->
+                            <!-- Casaca 1 -->
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                                <div class="product-card">
+                                    <img
+                                        src="./imagenes/hombre/casaca-hombre/Chaqueta-clásica-de-cuero-Hombre.png"
+                                        class="img-fluid product-image"
+                                        alt="Casaca">
+                                    <div class="product-info">
+                                        <div class="product-name">Chaqueta Clásica de Cuero</div>
+                                        <div class="color-title">Color:</div>
+                                        <div class="colors">
+                                            <span
+                                                class="color-circle"
+                                                style="background:#6c757d;">
+                                            </span>
+                                            <span
+                                                class="color-circle"
+                                                style="background:#000;">
+                                            </span>
+                                        </div>
+                                        <div class="price">S/ 49.90</div>
+                                        <div class="d-grid mt-3">
+                                            <button
+                                                class="btn btn-outline-dark btn-product"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#modalPolo1">
+                                                Ver más
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+
+            </div>
+        </div>
+        
+        <!-- FILTRO PARA MOVIL -->
+        <div class="filter-bar">
+            <button
+                class="btn btn-dark w-100"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#mobileFilter">
+
+                <i class="bi bi-funnel"></i>
+                Filtrar
+            </button>
         </div>
 
-        <input type="checkbox" id="menu-toggle">
+        <!-- OFFCANVAS -->
+        <div
+            class="offcanvas offcanvas-bottom"
+            tabindex="-1"
+            id="mobileFilter">
 
-        <label for="menu-toggle" class="menu-icono">
-            <i class="bi bi-list icono-abrir"></i>
-            <i class="bi bi-x-lg icono-cerrar"></i>
-        </label>
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title">
+                    Filtrar Productos
+                </h5>
 
-        <nav class="navegador">
-            <ul class="menu">
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="offcanvas">
+                </button>
+            </div>
 
-                <li class="menu__item">
-                    <a class="menu__link" href="index.html">INICIO<i class="bi bi-house-door"></i></a>
-                </li>
-
-                <li class="menu__item">
-                    <input type="checkbox" id="submenu-hombre" class="submenu-toggle">
-
-                    <label for="submenu-hombre" class="menu__link">
-                        HOMBRE
-                        <span>
-                            <i class="bi bi-person"></i>
-                            <i class="bi bi-chevron-right"></i>
-                        </span>
+            <div class="offcanvas-body">
+                <!-- PRECIO -->
+                <div class="mb-4">
+                    <label class="form-label">
+                        Precio
                     </label>
+                    <select class="form-select">
+                        <option>Todos</option>
+                        <option>Menos de S/50</option>
+                        <option>S/50 - S/100</option>
+                        <option>S/100 - S/150</option>
+                        <option>Más de S/150</option>
+                    </select>                
+                </div>
 
-                    <div class="submenu-mobile">
-                        <label for="submenu-hombre" class="submenu-back">
-                            <i class="bi bi-chevron-left"></i>
-                            HOMBRE
-                        </label>
-
-                        <ul class="submenu">
-                            <li class="submenu__item"><a class="submenu__link" href="hombre.html#polos-hombre">Polos</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="hombre.html#camisas-hombre">Camisas</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="hombre.html#pantalones-hombre">Pantalones</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="#">Casacas</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="hombre.html#shorts-hombre">Shorts</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="#">Calzados</a></li>
-                        </ul>
-                    </div>
-
-                </li>
-
-                <li class="menu__item">
-
-                    <input type="checkbox" id="submenu-mujer" class="submenu-toggle">
-                    <label for="submenu-mujer" class="menu__link">
-                        MUJER
-                        <span>
-                            <i class="bi bi-person-standing-dress"></i>
-                            <i class="bi bi-chevron-right"></i>
-                        </span>
+                <!-- TALLA -->
+                <div class="mb-4">
+                    <label class="form-label">
+                        Talla
                     </label>
+                    <select class="form-select">
+                        <option>Todas</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                    </select>
+                </div>
 
-                    <div class="submenu-mobile">
-
-                        <label for="submenu-mujer" class="submenu-back">
-                            <i class="bi bi-chevron-left"></i>
-                            MUJER
-                        </label>
-
-                        <ul class="submenu">
-                            <li class="submenu__item"><a class="submenu__link" href="mujer.html#blusas-mujer">Blusas</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="mujer.html#faldas-mujer">Falda</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="mujer.html#jeans-mujer">Jeans</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="mujer.html#vestidos-mujer">Vestidos</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="mujer.html#bikinis-mujer">Bikinis</a></li>
-                        </ul>
-
-                    </div>
-
-                </li>
-
-                <li class="menu__item">
-
-                    <input type="checkbox" id="submenu-ninos" class="submenu-toggle">
-                    <label for="submenu-ninos" class="menu__link">
-                        NIÑOS
-                        <span>
-                            <i class="bi bi-emoji-smile"></i>
-                            <i class="bi bi-chevron-right"></i>
-                        </span>
+                <!-- COLOR -->
+                <div>
+                    <label class="form-label">
+                        Color
                     </label>
+                    <select class="form-select">
+                        <option>Todos</option>
+                        <option>Negro</option>
+                        <option>Blanco</option>
+                        <option>Gris</option>
+                        <option>Azul</option>
+                    </select>
+                </div>
 
-                    <div class="submenu-mobile">
-
-                        <label for="submenu-ninos" class="submenu-back">
-                            <i class="bi bi-chevron-left"></i>
-                            NIÑOS
-                        </label>
-
-                        <ul class="submenu">
-                            <li class="submenu__item"><a class="submenu__link" href="ninos.html#polos-ninos">Polos</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="ninos.html#conjuntos-ninos">Conjuntos</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="ninos.html#shorts-ninos">Shorts</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="ninos.html#buzos-ninos">Buzos</a></li>
-                        </ul>
-
-                    </div>
-                </li>
-
-                <li class="menu__item">
-                    <a class="menu__link" href="nosotros.html">NOSOTROS<i class="bi bi-people"></i></a>
-                </li>
-
-                <li class="menu__item">
-                    <a class="menu__link" href="contacto.html">CONTACTO<i class="bi bi-envelope"></i></a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-
-    <main class="pagina-hombre">
-
-        <!-- FILTRO -->
-        <input type="checkbox" id="filtro-toggle">
-        <label for="filtro-toggle" class="filtro-boton">
-            <i class="bi bi-funnel"></i> Filtrar
-        </label>
-
-        <aside class="filtro">
-            <h2>Filtrar</h2>
-            <label for="filtro-toggle" class="filtro-cerrar">
-                <i class="bi bi-x-lg"></i>
-            </label>
-
-            <section class="filtro__grupo">
-                <h3>Precio</h3>
-                <label><input type="checkbox"> Menos de S/ 60</label>
-                <label><input type="checkbox"> S/60 - S/120</label>
-                <label><input type="checkbox"> Más de S/120</label>
-            </section>
-
-            <section class="filtro__grupo">
-                <h3>Talla</h3>
-                <label><input type="checkbox"> S</label>
-                <label><input type="checkbox"> M</label>
-                <label><input type="checkbox"> L</label>
-                <label><input type="checkbox"> XL</label>
-            </section>
-
-            <label for="filtro-toggle" class="filtro-aceptar">
-                Aceptar
-            </label>
-        </aside>
-
-
-        <section class="contenido-productos">
-            <h1 class="titulo-pagina">Ropa y accesorios para hombre</h1>
-
-            <h2 id="polos-hombre" class="productos__titulo-seccion">POLOS</h2>
-            <section class="productos productos--populares">
-
-                <article class="productos__item">
-                    <h3 class="productos__titulo">Polo Oversize Urban Restricted</h3>
-                    <figure>
-                        <img src="imagenes/Polo-Oversize-Urban-Restricted.png" alt="Polo Oversize Urban Restricted">
-                    </figure>
-                    <p class="productos__color">Color: Gris con Negro</p>
-                    <p class="productos__precio">S/60.00</p>
-                </article>
-
-                <article class="productos__item">
-                    <h3 class="productos__titulo">Polo Oversize Amiri</h3>
-                    <figure>
-                        <img src="imagenes/polo-hombre/polo-overzide/Polo-oversize-amiri.jpg" alt="Polo Oversize Amiri">
-                    </figure>
-                    <p class="productos__color">Color: Blanco</p>
-                    <p class="productos__precio">S/65.00</p>
-                </article>
-
-                <article class="productos__item">
-                    <h3 class="productos__titulo">Polo Oversize Realking</h3>
-                    <figure>
-                        <img src="imagenes/polo-hombre/polo-overzide/Polo-oversize-realking.jpg" alt="Polo Oversize Realking">
-                    </figure>
-                    <p class="productos__color">Color: Blanco con Negro</p>
-                    <p class="productos__precio">S/60.00</p>
-                </article>
-
-                <article class="productos__item">
-                    <h3 class="productos__titulo">Polo Drifit Jordan</h3>
-                    <figure>
-                        <img src="imagenes/Polo-Drifit-Jordan-blanco-con-rayas-negras.png" alt="Polo Drifit Jordan">
-                    </figure>
-                    <p class="productos__color">Color: Blanco con Negro</p>
-                    <p class="productos__precio">S/70.00</p>
-                </article>
-
-                <a href="#polos-hombre" class="portada__boton">Ver más</a>
-            </section>
-
-            <!-- CAMISAS -->
-            <h2 id="camisas-hombre" class="productos__titulo-seccion">CAMISAS</h2>
-            <section class="productos productos--populares">
-
-                <article class="productos__item">
-                    <h3 class="productos__titulo">Camisa Casual Italiana</h3>
-                    <figure>
-                        <img src="imagenes/Camisa-Casual-Italiana.png" alt="Camisa Casual Italiana">
-                    </figure>
-                    <p class="productos__color">Color: Beige</p>
-                    <p class="productos__precio">S/70.00</p>
-                </article>
-
-                <article class="productos__item">
-                    <h3 class="productos__titulo">Camisa Manga Corta Ae</h3>
-                    <figure>
-                        <img src="imagenes/camisas-hombre/camisa-maga-corta/camisa-1.webp" alt="Camisa Manga Corta Ae">
-                    </figure>
-                    <p class="productos__color">Color: Gris</p>
-                    <p class="productos__precio">S/65.00</p>
-                </article>
-
-                <article class="productos__item">
-                    <h3 class="productos__titulo">Camisa Manga Corta Floreada</h3>
-                    <figure>
-                        <img src="imagenes/camisas-hombre/camisa-maga-corta/camisa-4.jpg" alt="Camisa Manga Corta Floreada">
-                    </figure>
-                    <p class="productos__color">Color: Azul con Blanco</p>
-                    <p class="productos__precio">S/60.00</p>
-                </article>
-
-                <article class="productos__item">
-                    <h3 class="productos__titulo">Camisa Manga Corta con Rombos</h3>
-                    <figure>
-                        <img src="imagenes/camisas-hombre/camisa-maga-corta/camisa-5.jpg" alt="Camisa Manga Corta con Rombos">
-                    </figure>
-                    <p class="productos__color">Color: Gris</p>
-                    <p class="productos__precio">S/65.00</p>
-                </article>
-
-                <a href="#camisas-hombre" class="portada__boton">Ver más</a>
-            </section>
-
-            <!-- PANTALONES -->
-            <h2 id="pantalones-hombre" class="productos__titulo-seccion">PANTALONES</h2>
-            <section class="productos productos--populares">
-
-                <article class="productos__item">
-                    <h3 class="productos__titulo">Pantalón Jeans Clásico</h3>
-                    <figure>
-                        <img src="imagenes/pantalones-hombre/pantalon-1.avif" alt="Pantalón Jeans Clásico">
-                    </figure>
-                    <p class="productos__color">Color: Azul oscuro</p>
-                    <p class="productos__precio">S/95.00</p>
-                </article>
-
-                <article class="productos__item">
-                    <h3 class="productos__titulo">Pantalón Cargo sin Bolsillos</h3>
-                    <figure>
-                        <img src="imagenes/pantalones-hombre/pantalon-2.avif" alt="Pantalón Cargo sin Bolsillos">
-                    </figure>
-                    <p class="productos__color">Color: Mostaza</p>
-                    <p class="productos__precio">S/85.00</p>
-                </article>
-
-                <article class="productos__item">
-                    <h3 class="productos__titulo">Pantalón Cargo con Bolsillos</h3>
-                    <figure>
-                        <img src="imagenes/pantalones-hombre/pantalon-3.avif" alt="Pantalón Cargo con Bolsillos">
-                    </figure>
-                    <p class="productos__color">Color: Verde petróleo</p>
-                    <p class="productos__precio">S/90.00</p>
-                </article>
-
-                <article class="productos__item">
-                    <h3 class="productos__titulo">Pantalón Buzo</h3>
-                    <figure>
-                        <img src="imagenes/pantalones-hombre/pantalon-4.avif" alt="Pantalón Buzo">
-                    </figure>
-                    <p class="productos__color">Color: Azul marino</p>
-                    <p class="productos__precio">S/70.00</p>
-                </article>
-
-                <a href="#pantalones-hombre" class="portada__boton">Ver más</a>
-            </section>
-
-            <!-- SHORTS -->
-            <h2 id="shorts-hombre" class="productos__titulo-seccion">SHORTS</h2>
-            <section class="productos productos--populares">
-
-                <article class="productos__item">
-                    <h3 class="productos__titulo">Short Jean Element</h3>
-                    <figure>
-                        <img src="imagenes/shorts-hombre/short-1.jpg" alt="Short Jean Element">
-                    </figure>
-                    <p class="productos__color">Color: Negro despintado</p>
-                    <p class="productos__precio">S/45.00</p>
-                </article>
-
-                <article class="productos__item">
-                    <h3 class="productos__titulo">Short Jean Foulger</h3>
-                    <figure>
-                        <img src="imagenes/shorts-hombre/short-2.jpg" alt="Short Jean Foulger">
-                    </figure>
-                    <p class="productos__color">Color: Celeste</p>
-                    <p class="productos__precio">S/40.00</p>
-                </article>
-
-                <article class="productos__item">
-                    <h3 class="productos__titulo">Short Playero Floreado</h3>
-                    <figure>
-                        <img src="imagenes/shorts-hombre/short-3.jpg" alt="Short Playero Floreado">
-                    </figure>
-                    <p class="productos__color">Color: Verde azulado</p>
-                    <p class="productos__precio">S/35.00</p>
-                </article>
-
-                <article class="productos__item">
-                    <h3 class="productos__titulo">Short Playero</h3>
-                    <figure>
-                        <img src="imagenes/shorts-hombre/short-4.jpg" alt="Short Playero">
-                    </figure>
-                    <p class="productos__color">Color: Blanco</p>
-                    <p class="productos__precio">S/30.00</p>
-                </article>
-
-                <a href="#shorts-hombre" class="portada__boton">Ver más</a>
-            </section>
-
-        </section>
-    </main>
-
-    <footer>
-        <section>
-            <h3 class="datos-tienda">Tienda</h3>
-            <address>
-                <p>Jr. Lima Pst 8 parada municipal</p>
-                <p>Bagua, Amazonas, Perú, 15004</p>
-                <p>clothingstore.rr@gmail.com</p>
-                <p>+51 916 408 971</p>
-            </address>
-        </section>
-
-        <section class="atencion-cliente">
-            <h3>ATENCIÓN AL CLIENTE</h3>
-            <p>Formas de Pago</p>
-            <p>Métodos de Envío</p>
-            <p>Cambios y Devoluciones</p>
-            <p>Guía de Tallas</p>
-            <p>Preguntas Frecuentes</p>
-        </section>
-
-        <section class="terminos">
-            <h3>TÉRMINOS Y CONDICIONES</h3>
-            <p>Términos y Condiciones</p>
-            <p>Tratamiento de Datos</p>
-            <p>Política de Cookies</p>
-            <p class="libro-reclamaciones">Libro de Reclamaciones</p>
-            <figure>
-                <img class="libro-reclamaciones-img" src="imagenes/libro-de-reclamaciones.jpg"
-                    alt="Libro de Reclamaciones" />
-            </figure>
-        </section>
-
-        <section class="formulario-suscripcion">
-            <h3>NEWSLETTER</h3>
-            <p>
-                Regístrate para mantenerte al tanto de nuestros lanzamientos,
-                descuentos y más.
-            </p>
-
-            <form class="newsletter-form">
-                <input type="email" placeholder="Correo Electrónico" required />
-                <button type="submit">SUSCRIBIRSE</button>
-            </form>
-        </section>
-
-        <div class="redes">
-            <p>¡Síguenos en nuestras <strong>REDES SOCIALES!</strong></p>
-
-            <div class="redes__link">
-                <a href="https://web.facebook.com/RyRClothingstore/about">Facebook</a>
-                <a href="#">Tiktok</a>
-                <a href="#">Instagram</a>
             </div>
         </div>
 
-        <div class="copyright">
-            <p>&copy; 2026 R&R Clothing Store - Todos los derechos reservados</p>
+        <!-- MODAL PRODUCTO -->
+        <!-- Modal - Polos -->
+            <!-- Modal polo 1 -->
+        <div
+            class="modal fade"
+            id="modalPolo1"
+            tabindex="-1"
+            aria-hidden="true">
+
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+
+                    <!-- CABECERA -->
+                    <div class="modal-header">
+                        <h5 class="modal-title">
+                            Polo Oversize Urban Restricted
+                        </h5>
+
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal">
+                        </button>
+                    </div>
+
+                    <!-- CONTENIDO -->
+                    <div class="modal-body">
+
+                        <!-- CARRUSEL -->
+                        <div
+                            id="carouselPolo1"
+                            class="carousel slide">
+
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img
+                                        src="./imagenes/hombre/polo-hombre/Polo-Oversize-Urban-Restricted.png"
+                                        class="img-fluid d-block w-100"
+                                        alt="Polo">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img
+                                        src="./imagenes/hombre/polo-hombre/Polo-Oversize-Urban-Restricted.png"
+                                        class="img-fluid d-block w-100"
+                                        alt="Polo">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img
+                                        src="./imagenes/hombre/polo-hombre/Polo-Oversize-Urban-Restricted.png"
+                                        class="img-fluid d-block w-100"
+                                        alt="Polo">
+                                </div>
+
+                            </div>
+
+                            <!-- FLECHA IZQUIERDA -->
+                            <button
+                                class="carousel-control-prev"
+                                type="button"
+                                data-bs-target="#carouselPolo1"
+                                data-bs-slide="prev">
+                                <span
+                                    class="carousel-control-prev-icon">
+                                </span>
+                            </button>
+
+                            <!-- FLECHA DERECHA -->
+                            <button
+                                class="carousel-control-next"
+                                type="button"
+                                data-bs-target="#carouselPolo1"
+                                data-bs-slide="next">
+                                <span
+                                    class="carousel-control-next-icon">
+                                </span>
+                            </button>
+
+                        </div>
+
+                        <!-- INFORMACION -->
+                        <div class="mt-4">
+                            <h4>
+                                Polo Oversize Urban Restricted
+                            </h4>
+                            <hr>
+                            <p><strong>Material:</strong> Algodón Premium 24/1.</p>
+                            <p><strong>Corte:</strong> Oversize.</p>
+                            <p><strong>Tallas:</strong> S, M, L y XL.</p>
+                            <p><strong>Colores:</strong> Gris y Negro.</p>
+                            <p>
+                                <strong>Descripción:</strong>
+                                Polo urbano de alta calidad,
+                                confeccionado en algodón premium,
+                                cuello reforzado y acabado resistente
+                                para uso diario.
+                            </p>
+                            <h3 class="mt-3">S/ 49.90</h3>
+                        </div>
+                    </div>
+
+                    <!-- PIE -->
+                    <div class="modal-footer">
+                        <a
+                            href="https://wa.me/51953200488?text=Hola,%20quiero%20información%20del%20Polo%20Oversize%20Urban%20Restricted"
+                            target="_blank"
+                            class="btn btn-success w-100">
+                            <i class="bi bi-whatsapp"></i>
+                            Consultar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
-</body>
+            <!-- Modal polo 2 -->
+        <div
+            class="modal fade"
+            id="modalPolo2"
+            tabindex="-1"
+            aria-hidden="true">
+
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+
+                    <!-- CABECERA -->
+                    <div class="modal-header">
+                        <h5 class="modal-title">
+                            Polo Drifit Jordan
+                        </h5>
+
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal">
+                        </button>
+                    </div>
+
+                    <!-- CONTENIDO -->
+                    <div class="modal-body">
+
+                        <!-- CARRUSEL -->
+                        <div
+                            id="carouselPolo2"
+                            class="carousel slide">
+
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img
+                                        src="./imagenes/hombre/polo-hombre/Polo-Drifit-Jordan-blanco-con-rayas-negras.png"
+                                        class="img-fluid d-block w-100"
+                                        alt="Polo">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img
+                                        src="./imagenes/hombre/polo-hombre/Polo-Drifit-Jordan-blanco-con-rayas-negras.png"
+                                        class="img-fluid d-block w-100"
+                                        alt="Polo">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img
+                                        src="./imagenes/hombre/polo-hombre/Polo-Drifit-Jordan-blanco-con-rayas-negras.png"
+                                        class="img-fluid d-block w-100"
+                                        alt="Polo">
+                                </div>
+
+                            </div>
+
+                            <!-- FLECHA IZQUIERDA -->
+                            <button
+                                class="carousel-control-prev"
+                                type="button"
+                                data-bs-target="#carouselPolo2"
+                                data-bs-slide="prev">
+                                <span
+                                    class="carousel-control-prev-icon">
+                                </span>
+                            </button>
+
+                            <!-- FLECHA DERECHA -->
+                            <button
+                                class="carousel-control-next"
+                                type="button"
+                                data-bs-target="#carouselPolo2"
+                                data-bs-slide="next">
+                                <span
+                                    class="carousel-control-next-icon">
+                                </span>
+                            </button>
+
+                        </div>
+
+                        <!-- INFORMACION -->
+                        <div class="mt-4">
+                            <h4>
+                                Polo Drifit Jordan
+                            </h4>
+                            <hr>
+                            <p><strong>Material:</strong> Algodón Premium 24/1.</p>
+                            <p><strong>Corte:</strong> Oversize.</p>
+                            <p><strong>Tallas:</strong> S, M, L y XL.</p>
+                            <p><strong>Colores:</strong> Gris y Negro.</p>
+                            <p>
+                                <strong>Descripción:</strong>
+                                Polo urbano de alta calidad,
+                                confeccionado en algodón premium,
+                                cuello reforzado y acabado resistente
+                                para uso diario.
+                            </p>
+                            <h3 class="mt-3">S/ 49.90</h3>
+                        </div>
+                    </div>
+
+                    <!-- PIE -->
+                    <div class="modal-footer">
+                        <a
+                            href="https://wa.me/51953200488?text=Hola,%20quiero%20información%20del%20Polo%20Oversize%20Drifit%20Jordan"
+                            target="_blank"
+                            class="btn btn-success w-100">
+                            <i class="bi bi-whatsapp"></i>
+                            Consultar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!-- Modal polo 3 -->
+        <div
+            class="modal fade"
+            id="modalPolo3"
+            tabindex="-1"
+            aria-hidden="true">
+
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+
+                    <!-- CABECERA -->
+                    <div class="modal-header">
+                        <h5 class="modal-title">
+                            Polo Oversize Estampado Urbano
+                        </h5>
+
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal">
+                        </button>
+                    </div>
+
+                    <!-- CONTENIDO -->
+                    <div class="modal-body">
+
+                        <!-- CARRUSEL -->
+                        <div
+                            id="carouselPolo3"
+                            class="carousel slide">
+
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img
+                                        src="./imagenes/hombre/polo-hombre/Polo-Oversize-Estampado-Urbano-color-beige-con-negro.png"
+                                        class="img-fluid d-block w-100"
+                                        alt="Polo">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img
+                                        src="./imagenes/hombre/polo-hombre/Polo-Oversize-Estampado-Urbano-color-beige-con-negro.png"
+                                        class="img-fluid d-block w-100"
+                                        alt="Polo">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img
+                                        src="./imagenes/hombre/polo-hombre/Polo-Oversize-Estampado-Urbano-color-beige-con-negro.png"
+                                        class="img-fluid d-block w-100"
+                                        alt="Polo">
+                                </div>
+
+                            </div>
+
+                            <!-- FLECHA IZQUIERDA -->
+                            <button
+                                class="carousel-control-prev"
+                                type="button"
+                                data-bs-target="#carouselPolo3"
+                                data-bs-slide="prev">
+                                <span
+                                    class="carousel-control-prev-icon">
+                                </span>
+                            </button>
+
+                            <!-- FLECHA DERECHA -->
+                            <button
+                                class="carousel-control-next"
+                                type="button"
+                                data-bs-target="#carouselPolo3"
+                                data-bs-slide="next">
+                                <span
+                                    class="carousel-control-next-icon">
+                                </span>
+                            </button>
+
+                        </div>
+
+                        <!-- INFORMACION -->
+                        <div class="mt-4">
+                            <h4>
+                                Polo Oversize Estampado Urbano
+                            </h4>
+                            <hr>
+                            <p><strong>Material:</strong> Algodón Premium 24/1.</p>
+                            <p><strong>Corte:</strong> Oversize.</p>
+                            <p><strong>Tallas:</strong> S, M, L y XL.</p>
+                            <p><strong>Colores:</strong> Gris y Negro.</p>
+                            <p>
+                                <strong>Descripción:</strong>
+                                Polo urbano de alta calidad,
+                                confeccionado en algodón premium,
+                                cuello reforzado y acabado resistente
+                                para uso diario.
+                            </p>
+                            <h3 class="mt-3">S/ 49.90</h3>
+                        </div>
+                    </div>
+
+                    <!-- PIE -->
+                    <div class="modal-footer">
+                        <a
+                            href="https://wa.me/51953200488?text=Hola,%20quiero%20información%20del%20Polo%20Oversize%20Estampado%20Urbano"
+                            target="_blank"
+                            class="btn btn-success w-100">
+                            <i class="bi bi-whatsapp"></i>
+                            Consultar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!-- Modal polo 4 -->
+        <div
+            class="modal fade"
+            id="modalPolo4"
+            tabindex="-1"
+            aria-hidden="true">
+
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+
+                    <!-- CABECERA -->
+                    <div class="modal-header">
+                        <h5 class="modal-title">
+                            Polo Oversize Real King
+                        </h5>
+
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal">
+                        </button>
+                    </div>
+
+                    <!-- CONTENIDO -->
+                    <div class="modal-body">
+
+                        <!-- CARRUSEL -->
+                        <div
+                            id="carouselPolo4"
+                            class="carousel slide">
+
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img
+                                        src="./imagenes/hombre/polo-hombre/polo-overzide/Polo-oversize-realking.jpg"
+                                        class="img-fluid d-block w-100"
+                                        alt="Polo">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img
+                                        src="./imagenes/hombre/polo-hombre/polo-overzide/Polo-oversize-realking.jpg"
+                                        class="img-fluid d-block w-100"
+                                        alt="Polo">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img
+                                        src="./imagenes/hombre/polo-hombre/polo-overzide/Polo-oversize-realking.jpg"
+                                        class="img-fluid d-block w-100"
+                                        alt="Polo">
+                                </div>
+
+                            </div>
+
+                            <!-- FLECHA IZQUIERDA -->
+                            <button
+                                class="carousel-control-prev"
+                                type="button"
+                                data-bs-target="#carouselPolo4"
+                                data-bs-slide="prev">
+                                <span
+                                    class="carousel-control-prev-icon">
+                                </span>
+                            </button>
+
+                            <!-- FLECHA DERECHA -->
+                            <button
+                                class="carousel-control-next"
+                                type="button"
+                                data-bs-target="#carouselPolo4"
+                                data-bs-slide="next">
+                                <span
+                                    class="carousel-control-next-icon">
+                                </span>
+                            </button>
+
+                        </div>
+
+                        <!-- INFORMACION -->
+                        <div class="mt-4">
+                            <h4>
+                                Polo Oversize Real King
+                            </h4>
+                            <hr>
+                            <p><strong>Material:</strong> Algodón Premium 24/1.</p>
+                            <p><strong>Corte:</strong> Oversize.</p>
+                            <p><strong>Tallas:</strong> S, M, L y XL.</p>
+                            <p><strong>Colores:</strong> Gris y Negro.</p>
+                            <p>
+                                <strong>Descripción:</strong>
+                                Polo urbano de alta calidad,
+                                confeccionado en algodón premium,
+                                cuello reforzado y acabado resistente
+                                para uso diario.
+                            </p>
+                            <h3 class="mt-3">S/ 49.90</h3>
+                        </div>
+                    </div>
+
+                    <!-- PIE -->
+                    <div class="modal-footer">
+                        <a
+                            href="https://wa.me/51953200488?text=Hola,%20quiero%20información%20del%20Polo%20Oversize%20Urban%20Restricted"
+                            target="_blank"
+                            class="btn btn-success w-100">
+                            <i class="bi bi-whatsapp"></i>
+                            Consultar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!-- Modal polo 5 -->
+        <div
+            class="modal fade"
+            id="modalPolo5"
+            tabindex="-1"
+            aria-hidden="true">
+
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+
+                    <!-- CABECERA -->
+                    <div class="modal-header">
+                        <h5 class="modal-title">
+                            Polo Oversize Amiri
+                        </h5>
+
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal">
+                        </button>
+                    </div>
+
+                    <!-- CONTENIDO -->
+                    <div class="modal-body">
+
+                        <!-- CARRUSEL -->
+                        <div
+                            id="carouselPolo5"
+                            class="carousel slide">
+
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img
+                                        src="./imagenes/hombre/polo-hombre/polo-overzide/Polo-oversize-amiri.jpg"
+                                        class="img-fluid d-block w-100"
+                                        alt="Polo">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img
+                                        src="./imagenes/hombre/polo-hombre/polo-overzide/Polo-oversize-amiri.jpg"
+                                        class="img-fluid d-block w-100"
+                                        alt="Polo">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img
+                                        src="./imagenes/hombre/polo-hombre/polo-overzide/Polo-oversize-amiri.jpg"
+                                        class="img-fluid d-block w-100"
+                                        alt="Polo">
+                                </div>
+
+                            </div>
+
+                            <!-- FLECHA IZQUIERDA -->
+                            <button
+                                class="carousel-control-prev"
+                                type="button"
+                                data-bs-target="#carouselPolo5"
+                                data-bs-slide="prev">
+                                <span
+                                    class="carousel-control-prev-icon">
+                                </span>
+                            </button>
+
+                            <!-- FLECHA DERECHA -->
+                            <button
+                                class="carousel-control-next"
+                                type="button"
+                                data-bs-target="#carouselPolo5"
+                                data-bs-slide="next">
+                                <span
+                                    class="carousel-control-next-icon">
+                                </span>
+                            </button>
+
+                        </div>
+
+                        <!-- INFORMACION -->
+                        <div class="mt-4">
+                            <h4>
+                                Polo Oversize Amiri
+                            </h4>
+                            <hr>
+                            <p><strong>Material:</strong> Algodón Premium 24/1.</p>
+                            <p><strong>Corte:</strong> Oversize.</p>
+                            <p><strong>Tallas:</strong> S, M, L y XL.</p>
+                            <p><strong>Colores:</strong> Gris y Negro.</p>
+                            <p>
+                                <strong>Descripción:</strong>
+                                Polo urbano de alta calidad,
+                                confeccionado en algodón premium,
+                                cuello reforzado y acabado resistente
+                                para uso diario.
+                            </p>
+                            <h3 class="mt-3">S/ 49.90</h3>
+                        </div>
+                    </div>
+
+                    <!-- PIE -->
+                    <div class="modal-footer">
+                        <a
+                            href="https://wa.me/51953200488?text=Hola,%20quiero%20información%20del%20Polo%20Oversize%20Urban%20Restricted"
+                            target="_blank"
+                            class="btn btn-success w-100">
+                            <i class="bi bi-whatsapp"></i>
+                            Consultar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!-- Modal polo 6 -->
+        <div
+            class="modal fade"
+            id="modalPolo6"
+            tabindex="-1"
+            aria-hidden="true">
+
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+
+                    <!-- CABECERA -->
+                    <div class="modal-header">
+                        <h5 class="modal-title">
+                            Polo Oversize Arts
+                        </h5>
+
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal">
+                        </button>
+                    </div>
+
+                    <!-- CONTENIDO -->
+                    <div class="modal-body">
+
+                        <!-- CARRUSEL -->
+                        <div
+                            id="carouselPolo6"
+                            class="carousel slide">
+
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img
+                                        src="./imagenes/hombre/polo-hombre/polo-overzide/Polo-oversize-arts.jpg"
+                                        class="img-fluid d-block w-100"
+                                        alt="Polo">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img
+                                        src="./imagenes/hombre/polo-hombre/polo-overzide/Polo-oversize-arts.jpg"
+                                        class="img-fluid d-block w-100"
+                                        alt="Polo">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img
+                                        src="./imagenes/hombre/polo-hombre/polo-overzide/Polo-oversize-arts.jpg"
+                                        class="img-fluid d-block w-100"
+                                        alt="Polo">
+                                </div>
+
+                            </div>
+
+                            <!-- FLECHA IZQUIERDA -->
+                            <button
+                                class="carousel-control-prev"
+                                type="button"
+                                data-bs-target="#carouselPolo6"
+                                data-bs-slide="prev">
+                                <span
+                                    class="carousel-control-prev-icon">
+                                </span>
+                            </button>
+
+                            <!-- FLECHA DERECHA -->
+                            <button
+                                class="carousel-control-next"
+                                type="button"
+                                data-bs-target="#carouselPolo6"
+                                data-bs-slide="next">
+                                <span
+                                    class="carousel-control-next-icon">
+                                </span>
+                            </button>
+
+                        </div>
+
+                        <!-- INFORMACION -->
+                        <div class="mt-4">
+                            <h4>
+                                Polo Oversize Arts
+                            </h4>
+                            <hr>
+                            <p><strong>Material:</strong> Algodón Premium 24/1.</p>
+                            <p><strong>Corte:</strong> Oversize.</p>
+                            <p><strong>Tallas:</strong> S, M, L y XL.</p>
+                            <p><strong>Colores:</strong> Gris y Negro.</p>
+                            <p>
+                                <strong>Descripción:</strong>
+                                Polo urbano de alta calidad,
+                                confeccionado en algodón premium,
+                                cuello reforzado y acabado resistente
+                                para uso diario.
+                            </p>
+                            <h3 class="mt-3">S/ 49.90</h3>
+                        </div>
+                    </div>
+
+                    <!-- PIE -->
+                    <div class="modal-footer">
+                        <a
+                            href="https://wa.me/51953200488?text=Hola,%20quiero%20información%20del%20Polo%20Oversize%20Urban%20Restricted"
+                            target="_blank"
+                            class="btn btn-success w-100">
+                            <i class="bi bi-whatsapp"></i>
+                            Consultar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!-- Modal polo 7 -->
+        <div
+            class="modal fade"
+            id="modalPolo7"
+            tabindex="-1"
+            aria-hidden="true">
+
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+
+                    <!-- CABECERA -->
+                    <div class="modal-header">
+                        <h5 class="modal-title">
+                            Polo Oversize Escorpión
+                        </h5>
+
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal">
+                        </button>
+                    </div>
+
+                    <!-- CONTENIDO -->
+                    <div class="modal-body">
+
+                        <!-- CARRUSEL -->
+                        <div
+                            id="carouselPolo7"
+                            class="carousel slide">
+
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img
+                                        src="./imagenes/hombre/polo-hombre/polo-overzide/Polo-escorpion.jpg"
+                                        class="img-fluid d-block w-100"
+                                        alt="Polo">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img
+                                        src="./imagenes/hombre/polo-hombre/polo-overzide/Polo-escorpion.jpg"
+                                        class="img-fluid d-block w-100"
+                                        alt="Polo">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img
+                                        src="./imagenes/hombre/polo-hombre/polo-overzide/Polo-escorpion.jpg"
+                                        class="img-fluid d-block w-100"
+                                        alt="Polo">
+                                </div>
+
+                            </div>
+
+                            <!-- FLECHA IZQUIERDA -->
+                            <button
+                                class="carousel-control-prev"
+                                type="button"
+                                data-bs-target="#carouselPolo7"
+                                data-bs-slide="prev">
+                                <span
+                                    class="carousel-control-prev-icon">
+                                </span>
+                            </button>
+
+                            <!-- FLECHA DERECHA -->
+                            <button
+                                class="carousel-control-next"
+                                type="button"
+                                data-bs-target="#carouselPolo7"
+                                data-bs-slide="next">
+                                <span
+                                    class="carousel-control-next-icon">
+                                </span>
+                            </button>
+
+                        </div>
+
+                        <!-- INFORMACION -->
+                        <div class="mt-4">
+                            <h4>
+                                Polo Oversize Escorpión
+                            </h4>
+                            <hr>
+                            <p><strong>Material:</strong> Algodón Premium 24/1.</p>
+                            <p><strong>Corte:</strong> Oversize.</p>
+                            <p><strong>Tallas:</strong> S, M, L y XL.</p>
+                            <p><strong>Colores:</strong> Gris y Negro.</p>
+                            <p>
+                                <strong>Descripción:</strong>
+                                Polo urbano de alta calidad,
+                                confeccionado en algodón premium,
+                                cuello reforzado y acabado resistente
+                                para uso diario.
+                            </p>
+                            <h3 class="mt-3">S/ 49.90</h3>
+                        </div>
+                    </div>
+
+                    <!-- PIE -->
+                    <div class="modal-footer">
+                        <a
+                            href="https://wa.me/51953200488?text=Hola,%20quiero%20información%20del%20Polo%20Oversize%20Urban%20Restricted"
+                            target="_blank"
+                            class="btn btn-success w-100">
+                            <i class="bi bi-whatsapp"></i>
+                            Consultar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row g-4">
+                    <section class="col-12 col-md-6 col-lg-3">
+                        <h3>Tienda</h3>
+                        <address>
+                            <p>Jr. Lima Pst 8 parada municipal</p>
+                            <p>Bagua, Amazonas, Perú, 15004</p>
+                            <p><a href="mailto:clothingstore.rr@gmail.com">clothingstore.rr@gmail.com</a></p>
+                            <p><a href="tel:+51916408971">+51 916 408 971</a></p>
+                        </address>
+                    </section>
+
+                    <section class="col-12 col-md-6 col-lg-3">
+                        <h3>Atención al cliente</h3>
+                        <ul class="footer-list">
+                            <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalPagos">Formas de pago</button></li>
+                            <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalEnvios">Métodos de envío</button></li>
+                            <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalCambios">Cambios y devoluciones</button></li>
+                            <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalPreguntas">Preguntas frecuentes</button></li>
+                        </ul>
+                    </section>
+
+                    <section class="col-12 col-md-6 col-lg-3">
+                        <h3>Términos y condiciones</h3>
+                        <ul class="footer-list">
+                            <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalTerminos">Términos y condiciones</button></li>
+                            <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalDatos">Tratamiento de datos</button></li>
+                            <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalCookies">Política de cookies</button></li>
+                            <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalReclamaciones">Libro de reclamaciones</button></li>
+                        </ul>
+                        <img class="libro-reclamaciones-img img-fluid" src="imagenes/libro-de-reclamaciones.jpg" alt="Libro de Reclamaciones">
+                    </section>
+
+                    <section class="col-12 col-md-6 col-lg-3">
+                        <h3>Newsletter</h3>
+                        <p>Regístrate para conocer lanzamientos, descuentos y novedades.</p>
+
+                        <form class="newsletter-form">
+                            <label class="visually-hidden" for="correo-newsletter">Correo electrónico</label>
+                            <input id="correo-newsletter" class="form-control" type="email" placeholder="Correo electrónico" required>
+                            <button class="btn btn-primary w-100" type="submit">Suscribirse</button>
+                        </form>
+                    </section>
+                </div>
+
+                <div class="footer-bottom">
+                    <div class="redes">
+                        <p>Síguenos en nuestras <strong>redes sociales</strong></p>
+                        <div class="redes__link">
+                            <a href="https://web.facebook.com/RyRClothingstore/about">Facebook</a>
+                            <span>TikTok</span>
+                            <span>Instagram</span>
+                        </div>
+                    </div>
+
+                    <p class="copyright">&copy; 2026 R&R Clothing Store - Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>        
+
+        <!-- Bootstrap JS -->
+        <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
 
 </html>
