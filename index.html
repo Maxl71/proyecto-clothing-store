@@ -4,356 +4,828 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>R&R | Tienda de Ropa</title>
-    <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <a href="index.html">
-                <img src="imagenes/logo-transparente.png" alt="Logo de la Tienda">
+    <header class="site-header sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark container py-2" aria-label="Navegación principal">
+            <a class="navbar-brand site-logo" href="index.html" aria-label="R&R Clothing Store">
+                <img src="imagenes/logo/logo-transparente.png" alt="Logo de R&R Clothing Store">
             </a>
-        </div>
 
-        <input type="checkbox" id="menu-toggle">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <label for="menu-toggle" class="menu-icono">
-            <i class="bi bi-list icono-abrir"></i>
-            <i class="bi bi-x-lg icono-cerrar"></i>
-        </label>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="menuPrincipal" aria-labelledby="menuPrincipalLabel">
+                <input class="mobile-submenu-toggle" type="checkbox" id="submenu-panel-hombre">
+                <input class="mobile-submenu-toggle" type="checkbox" id="submenu-panel-mujer">
+                <input class="mobile-submenu-toggle" type="checkbox" id="submenu-panel-ninos">
 
-        <nav class="navegador">
-            <ul class="menu">
+                <div class="offcanvas-header">
+                    <h2 class="offcanvas-title fs-5" id="menuPrincipalLabel">R&R Clothing Store</h2>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar menú"></button>
+                </div>
 
-                <li class="menu__item">
-                    <a class="menu__link" href="index.html">INICIO<i class="bi bi-house-door"></i></a>
-                </li>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">
+                                Inicio <i class="bi bi-house-door ms-1"></i>
+                            </a>
+                        </li>
 
-                <li class="menu__item">
-                    <input type="checkbox" id="submenu-hombre" class="submenu-toggle">
+                        <li class="nav-item dropdown menu-con-submenu">
+                            <label class="nav-link submenu-open d-lg-none" for="submenu-panel-hombre">
+                                Hombre
+                                <span>
+                                    <i class="bi bi-person"></i>
+                                    <i class="bi bi-chevron-right"></i>
+                                </span>
+                            </label>
+                            <a class="nav-link d-none d-lg-flex align-items-center gap-1"
+                            href="hombre.html">
+                                Hombre <i class="bi bi-person ms-1"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="hombre.html#polos-hombre">Polos</a></li>
+                                <li><a class="dropdown-item" href="hombre.html#camisas-hombre">Camisas</a></li>
+                                <li><a class="dropdown-item" href="hombre.html#pantalones-hombre">Pantalones</a></li>
+                                <li><a class="dropdown-item" href="hombre.html#shorts-hombre">Shorts</a></li>
+                            </ul>
+                        </li>
 
-                    <label for="submenu-hombre" class="menu__link">
-                        HOMBRE
-                        <span>
-                            <i class="bi bi-person"></i>
-                            <i class="bi bi-chevron-right"></i>
-                        </span>
-                    </label>
+                        <li class="nav-item dropdown menu-con-submenu">
+                            <label class="nav-link submenu-open d-lg-none" for="submenu-panel-mujer">
+                                Mujer
+                                <span>
+                                    <i class="bi bi-person-standing-dress"></i>
+                                    <i class="bi bi-chevron-right"></i>
+                                </span>
+                            </label>
+                            <a class="nav-link d-none d-lg-flex align-items-center gap-1" href="mujer.html">
+                                Mujer <i class="bi bi-person-standing-dress ms-1"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="mujer.html#blusas-mujer">Blusas</a></li>
+                                <li><a class="dropdown-item" href="mujer.html#faldas-mujer">Faldas</a></li>
+                                <li><a class="dropdown-item" href="mujer.html#jeans-mujer">Jeans</a></li>
+                                <li><a class="dropdown-item" href="mujer.html#vestidos-mujer">Vestidos</a></li>
+                                <li><a class="dropdown-item" href="mujer.html#bikinis-mujer">Bikinis</a></li>
+                            </ul>
+                        </li>
 
-                    <div class="submenu-mobile">
-                        <label for="submenu-hombre" class="submenu-back">
-                            <i class="bi bi-chevron-left"></i>
-                            HOMBRE
+                        <li class="nav-item dropdown menu-con-submenu">
+                            <label class="nav-link submenu-open d-lg-none" for="submenu-panel-ninos">
+                                Niños
+                                <span>
+                                    <i class="bi bi-emoji-smile"></i>
+                                    <i class="bi bi-chevron-right"></i>
+                                </span>
+                            </label>
+                            <a class="nav-link d-none d-lg-flex align-items-center gap-1" href="ninos.html">
+                                Niños <i class="bi bi-emoji-smile ms-1"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="ninos.html#polos-ninos">Polos</a></li>
+                                <li><a class="dropdown-item" href="ninos.html#conjuntos-ninos">Conjuntos</a></li>
+                                <li><a class="dropdown-item" href="ninos.html#shorts-ninos">Shorts</a></li>
+                                <li><a class="dropdown-item" href="ninos.html#buzos-ninos">Buzos</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Nosotros <i class="bi bi-people ms-1"></i></a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto <i class="bi bi-envelope ms-1"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <section class="mobile-submenu-panel mobile-submenu-panel--hombre" aria-label="Categorías de hombre">
+                    <div class="mobile-submenu-panel__header">
+                        <h3>Hombre</h3>
+                        <label class="mobile-submenu-close" for="submenu-panel-hombre" aria-label="Cerrar submenú hombre">
+                            <i class="bi bi-x-lg"></i>
                         </label>
-
-                        <ul class="submenu">
-                            <li class="submenu__item"><a class="submenu__link" href="hombre.html#polos-hombre">Polos</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="hombre.html#camisas-hombre">Camisas</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="hombre.html#pantalones-hombre">Pantalones</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="#">Casacas</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="hombre.html#shorts-hombre">Shorts</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="#">Calzados</a></li>
-                        </ul>
                     </div>
+                    <ul class="mobile-submenu-list">
+                        <li><a href="hombre.html#polos-hombre">Polos</a></li>
+                        <li><a href="hombre.html#camisas-hombre">Camisas</a></li>
+                        <li><a href="hombre.html#pantalones-hombre">Pantalones</a></li>
+                        <li><a href="hombre.html#shorts-hombre">Shorts</a></li>
+                    </ul>
+                </section>
 
-                </li>
-
-                <li class="menu__item">
-
-                    <input type="checkbox" id="submenu-mujer" class="submenu-toggle">
-                    <label for="submenu-mujer" class="menu__link">
-                        MUJER
-                        <span>
-                            <i class="bi bi-person-standing-dress"></i>
-                            <i class="bi bi-chevron-right"></i>
-                        </span>
-                    </label>
-
-                    <div class="submenu-mobile">
-
-                        <label for="submenu-mujer" class="submenu-back">
-                            <i class="bi bi-chevron-left"></i>
-                            MUJER
+                <section class="mobile-submenu-panel mobile-submenu-panel--mujer" aria-label="Categorías de mujer">
+                    <div class="mobile-submenu-panel__header">
+                        <h3>Mujer</h3>
+                        <label class="mobile-submenu-close" for="submenu-panel-mujer" aria-label="Cerrar submenú mujer">
+                            <i class="bi bi-x-lg"></i>
                         </label>
-
-                        <ul class="submenu">
-                            <li class="submenu__item"><a class="submenu__link" href="mujer.html#blusas-mujer">Blusas</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="mujer.html#faldas-mujer">Falda</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="mujer.html#jeans-mujer">Jeans</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="mujer.html#vestidos-mujer">Vestidos</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="mujer.html#bikinis-mujer">Bikinis</a></li>
-                        </ul>
-
                     </div>
+                    <ul class="mobile-submenu-list">
+                        <li><a href="mujer.html#blusas-mujer">Blusas</a></li>
+                        <li><a href="mujer.html#faldas-mujer">Faldas</a></li>
+                        <li><a href="mujer.html#jeans-mujer">Jeans</a></li>
+                        <li><a href="mujer.html#vestidos-mujer">Vestidos</a></li>
+                        <li><a href="mujer.html#bikinis-mujer">Bikinis</a></li>
+                    </ul>
+                </section>
 
-                </li>
-
-                <li class="menu__item">
-
-                    <input type="checkbox" id="submenu-ninos" class="submenu-toggle">
-                    <label for="submenu-ninos" class="menu__link">
-                        NIÑOS
-                        <span>
-                            <i class="bi bi-emoji-smile"></i>
-                            <i class="bi bi-chevron-right"></i>
-                        </span>
-                    </label>
-
-                    <div class="submenu-mobile">
-
-                        <label for="submenu-ninos" class="submenu-back">
-                            <i class="bi bi-chevron-left"></i>
-                            NIÑOS
+                <section class="mobile-submenu-panel mobile-submenu-panel--ninos" aria-label="Categorías de niños">
+                    <div class="mobile-submenu-panel__header">
+                        <h3>Niños</h3>
+                        <label class="mobile-submenu-close" for="submenu-panel-ninos" aria-label="Cerrar submenú niños">
+                            <i class="bi bi-x-lg"></i>
                         </label>
-
-                        <ul class="submenu">
-                            <li class="submenu__item"><a class="submenu__link" href="ninos.html#polos-ninos">Polos</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="ninos.html#conjuntos-ninos">Conjuntos</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="ninos.html#shorts-ninos">Shorts</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="ninos.html#buzos-ninos">Buzos</a></li>
-                        </ul>
-
                     </div>
-                </li>
-
-                <li class="menu__item">
-                    <a class="menu__link" href="nosotros.html">NOSOTROS<i class="bi bi-people"></i></a>
-                </li>
-
-                <li class="menu__item">
-                    <a class="menu__link" href="contacto.html">CONTACTO<i class="bi bi-envelope"></i></a>
-                </li>
-            </ul>
+                    <ul class="mobile-submenu-list">
+                        <li><a href="ninos.html#polos-ninos">Polos</a></li>
+                        <li><a href="ninos.html#conjuntos-ninos">Conjuntos</a></li>
+                        <li><a href="ninos.html#shorts-ninos">Shorts</a></li>
+                        <li><a href="ninos.html#buzos-ninos">Buzos</a></li>
+                    </ul>
+                </section>
+            </div>
         </nav>
     </header>
 
     <main>
-
-    <section class="portada">
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="../imagenes/portada/portada-smartphone.png" class="d-block w-100" alt="Portada 1">
-                <div class="carousel-caption d-none d-md-block">
-                <h5>Nueva Colección 2026</h5>
-                <p>Descubre las últimas tendencias en moda y viste con estilo</p>
-                <a href="#novedades" class="btn btn-primary">Ver productos</a>
+        <section class="portada" aria-label="Promociones principales">
+            <div id="carouselPrincipal" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselPrincipal" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Colección 2026"></button>
+                    <button type="button" data-bs-target="#carouselPrincipal" data-bs-slide-to="1" aria-label="Ofertas exclusivas"></button>
+                    <button type="button" data-bs-target="#carouselPrincipal" data-bs-slide-to="2" aria-label="Estilo y comodidad"></button>
                 </div>
-            </div>
-            <div class="carousel-item">
-                <img src="../imagenes/portada/portada-smartphone-2.png" class="d-block w-100" alt="Portada 2">
-                <div class="carousel-caption d-none d-md-block">
-                <h5>Ofertas Exclusivas</h5>
-                <p>Aprovecha nuestras promociones por tiempo limitado</p>
-                <a href="#novedades" class="btn btn-primary">Ver productos</a>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="imagenes/portada/portada-smartphone.png" class="d-block w-100 img-fluid portada__img" alt="Modelo usando prendas de la nueva colección 2026">
+                        <div class="carousel-caption portada__caption">
+                            <span class="portada__etiqueta">Nueva temporada</span>
+                            <h1>Nueva Colección 2026</h1>
+                            <p>Moda urbana, cómoda y versátil para renovar tu estilo diario.</p>
+                            <a href="#novedades" class="btn btn-primary btn-lg">Ver productos</a>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="imagenes/portada/portada-smartphone-2.png" class="d-block w-100 img-fluid portada__img" alt="Prendas seleccionadas con descuentos especiales">
+                        <div class="carousel-caption portada__caption">
+                            <span class="portada__etiqueta">Promociones</span>
+                            <h2>Ofertas Exclusivas</h2>
+                            <p>Aprovecha descuentos por tiempo limitado en prendas seleccionadas.</p>
+                            <a href="#mas-vendido" class="btn btn-primary btn-lg">Comprar ahora</a>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="imagenes/portada/portada-smartphone-3.png" class="d-block w-100 img-fluid portada__img" alt="Outfit casual con prendas cómodas y modernas">
+                        <div class="carousel-caption portada__caption">
+                            <span class="portada__etiqueta">Estilo R&R</span>
+                            <h2>Estilo y Comodidad</h2>
+                            <p>Prendas para hombres, mujeres y niños con diseños actuales.</p>
+                            <a href="#categorias" class="btn btn-primary btn-lg">Explorar categorías</a>
+                        </div>
+                    </div>
                 </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselPrincipal" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselPrincipal" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
             </div>
-            <div class="carousel-item">
-                <img src="../imagenes/portada/portada-smartphone-3.png" class="d-block w-100" alt="Portada 3">
-                <div class="carousel-caption d-none d-md-block">
-                <h5>Estilo y Comodidad</h5>
-                <p>Ropa que combina moda y confort para todos los días</p>
-                <a href="#novedades" class="btn btn-primary">Ver productos</a>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Anterior</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Siguiente</span>
-        </button>
-    </div>
-    </section>  
-
-        <h2 class="productos__titulo-seccion">LO MÁS VENDIDO</h2>
-        <section class="productos productos--populares">
-
-            <article class="productos__item">
-                <h3 class="productos__titulo">Polo Oversize Urban Restricted</h3>
-                <figure>
-                    <img src="imagenes/Polo-Oversize-Urban-Restricted.png" alt="Polo Oversize Urban Restricted">
-                </figure>
-                <p class="productos__color">Color: Gris con negro</p>
-                <p class="productos__precio">S/60.00</p>
-            </article>
-
-            <article class="productos__item">
-                <h3 class="productos__titulo">Conjunto Dama Verano Cebra</h3>
-                <figure>
-                    <img src="imagenes/Conjunto-Dama-Verano-Cebra.png" alt="Conjunto Dama Verano Cebra">
-                </figure>
-                <p class="productos__color">Color: Verde con Blanco</p>
-                <p class="productos__precio">S/120.00</p>
-            </article>
-            
-            <article class="productos__item">
-                <h3 class="productos__titulo">Polo Drifit Jordan</h3>
-                <figure>
-                    <img src="imagenes/Polo-Drifit-Jordan-blanco-con-rayas-negras.png" alt="Polo Drifit Jordan blanco con rayas negras">
-                </figure>
-                <p class="productos__color">Color: Blanco con Negro</p>
-                <p class="productos__precio">s/70.00</p>
-            </article>
-
-            <article class="productos__item">
-                <h3 class="productos__titulo">Top Corset Dama Elegante</h3>
-                <figure>
-                    <img src="imagenes/Top-Corset-Dama-Elegante.png" alt="Top Corset Dama Elegante verde oscuro">
-                </figure>
-                <p class="productos__color">Color: Verde Oscuro</p>
-                <p class="productos__precio">S/70.00</p>
-            </article>
         </section>
 
-        <h2 class="productos__titulo-seccion">PRODUCTOS DESTACADOS</h2>
-        <section class="productos productos--destacados">
+        <section class="categorias-index py-5" id="categorias">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <span>Experiencia R&R</span>
+                    <h2>Compra con confianza</h2>
+                </div>
 
-            <article class="productos__item">
-                <h3 class="productos__titulo">Casaca Clásica de Cuero para Hombre</h3>
-                <figure>
-                    <img src="imagenes/Chaqueta-clásica-de-cuero-Hombre.png" alt="Casaca clásica de cuero Hombre negro">
-                </figure>
-                <p class="productos__color">Color: Negro</p>
-                <p class="productos__precio">S/120.00</p>
-            </article>
+                <div class="categorias-grid">
+                    <article class="categoria-card">
+                        <i class="bi bi-stars"></i>
+                        <h3>Prendas seleccionadas</h3>
+                        <p>Elegimos piezas modernas, cómodas y fáciles de combinar para distintos estilos.</p>
+                    </article>
 
-            <article class="productos__item">
-                <h3 class="productos__titulo">Vestido Elegante de Noche</h3>
-                <figure>
-                    <img src="imagenes/Vestido-Elegante-de-Noche.png" alt="Vestido Elegante de Noche color negro">
-                </figure>
-                <p class="productos__color">Color: Negro</p>
-                <p class="productos__precio">S/180.00</p>
-            </article>
+                    <article class="categoria-card">
+                        <i class="bi bi-chat-heart"></i>
+                        <h3>Atención cercana</h3>
+                        <p>Resolvemos dudas sobre tallas, colores y disponibilidad antes de cada pedido.</p>
+                    </article>
 
-            <article class="productos__item">
-                <h3 class="productos__titulo">Conjunto deportivo moderno para mujer</h3>
-                <figure>
-                    <img src="imagenes/Conjunto-deportivo-moderno-para-mujer.png" alt="Conjunto deportivo moderno para mujer color negro">
-                </figure>
-                <p class="productos__color">Color: Negro</p>
-                <p class="productos__precio">S/160.00</p>
-            </article>
-
-            <article class="productos__item">
-                <h3 class="productos__titulo">Camisa Casual Italiana</h3>
-                <figure>
-                    <img src="imagenes/Camisa-Casual-Italiana.png" alt="Camisa Casual Italiana color beige">
-                </figure>
-                <p class="productos__color">Color: Beige</p>
-                <p class="productos__precio">S/70.00</p>
-            </article>
+                    <article class="categoria-card">
+                        <i class="bi bi-bag-check"></i>
+                        <h3>Compra sencilla</h3>
+                        <p>Coordinamos pagos, entregas y consultas de forma rápida por nuestros canales.</p>
+                    </article>
+                </div>
+            </div>
         </section>
 
-        <h2 class="productos__titulo-seccion">NOVEDADES</h2>
-        <section id="novedades" class="productos productos--nuevos">
+        <section class="promo-responsiva py-5">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-12 col-lg-6 order-2 order-lg-1">
+                        <div class="promo-responsiva__contenido">
+                            <span>Estilo R&R</span>
+                            <h2>Looks modernos para cada día</h2>
+                            <p>Encuentra prendas actuales, cómodas y versátiles para renovar tu outfit sin complicarte.</p>
+                        </div>
+                    </div>
 
-            <article class="productos__item">
-                <h3 class="productos__titulo">Polo Oversize Estampado Urbano</h3>
-                <figure>
-                    <img src="imagenes/Polo-Oversize-Estampado-Urbano-color-beige-con-negro.png" alt="Polo Oversize Estampado Urbano color beige con negro">
-                </figure>
-                <p class="productos__color">Color: Beige con negro</p>
-                <p class="productos__precio">S/60.00</p>
-            </article>
+                    <div class="col-12 col-lg-6 order-1 order-lg-2">
+                        <img src="imagenes/portada/portada.png" class="img-fluid promo-responsiva__img" alt="Portada editorial de R&R Clothing Store">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <article class="productos__item">
-                <h3 class="productos__titulo">Vestido Floral Verano Corto</h3>
-                <figure>
-                    <img src="imagenes/Vestido-Floral-Verano-Corto-color-beige-rosa-naranja.png" alt="Vestido Floral Verano Corto color beige, rosa y naranja">
-                </figure>
-                <p class="productos__color">Color: Beige con Rosado y Naranja</p>
-                <p class="productos__precio">S/120.00</p>
-            </article>
+        <section class="seccion-productos py-5" id="mas-vendido">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <h2>Lo más vendido</h2>
+                </div>
 
-            <article class="productos__item">
-                <h3 class="productos__titulo">Pantalones Jeans Wide Leg Tiro Alto</h3>
-                <figure>
-                    <img src="imagenes/Jeans-Wide-Leg-Tiro-Alto-color-azul-denim.png" alt="Jeans Wide Leg Tiro Alto color azul denim">
-                </figure>
-                <p class="productos__color">Color: Azul Denim</p>
-                <p class="productos__precio">S/90.00</p>
-            </article>
+                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xxl-5 g-4 productos-bootstrap">
+                    <article class="col product-col"><div class="product-card"><img src="imagenes/polo-hombre/Polo-Oversize-Urban-Restricted.png" alt="Polo Oversize Urban Restricted" loading="lazy"><div class="product-info"><div class="product-name">Polo Oversize Urban Restricted</div><div class="color-title">Color:</div><div class="colors"><span class="color-circle" style="background:#6c757d;"></span><span class="color-circle" style="background:#111111;"></span></div><div class="price">S/60.00</div><div class="d-grid mt-3"><button class="btn btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#modalPoloRestricted">Ver más</button></div></div></div></article>
+                    <article class="col product-col"><div class="product-card"><img src="imagenes/conjunto-mujer/Conjunto-Dama-Verano-Cebra.png" alt="Conjunto Dama Verano Cebra" loading="lazy"><div class="product-info"><div class="product-name">Conjunto Dama Verano Cebra</div><div class="color-title">Color:</div><div class="colors"><span class="color-circle" style="background:#2ecc71;"></span><span class="color-circle" style="background:#ffffff;"></span></div><div class="price">S/120.00</div><div class="d-grid mt-3"><button class="btn btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#modalConjuntoCebra">Ver más</button></div></div></div></article>
+                    <article class="col product-col"><div class="product-card"><img src="imagenes/polo-hombre/Polo-Drifit-Jordan-blanco-con-rayas-negras.png" alt="Polo Drifit Jordan blanco con rayas negras" loading="lazy"><div class="product-info"><div class="product-name">Polo Drifit Jordan</div><div class="color-title">Color:</div><div class="colors"><span class="color-circle" style="background:#ffffff;"></span><span class="color-circle" style="background:#111111;"></span></div><div class="price">S/70.00</div><div class="d-grid mt-3"><button class="btn btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#modalPoloDrifit">Ver más</button></div></div></div></article>
+                    <article class="col product-col"><div class="product-card"><img src="imagenes/blusa-mujer/Top-Corset-Dama-Elegante.png" alt="Top Corset Dama Elegante verde oscuro" loading="lazy"><div class="product-info"><div class="product-name">Top Corset Dama Elegante</div><div class="color-title">Color:</div><div class="colors"><span class="color-circle" style="background:#0b3d2e;"></span></div><div class="price">S/70.00</div><div class="d-grid mt-3"><button class="btn btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#modalTopCorset">Ver más</button></div></div></div></article>
+                    <article class="col product-col"><div class="product-card"><img src="imagenes/camisas-hombre/Camisa-Casual-Italiana.png" alt="Camisa Casual Italiana color beige" loading="lazy"><div class="product-info"><div class="product-name">Camisa Casual Italiana</div><div class="color-title">Color:</div><div class="colors"><span class="color-circle" style="background:#d8c3a5;"></span></div><div class="price">S/70.00</div><div class="d-grid mt-3"><button class="btn btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#modalCamisaItaliana">Ver más</button></div></div></div></article>
+                    <article class="col product-col"><div class="product-card"><img src="imagenes/vestido-mujer/Vestido-Elegante-de-Noche.png" alt="Vestido Elegante de Noche color negro" loading="lazy"><div class="product-info"><div class="product-name">Vestido Elegante de Noche</div><div class="color-title">Color:</div><div class="colors"><span class="color-circle" style="background:#111111;"></span></div><div class="price">S/180.00</div><div class="d-grid mt-3"><button class="btn btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#modalVestidoNoche">Ver más</button></div></div></div></article>
+                    <article class="col product-col"><div class="product-card"><img src="imagenes/falda-mujer/Jeans-Wide-Leg-Tiro-Alto-color-azul-denim.png" alt="Jeans Wide Leg Tiro Alto color azul denim" loading="lazy"><div class="product-info"><div class="product-name">Jeans Wide Leg Tiro Alto</div><div class="color-title">Color:</div><div class="colors"><span class="color-circle" style="background:#315f9c;"></span></div><div class="price">S/90.00</div><div class="d-grid mt-3"><button class="btn btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#modalJeansWide">Ver más</button></div></div></div></article>
+                    <article class="col product-col"><div class="product-card"><img src="imagenes/polo-hombre/Polera-hombre-yansus-color-beige.png" alt="Polera sudadera hoodie color arena" loading="lazy"><div class="product-info"><div class="product-name">Polera Sudadera Hoodie</div><div class="color-title">Color:</div><div class="colors"><span class="color-circle" style="background:#d6b98c;"></span></div><div class="price">S/90.00</div><div class="d-grid mt-3"><button class="btn btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#modalPoleraHoodie">Ver más</button></div></div></div></article>
+                </div>
+            </div>
+        </section>
 
-            <article class="productos__item">
-                <h3 class="productos__titulo">Polera Sudadera Hoodie</h3>
-                <figure>
-                    <img src="imagenes/Polera-hombre-yansus-color-beige.png" alt="Polera hombre yansus color beige">
-                </figure>
-                <p class="productos__color">Color: Arena</p>
-                <p class="productos__precio">S/90.00</p>
-            </article>            
+        <section class="seccion-productos seccion-productos--clara py-5">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <h2>Productos destacados</h2>
+                </div>
+
+                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xxl-5 g-4 productos-bootstrap">
+                    <article class="col product-col"><div class="product-card"><img src="imagenes/casaca-hombre/Chaqueta-clásica-de-cuero-Hombre.png" alt="Casaca clásica de cuero para hombre color negro" loading="lazy"><div class="product-info"><div class="product-name">Casaca Clásica de Cuero</div><div class="color-title">Color:</div><div class="colors"><span class="color-circle" style="background:#111111;"></span></div><div class="price">S/120.00</div><div class="d-grid mt-3"><button class="btn btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#modalCasacaCuero">Ver más</button></div></div></div></article>
+                    <article class="col product-col"><div class="product-card"><img src="imagenes/vestido-mujer/Vestido-Elegante-de-Noche.png" alt="Vestido Elegante de Noche color negro" loading="lazy"><div class="product-info"><div class="product-name">Vestido Elegante de Noche</div><div class="color-title">Color:</div><div class="colors"><span class="color-circle" style="background:#111111;"></span></div><div class="price">S/180.00</div><div class="d-grid mt-3"><button class="btn btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#modalVestidoNoche">Ver más</button></div></div></div></article>
+                    <article class="col product-col"><div class="product-card"><img src="imagenes/conjunto-mujer/Conjunto-deportivo-moderno-para-mujer.png" alt="Conjunto deportivo moderno para mujer color negro" loading="lazy"><div class="product-info"><div class="product-name">Conjunto Deportivo Moderno</div><div class="color-title">Color:</div><div class="colors"><span class="color-circle" style="background:#111111;"></span></div><div class="price">S/160.00</div><div class="d-grid mt-3"><button class="btn btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#modalConjuntoDeportivo">Ver más</button></div></div></div></article>
+                    <article class="col product-col"><div class="product-card"><img src="imagenes/camisas-hombre/Camisa-Casual-Italiana.png" alt="Camisa Casual Italiana color beige" loading="lazy"><div class="product-info"><div class="product-name">Camisa Casual Italiana</div><div class="color-title">Color:</div><div class="colors"><span class="color-circle" style="background:#d8c3a5;"></span></div><div class="price">S/70.00</div><div class="d-grid mt-3"><button class="btn btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#modalCamisaItaliana">Ver más</button></div></div></div></article>
+                    <article class="col product-col"><div class="product-card"><img src="imagenes/polo-hombre/Polo-Oversize-Estampado-Urbano-color-beige-con-negro.png" alt="Polo Oversize Estampado Urbano color beige con negro" loading="lazy"><div class="product-info"><div class="product-name">Polo Oversize Estampado Urbano</div><div class="color-title">Color:</div><div class="colors"><span class="color-circle" style="background:#d6b98c;"></span><span class="color-circle" style="background:#111111;"></span></div><div class="price">S/60.00</div><div class="d-grid mt-3"><button class="btn btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#modalPoloEstampado">Ver más</button></div></div></div></article>
+                    <article class="col product-col"><div class="product-card"><img src="imagenes/blusa-mujer/Top-Corset-Dama-Elegante.png" alt="Top Corset Dama Elegante verde oscuro" loading="lazy"><div class="product-info"><div class="product-name">Top Corset Dama Elegante</div><div class="color-title">Color:</div><div class="colors"><span class="color-circle" style="background:#0b3d2e;"></span></div><div class="price">S/70.00</div><div class="d-grid mt-3"><button class="btn btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#modalTopCorset">Ver más</button></div></div></div></article>
+                    <article class="col product-col"><div class="product-card"><img src="imagenes/vestido-mujer/Vestido-Floral-Verano-Corto-color-beige-rosa-naranja.png" alt="Vestido Floral Verano Corto color beige, rosa y naranja" loading="lazy"><div class="product-info"><div class="product-name">Vestido Floral Verano Corto</div><div class="color-title">Color:</div><div class="colors"><span class="color-circle" style="background:#d8c3a5;"></span><span class="color-circle" style="background:#f4a6b8;"></span><span class="color-circle" style="background:#f28c28;"></span></div><div class="price">S/120.00</div><div class="d-grid mt-3"><button class="btn btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#modalVestidoFloral">Ver más</button></div></div></div></article>
+                    <article class="col product-col"><div class="product-card"><img src="imagenes/polo-hombre/Polo-Drifit-Jordan-blanco-con-rayas-negras.png" alt="Polo Drifit Jordan blanco con rayas negras" loading="lazy"><div class="product-info"><div class="product-name">Polo Drifit Jordan</div><div class="color-title">Color:</div><div class="colors"><span class="color-circle" style="background:#ffffff;"></span><span class="color-circle" style="background:#111111;"></span></div><div class="price">S/70.00</div><div class="d-grid mt-3"><button class="btn btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#modalPoloDrifit">Ver más</button></div></div></div></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion-productos py-5" id="novedades">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <h2>Novedades</h2>
+                </div>
+
+                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xxl-5 g-4 productos-bootstrap">
+                    <article class="col product-col"><div class="product-card"><img src="imagenes/polo-hombre/Polo-Oversize-Estampado-Urbano-color-beige-con-negro.png" alt="Polo Oversize Estampado Urbano color beige con negro" loading="lazy"><div class="product-info"><div class="product-name">Polo Oversize Estampado Urbano</div><div class="color-title">Color:</div><div class="colors"><span class="color-circle" style="background:#d6b98c;"></span><span class="color-circle" style="background:#111111;"></span></div><div class="price">S/60.00</div><div class="d-grid mt-3"><button class="btn btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#modalPoloEstampado">Ver más</button></div></div></div></article>
+                    <article class="col product-col"><div class="product-card"><img src="imagenes/vestido-mujer/Vestido-Floral-Verano-Corto-color-beige-rosa-naranja.png" alt="Vestido Floral Verano Corto color beige, rosa y naranja" loading="lazy"><div class="product-info"><div class="product-name">Vestido Floral Verano Corto</div><div class="color-title">Color:</div><div class="colors"><span class="color-circle" style="background:#d8c3a5;"></span><span class="color-circle" style="background:#f4a6b8;"></span><span class="color-circle" style="background:#f28c28;"></span></div><div class="price">S/120.00</div><div class="d-grid mt-3"><button class="btn btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#modalVestidoFloral">Ver más</button></div></div></div></article>
+                    <article class="col product-col"><div class="product-card"><img src="imagenes/falda-mujer/Jeans-Wide-Leg-Tiro-Alto-color-azul-denim.png" alt="Jeans Wide Leg Tiro Alto color azul denim" loading="lazy"><div class="product-info"><div class="product-name">Jeans Wide Leg Tiro Alto</div><div class="color-title">Color:</div><div class="colors"><span class="color-circle" style="background:#315f9c;"></span></div><div class="price">S/90.00</div><div class="d-grid mt-3"><button class="btn btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#modalJeansWide">Ver más</button></div></div></div></article>
+                    <article class="col product-col"><div class="product-card"><img src="imagenes/polo-hombre/Polera-hombre-yansus-color-beige.png" alt="Polera sudadera hoodie color arena" loading="lazy"><div class="product-info"><div class="product-name">Polera Sudadera Hoodie</div><div class="color-title">Color:</div><div class="colors"><span class="color-circle" style="background:#d6b98c;"></span></div><div class="price">S/90.00</div><div class="d-grid mt-3"><button class="btn btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#modalPoleraHoodie">Ver más</button></div></div></div></article>
+                    <article class="col product-col"><div class="product-card"><img src="imagenes/conjunto-mujer/Conjunto-Dama-Verano-Cebra.png" alt="Conjunto Dama Verano Cebra" loading="lazy"><div class="product-info"><div class="product-name">Conjunto Dama Verano Cebra</div><div class="color-title">Color:</div><div class="colors"><span class="color-circle" style="background:#2ecc71;"></span><span class="color-circle" style="background:#ffffff;"></span></div><div class="price">S/120.00</div><div class="d-grid mt-3"><button class="btn btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#modalConjuntoCebra">Ver más</button></div></div></div></article>
+                    <article class="col product-col"><div class="product-card"><img src="imagenes/casaca-hombre/Chaqueta-clásica-de-cuero-Hombre.png" alt="Casaca clásica de cuero para hombre color negro" loading="lazy"><div class="product-info"><div class="product-name">Casaca Clásica de Cuero</div><div class="color-title">Color:</div><div class="colors"><span class="color-circle" style="background:#111111;"></span></div><div class="price">S/120.00</div><div class="d-grid mt-3"><button class="btn btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#modalCasacaCuero">Ver más</button></div></div></div></article>
+                    <article class="col product-col"><div class="product-card"><img src="imagenes/conjunto-mujer/Conjunto-deportivo-moderno-para-mujer.png" alt="Conjunto deportivo moderno para mujer color negro" loading="lazy"><div class="product-info"><div class="product-name">Conjunto Deportivo Moderno</div><div class="color-title">Color:</div><div class="colors"><span class="color-circle" style="background:#111111;"></span></div><div class="price">S/160.00</div><div class="d-grid mt-3"><button class="btn btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#modalConjuntoDeportivo">Ver más</button></div></div></div></article>
+                    <article class="col product-col"><div class="product-card"><img src="imagenes/camisas-hombre/Camisa-Casual-Italiana.png" alt="Camisa Casual Italiana color beige" loading="lazy"><div class="product-info"><div class="product-name">Camisa Casual Italiana</div><div class="color-title">Color:</div><div class="colors"><span class="color-circle" style="background:#d8c3a5;"></span></div><div class="price">S/70.00</div><div class="d-grid mt-3"><button class="btn btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#modalCamisaItaliana">Ver más</button></div></div></div></article>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <section>
-            <h3 class="datos-tienda">Tienda</h3>
-            <address>
-                <p>Jr. Lima Pst 8 parada municipal</p>
-                <p>Bagua, Amazonas, Perú, 15004</p>
-                <p>clothingstore.rr@gmail.com</p>
-                <p>+51 916 408 971</p>
-            </address>
-        </section>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-4">
+                <section class="col-12 col-md-6 col-lg-3">
+                    <h3>Tienda</h3>
+                    <address>
+                        <p>Jr. Lima Pst 8 parada municipal</p>
+                        <p>Bagua, Amazonas, Perú, 15004</p>
+                        <p><a href="mailto:clothingstore.rr@gmail.com">clothingstore.rr@gmail.com</a></p>
+                        <p><a href="tel:+51916408971">+51 916 408 971</a></p>
+                    </address>
+                </section>
 
-        <section class="atencion-cliente">
-            <h3>ATENCIÓN AL CLIENTE</h3>
-            <p>Formas de Pago</p>
-            <p>Métodos de Envío</p>
-            <p>Cambios y Devoluciones</p>
-            <p>Guía de Tallas</p>
-            <p>Preguntas Frecuentes</p>
-        </section>
+                <section class="col-12 col-md-6 col-lg-3">
+                    <h3>Atención al cliente</h3>
+                    <ul class="footer-list">
+                        <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalPagos">Formas de pago</button></li>
+                        <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalEnvios">Métodos de envío</button></li>
+                        <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalCambios">Cambios y devoluciones</button></li>
+                        <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalPreguntas">Preguntas frecuentes</button></li>
+                    </ul>
+                </section>
 
-        <section class="terminos">
-            <h3>TÉRMINOS Y CONDICIONES</h3>
-            <p>Términos y Condiciones</p>
-            <p>Tratamiento de Datos</p>
-            <p>Política de Cookies</p>
-            <p class="libro-reclamaciones">Libro de Reclamaciones</p>
-            <figure>
-                <img class="libro-reclamaciones-img" src="imagenes/libro-de-reclamaciones.jpg" alt="Libro de Reclamaciones">
-            </figure>
-        </section>
+                <section class="col-12 col-md-6 col-lg-3">
+                    <h3>Términos y condiciones</h3>
+                    <ul class="footer-list">
+                        <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalTerminos">Términos y condiciones</button></li>
+                        <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalDatos">Tratamiento de datos</button></li>
+                        <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalCookies">Política de cookies</button></li>
+                        <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalReclamaciones">Libro de reclamaciones</button></li>
+                    </ul>
+                    <img class="libro-reclamaciones-img img-fluid" src="imagenes/libro-de-reclamaciones.jpg" alt="Libro de Reclamaciones">
+                </section>
 
-        <section class="formulario-suscripcion">
-            <h3>NEWSLETTER</h3>
-            <p>Regístrate para mantenerte al tanto de nuestros lanzamientos, descuentos y más.</p>
+                <section class="col-12 col-md-6 col-lg-3">
+                    <h3>Newsletter</h3>
+                    <p>Regístrate para conocer lanzamientos, descuentos y novedades.</p>
 
-            <form class="newsletter-form">
-                <input type="email" placeholder="Correo Electrónico" required>
-                <button type="submit">SUSCRIBIRSE</button>
-            </form>
-        </section>
-
-        <div class="redes">
-            <p>¡Síguenos en nuestras <strong>REDES SOCIALES!</strong></p>
-
-            <div class="redes__link">
-                <a href="https://web.facebook.com/RyRClothingstore/about">Facebook</a>
-                <a href="#">Tiktok</a>
-                <a href="#">Instagram</a>
+                    <form class="newsletter-form">
+                        <label class="visually-hidden" for="correo-newsletter">Correo electrónico</label>
+                        <input id="correo-newsletter" class="form-control" type="email" placeholder="Correo electrónico" required>
+                        <button class="btn btn-primary w-100" type="submit">Suscribirse</button>
+                    </form>
+                </section>
             </div>
-        </div>
 
-        <div class="copyright">
-            <p>&copy; 2026 R&R Clothing Store - Todos los derechos reservados.</p>
+            <div class="footer-bottom">
+                <div class="redes">
+                    <p>Síguenos en nuestras <strong>redes sociales</strong></p>
+                    <div class="redes__link">
+                        <a href="https://web.facebook.com/RyRClothingstore/about">Facebook</a>
+                        <span>TikTok</span>
+                        <span>Instagram</span>
+                    </div>
+                </div>
+
+                <p class="copyright">&copy; 2026 R&R Clothing Store - Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="modal fade product-modal" id="modalPoloRestricted" tabindex="-1" aria-labelledby="modalPoloRestrictedLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalPoloRestrictedLabel">Polo Oversize Urban Restricted</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carouselPoloRestricted" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="imagenes/polo-hombre/Polo-Oversize-Urban-Restricted.png" class="d-block w-100 product-modal-img" alt="Polo Oversize Urban Restricted">
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="mt-3">Polo Oversize Urban Restricted</h3>
+                    <p><strong>Material:</strong> Algodón suave de uso diario.</p>
+                    <p><strong>Tallas:</strong> S, M, L y XL.</p>
+                    <p><strong>Características:</strong> Corte oversize, estilo urbano y acabado cómodo.</p>
+                    <h4>S/ 60.00</h4>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Polo%20Oversize%20Urban%20Restricted" class="btn btn-success w-100" target="_blank">Consultar por WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade product-modal" id="modalConjuntoCebra" tabindex="-1" aria-labelledby="modalConjuntoCebraLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalConjuntoCebraLabel">Conjunto Dama Verano Cebra</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carouselConjuntoCebra" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="imagenes/conjunto-mujer/Conjunto-Dama-Verano-Cebra.png" class="d-block w-100 product-modal-img" alt="Conjunto Dama Verano Cebra">
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="mt-3">Conjunto Dama Verano Cebra</h3>
+                    <p><strong>Material:</strong> Tela fresca para temporada cálida.</p>
+                    <p><strong>Tallas:</strong> S, M y L.</p>
+                    <p><strong>Características:</strong> Diseño llamativo, ligero y fácil de combinar.</p>
+                    <h4>S/ 120.00</h4>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Conjunto%20Dama%20Verano%20Cebra" class="btn btn-success w-100" target="_blank">Consultar por WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade product-modal" id="modalPoloDrifit" tabindex="-1" aria-labelledby="modalPoloDrifitLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalPoloDrifitLabel">Polo Drifit Jordan</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carouselPoloDrifit" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="imagenes/polo-hombre/Polo-Drifit-Jordan-blanco-con-rayas-negras.png" class="d-block w-100 product-modal-img" alt="Polo Drifit Jordan">
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="mt-3">Polo Drifit Jordan</h3>
+                    <p><strong>Material:</strong> Tela drifit ligera.</p>
+                    <p><strong>Tallas:</strong> S, M, L y XL.</p>
+                    <p><strong>Características:</strong> Secado rápido, diseño deportivo y ajuste cómodo.</p>
+                    <h4>S/ 70.00</h4>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Polo%20Drifit%20Jordan" class="btn btn-success w-100" target="_blank">Consultar por WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade product-modal" id="modalTopCorset" tabindex="-1" aria-labelledby="modalTopCorsetLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalTopCorsetLabel">Top Corset Dama Elegante</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carouselTopCorset" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="imagenes/blusa-mujer/Top-Corset-Dama-Elegante.png" class="d-block w-100 product-modal-img" alt="Top Corset Dama Elegante">
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="mt-3">Top Corset Dama Elegante</h3>
+                    <p><strong>Material:</strong> Tela suave con buena estructura.</p>
+                    <p><strong>Tallas:</strong> S, M y L.</p>
+                    <p><strong>Características:</strong> Diseño elegante para combinar con jeans o falda.</p>
+                    <h4>S/ 70.00</h4>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Top%20Corset%20Dama%20Elegante" class="btn btn-success w-100" target="_blank">Consultar por WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade product-modal" id="modalCamisaItaliana" tabindex="-1" aria-labelledby="modalCamisaItalianaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalCamisaItalianaLabel">Camisa Casual Italiana</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carouselCamisaItaliana" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="imagenes/camisas-hombre/Camisa-Casual-Italiana.png" class="d-block w-100 product-modal-img" alt="Camisa Casual Italiana">
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="mt-3">Camisa Casual Italiana</h3>
+                    <p><strong>Material:</strong> Tela cómoda para uso casual.</p>
+                    <p><strong>Tallas:</strong> S, M, L y XL.</p>
+                    <p><strong>Características:</strong> Color neutro, manga corta y estilo versátil.</p>
+                    <h4>S/ 70.00</h4>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20de%20la%20Camisa%20Casual%20Italiana" class="btn btn-success w-100" target="_blank">Consultar por WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade product-modal" id="modalVestidoNoche" tabindex="-1" aria-labelledby="modalVestidoNocheLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalVestidoNocheLabel">Vestido Elegante de Noche</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carouselVestidoNoche" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="imagenes/vestido-mujer/Vestido-Elegante-de-Noche.png" class="d-block w-100 product-modal-img" alt="Vestido Elegante de Noche">
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="mt-3">Vestido Elegante de Noche</h3>
+                    <p><strong>Material:</strong> Tela elegante con caída suave.</p>
+                    <p><strong>Tallas:</strong> S, M y L.</p>
+                    <p><strong>Características:</strong> Ideal para reuniones, cenas y ocasiones especiales.</p>
+                    <h4>S/ 180.00</h4>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Vestido%20Elegante%20de%20Noche" class="btn btn-success w-100" target="_blank">Consultar por WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade product-modal" id="modalJeansWide" tabindex="-1" aria-labelledby="modalJeansWideLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalJeansWideLabel">Jeans Wide Leg Tiro Alto</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carouselJeansWide" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="imagenes/falda-mujer/Jeans-Wide-Leg-Tiro-Alto-color-azul-denim.png" class="d-block w-100 product-modal-img" alt="Jeans Wide Leg Tiro Alto">
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="mt-3">Jeans Wide Leg Tiro Alto</h3>
+                    <p><strong>Material:</strong> Denim resistente y cómodo.</p>
+                    <p><strong>Tallas:</strong> 28, 30, 32 y 34.</p>
+                    <p><strong>Características:</strong> Tiro alto, pierna amplia y color azul denim.</p>
+                    <h4>S/ 90.00</h4>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Jeans%20Wide%20Leg%20Tiro%20Alto" class="btn btn-success w-100" target="_blank">Consultar por WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade product-modal" id="modalPoleraHoodie" tabindex="-1" aria-labelledby="modalPoleraHoodieLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalPoleraHoodieLabel">Polera Sudadera Hoodie</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carouselPoleraHoodie" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="imagenes/polo-hombre/Polera-hombre-yansus-color-beige.png" class="d-block w-100 product-modal-img" alt="Polera Sudadera Hoodie">
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="mt-3">Polera Sudadera Hoodie</h3>
+                    <p><strong>Material:</strong> Franela suave y abrigadora.</p>
+                    <p><strong>Tallas:</strong> S, M, L y XL.</p>
+                    <p><strong>Características:</strong> Capucha, color arena y estilo casual.</p>
+                    <h4>S/ 90.00</h4>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20de%20la%20Polera%20Sudadera%20Hoodie" class="btn btn-success w-100" target="_blank">Consultar por WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade product-modal" id="modalCasacaCuero" tabindex="-1" aria-labelledby="modalCasacaCueroLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalCasacaCueroLabel">Casaca Clásica de Cuero</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carouselCasacaCuero" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="imagenes/casaca-hombre/Chaqueta-clásica-de-cuero-Hombre.png" class="d-block w-100 product-modal-img" alt="Casaca Clásica de Cuero">
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="mt-3">Casaca Clásica de Cuero</h3>
+                    <p><strong>Material:</strong> Cuero sintético con acabado liso.</p>
+                    <p><strong>Tallas:</strong> M, L y XL.</p>
+                    <p><strong>Características:</strong> Color negro, estilo clásico y fácil de combinar.</p>
+                    <h4>S/ 120.00</h4>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20de%20la%20Casaca%20Clásica%20de%20Cuero" class="btn btn-success w-100" target="_blank">Consultar por WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade product-modal" id="modalConjuntoDeportivo" tabindex="-1" aria-labelledby="modalConjuntoDeportivoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalConjuntoDeportivoLabel">Conjunto Deportivo Moderno</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carouselConjuntoDeportivo" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="imagenes/conjunto-mujer/Conjunto-deportivo-moderno-para-mujer.png" class="d-block w-100 product-modal-img" alt="Conjunto Deportivo Moderno">
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="mt-3">Conjunto Deportivo Moderno</h3>
+                    <p><strong>Material:</strong> Tela flexible y cómoda.</p>
+                    <p><strong>Tallas:</strong> S, M y L.</p>
+                    <p><strong>Características:</strong> Diseño moderno para uso casual o deportivo.</p>
+                    <h4>S/ 160.00</h4>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Conjunto%20Deportivo%20Moderno" class="btn btn-success w-100" target="_blank">Consultar por WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade product-modal" id="modalPoloEstampado" tabindex="-1" aria-labelledby="modalPoloEstampadoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalPoloEstampadoLabel">Polo Oversize Estampado Urbano</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carouselPoloEstampado" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="imagenes/polo-hombre/Polo-Oversize-Estampado-Urbano-color-beige-con-negro.png" class="d-block w-100 product-modal-img" alt="Polo Oversize Estampado Urbano">
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="mt-3">Polo Oversize Estampado Urbano</h3>
+                    <p><strong>Material:</strong> Algodón suave para uso diario.</p>
+                    <p><strong>Tallas:</strong> S, M, L y XL.</p>
+                    <p><strong>Características:</strong> Estampado urbano, corte amplio y colores neutros.</p>
+                    <h4>S/ 60.00</h4>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Polo%20Oversize%20Estampado%20Urbano" class="btn btn-success w-100" target="_blank">Consultar por WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade product-modal" id="modalVestidoFloral" tabindex="-1" aria-labelledby="modalVestidoFloralLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalVestidoFloralLabel">Vestido Floral Verano Corto</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carouselVestidoFloral" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="imagenes/vestido-mujer/Vestido-Floral-Verano-Corto-color-beige-rosa-naranja.png" class="d-block w-100 product-modal-img" alt="Vestido Floral Verano Corto">
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="mt-3">Vestido Floral Verano Corto</h3>
+                    <p><strong>Material:</strong> Tela ligera y fresca.</p>
+                    <p><strong>Tallas:</strong> S, M y L.</p>
+                    <p><strong>Características:</strong> Diseño floral, colores de temporada y corte corto.</p>
+                    <h4>S/ 120.00</h4>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Vestido%20Floral%20Verano%20Corto" class="btn btn-success w-100" target="_blank">Consultar por WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalPagos" tabindex="-1" aria-labelledby="modalPagosLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm modal-responsive">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalPagosLabel">Formas de pago</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Aceptamos pagos por Yape, transferencia bancaria y efectivo al momento de la compra.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalEnvios" tabindex="-1" aria-labelledby="modalEnviosLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm modal-responsive">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalEnviosLabel">Métodos de envío</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Realizamos entregas locales en Bagua y coordinamos envíos a otras zonas según disponibilidad.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalCambios" tabindex="-1" aria-labelledby="modalCambiosLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm modal-responsive">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalCambiosLabel">Cambios y devoluciones</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Los cambios se coordinan dentro de las primeras 48 horas, siempre que la prenda esté en buen estado.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalPreguntas" tabindex="-1" aria-labelledby="modalPreguntasLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm modal-responsive">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalPreguntasLabel">Preguntas frecuentes</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Puedes consultar disponibilidad, tallas y precios por nuestros canales de contacto antes de comprar.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalTerminos" tabindex="-1" aria-labelledby="modalTerminosLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm modal-responsive">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalTerminosLabel">Términos y condiciones</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>La compra confirma la aceptación de precios, disponibilidad y condiciones informadas por la tienda.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalDatos" tabindex="-1" aria-labelledby="modalDatosLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm modal-responsive">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalDatosLabel">Tratamiento de datos</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Los datos de contacto se usan únicamente para atender consultas, coordinar pedidos y confirmar entregas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalCookies" tabindex="-1" aria-labelledby="modalCookiesLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm modal-responsive">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalCookiesLabel">Política de cookies</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Este sitio puede usar cookies básicas del navegador para mejorar la navegación del usuario.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalReclamaciones" tabindex="-1" aria-labelledby="modalReclamacionesLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm modal-responsive">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalReclamacionesLabel">Libro de reclamaciones</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Para registrar una consulta o reclamo, comunícate con la tienda por correo o teléfono.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+
