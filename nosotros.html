@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>R&R | Tienda de Ropa</title>
-    <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -34,7 +38,7 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">
+                            <a class="nav-link" href="index.html">
                                 Inicio <i class="bi bi-house-door ms-1"></i>
                             </a>
                         </li>
@@ -99,7 +103,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="nosotros.html">Nosotros <i class="bi bi-people ms-1"></i></a>
+                            <a class="nav-link active" aria-current="page" href="nosotros.html">Nosotros <i class="bi bi-people ms-1"></i></a>
                         </li>
 
                         <li class="nav-item">
@@ -310,5 +314,118 @@
             </div>
         </div>
     </footer>
+    <div class="modal fade" id="modalPagos" tabindex="-1" aria-labelledby="modalPagosLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm modal-responsive">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalPagosLabel">Formas de pago</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Aceptamos pagos por Yape, transferencia bancaria y efectivo al momento de la compra.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalEnvios" tabindex="-1" aria-labelledby="modalEnviosLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm modal-responsive">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalEnviosLabel">Métodos de envío</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Realizamos entregas locales en Bagua y coordinamos envíos a otras zonas según disponibilidad.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalCambios" tabindex="-1" aria-labelledby="modalCambiosLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm modal-responsive">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalCambiosLabel">Cambios y devoluciones</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Los cambios se coordinan dentro de las primeras 48 horas, siempre que la prenda esté en buen estado.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalPreguntas" tabindex="-1" aria-labelledby="modalPreguntasLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm modal-responsive">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalPreguntasLabel">Preguntas frecuentes</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Puedes consultar disponibilidad, tallas y precios por nuestros canales de contacto antes de comprar.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalTerminos" tabindex="-1" aria-labelledby="modalTerminosLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm modal-responsive">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalTerminosLabel">Términos y condiciones</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>La compra confirma la aceptación de precios, disponibilidad y condiciones informadas por la tienda.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalDatos" tabindex="-1" aria-labelledby="modalDatosLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm modal-responsive">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalDatosLabel">Tratamiento de datos</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Los datos de contacto se usan únicamente para atender consultas, coordinar pedidos y confirmar entregas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalCookies" tabindex="-1" aria-labelledby="modalCookiesLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm modal-responsive">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalCookiesLabel">Política de cookies</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Este sitio puede usar cookies básicas del navegador para mejorar la navegación del usuario.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalReclamaciones" tabindex="-1" aria-labelledby="modalReclamacionesLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm modal-responsive">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalReclamacionesLabel">Libro de reclamaciones</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Para registrar una consulta o reclamo, comunícate con la tienda por correo o teléfono.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
