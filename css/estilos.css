@@ -471,221 +471,62 @@ footer {
     }
 }
 
-/* NOSOTROS  */
+/*CSS NOSOTROS Y CONTACTO */
 
-.nosotros {
-    width: calc(100% - 30px);
-    margin: 20px auto;
-    padding: 0 0 50px;
-    background: #ffffff;
-    color: #1b1b1b;
-    border-radius: 18px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-
-    &::before {
-        display: none;
-    }
-
-    h1 {
-        margin: 0 0 35px;
-        padding: 40px 20px;
-        text-align: center;
-        font-family: Georgia, serif;
-        font-size: 2.2rem;
-        color: var(--color-texto-oscuro);
-        background: var(--color-fondo);
-    }
-
-    > p {
-        max-width: 100%;
-        margin: 0;
-        padding: 0 22px;
-        font-size: 1rem;
-        line-height: 1.8;
-        color: #333;
-
-        strong {
-            color: #b87545;
-        }
-    }
-
-    .bloques {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 0 18px;
-        margin-top: 45px;
-
-        .bloque {
-            background: #fbf9f8;
-            padding: 35px 22px;
-            border-radius: 16px;
-            text-align: center;
-            box-shadow: 0 12px 28px rgba(16, 32, 42, 0.09);
-            border-top: 4px solid #b87545;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-            &:hover {
-                transform: translateY(-6px);
-                box-shadow: 0 18px 38px rgba(16, 32, 42, 0.15);
-            }
-
-            h2 {
-                font-family: Georgia, serif;
-                font-size: 1.6rem;
-                color: #10202a;
-                margin-bottom: 16px;
-            }
-
-            p {
-                font-size: 1rem;
-                line-height: 1.7;
-                color: var(--color-texto-oscuro);
-                max-width: 100%;
-                margin: 0 auto;
-            }
-        }
-    }
-
-    > h2 {
-        display: block;
-        margin: 50px 0 20px;
-        text-align: center;
-        font-family: Georgia, serif;
-        font-size: 1.8rem;
-        color: var(--color-header-footer);
-        padding: 0 15px;
-
-        i{
-            display: block;
-            font-size: 2.7rem;
-            color: var(--color-fondo);
-            margin-bottom: 14px;
-        }
-    }
-
-    > ul {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 16px;
-        padding: 0 18px;
-        margin: 0;
-        list-style: none;
-
-        li {
-            background: var(--color-texto-claro);
-            padding: 22px 18px;
-            border-radius: 14px;
-            text-align: center;
-            color: #333;
-            box-shadow: 0 10px 25px rgba(16, 32, 42, 0.08);
-            border-top: 3px solid #b87545;
-
-            i{
-                display: block;
-                color: var(--color-fondo);
-                font-size: 1.6rem;
-                margin-bottom: 10px;
-            }
-        }
-    }
+/* Tarjetas principales de Contacto y Nosotros */
+main .card {
+    color: var(--color-texto-oscuro);
 }
 
-
-/* CONTACTO - Smartphone */
-
-.contacto {
-    width: 92%;
-    margin: 25px auto;
-    padding: 20px;
-    background-color: var(--color-texto-claro);
-    border-radius: 12px;
-    line-height: 1.6;
-
-    h1 {
-        text-align: center;
-        margin-bottom: 20px;
-        font-size: 2rem;
-        color: var(--color-header-footer);
-    }
-
-    h2 {
-        margin-top: 20px;
-        font-size: 1.4rem;
-        color: var(--color-texto-oscuro);
-    }
-
-    .contacto__info {
-        margin: 20px 0;
-        padding: 15px;
-        background-color: var(--color-texto-claro);
-        border-radius: 10px;
-    }
-
-    .contacto__botones {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        margin: 20px 0;
-
-        .boton-whatsapp,
-        .boton-facebook {
-            width: 100%;
-            padding: 12px;
-            color: var(--color-texto-claro);
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            text-align: center;
-        }
-
-        .boton-whatsapp {
-            background-color: #25D366;
-        }
-
-        .boton-facebook {
-            background-color: #1877F2;
-        }
-    }
-
-    form {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-
-        label {
-            font-size: 16px;
-            font-weight: bold;
-            color: #0a2345;
-        }
-
-        input,
-        textarea {
-            width: 100%;
-            max-width: 100%;
-            padding: 12px;
-            font-size: 16px;
-            border: 1px solid #aaa;
-            border-radius: 6px;
-        }
-
-        textarea {
-            height: 140px;
-            resize: vertical;
-        }
-
-        button {
-            width: 100%;
-            padding: 12px 20px;
-            background: var(--color-fondo);
-            color: #111;
-            border: none;
-            border-radius: 6px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-    }
+/* Títulos dentro del contenido principal */
+main h1,
+main h2,
+main h3 {
+    color: var(--color-texto-oscuro);
 }
 
+/* Texto resaltado de la marca */
+main strong {
+    color: #b87545;
+}
+
+/* Imagen de la página Nosotros */
+main img {
+    max-width: 100%;
+}
+
+/* Botón amarillo personalizado */
+main .btn-warning {
+    background-color: var(--color-fondo);
+    border-color: var(--color-fondo);
+    color: #111111;
+}
+
+main .btn-warning:hover {
+    background-color: #cf791e;
+    border-color: #cf791e;
+    color: #111111;
+}
+
+/* Botón oscuro para ubicación */
+main .btn-dark {
+    background-color: var(--color-header-footer);
+    border-color: var(--color-header-footer);
+}
+
+/* Cards de misión, visión y beneficios */
+main .card.shadow-sm {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main .card.shadow-sm:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Iconos dentro de Nosotros */
+main .bi {
+    vertical-align: middle;
+}
 
 
