@@ -736,7 +736,7 @@ body {
 
     .site-header + main {
     padding-top: 0;
-}
+    }
 
     .portada .carousel-item,
     .portada__img {
@@ -832,7 +832,7 @@ body {
         color: var(--color-fondo);
     }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
     .portada .carousel-item,
     .portada__img {
         height: clamp(600px, calc(100vh - 88px), 680px);
@@ -850,6 +850,15 @@ body {
 
     .site-footer .row > .col-lg-3 {
         width: 25%;
+    }
+}
+@media (min-width: 1400px) {
+    .carousel-item img {
+        height: 700px;
+    }
+
+    .product-col {
+        width: 20%;
     }
 }
 /*CSS NOSOTROS Y CONTACTO */
