@@ -861,49 +861,6 @@ body {
         width: 20%;
     }
 }
-/*CSS NOSOTROS Y CONTACTO */
-
-/* Tarjetas principales de Contacto y Nosotros */
-main .card {
-    color: var(--color-texto-oscuro);
-}
-
-/* Títulos dentro del contenido principal */
-main h1,
-main h2,
-main h3 {
-    color: var(--color-texto-oscuro);
-}
-
-/* Texto resaltado de la marca */
-main strong {
-    color: #b87545;
-}
-
-/* Imagen de la página Nosotros */
-main img {
-    max-width: 100%;
-}
-
-/* Botón amarillo personalizado */
-main .btn-warning {
-    background-color: var(--color-fondo);
-    border-color: var(--color-fondo);
-    color: #111111;
-}
-
-main .btn-warning:hover {
-    background-color: #cf791e;
-    border-color: #cf791e;
-    color: #111111;
-}
-
-/* Botón oscuro para ubicación */
-main .btn-dark {
-    background-color: var(--color-header-footer);
-    border-color: var(--color-header-footer);
-}
-
 /* Cards de misión, visión y beneficios */
 main .card.shadow-sm {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -913,10 +870,3 @@ main .card.shadow-sm:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
 }
-
-/* Iconos dentro de Nosotros */
-main .bi {
-    vertical-align: middle;
-}
-
-
