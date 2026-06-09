@@ -4,226 +4,417 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>R&R | Tienda de Ropa</title>
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <a href="index.html">
-                <img src="imagenes/logo-transparente.png" alt="Logo de la Tienda">
+  <header class="site-header sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark container py-2" aria-label="Navegación principal">
+            <a class="navbar-brand site-logo" href="index.html" aria-label="R&R Clothing Store">
+                <img src="imagenes/logo/logo-transparente.png" alt="Logo de R&R Clothing Store">
             </a>
-        </div>
 
-        <input type="checkbox" id="menu-toggle">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <label for="menu-toggle" class="menu-icono">
-            <i class="bi bi-list icono-abrir"></i>
-            <i class="bi bi-x-lg icono-cerrar"></i>
-        </label>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="menuPrincipal" aria-labelledby="menuPrincipalLabel">
+                <input class="mobile-submenu-toggle" type="checkbox" id="submenu-panel-hombre">
+                <input class="mobile-submenu-toggle" type="checkbox" id="submenu-panel-mujer">
+                <input class="mobile-submenu-toggle" type="checkbox" id="submenu-panel-ninos">
 
-        <nav class="navegador">
-            <ul class="menu">
+                <div class="offcanvas-header">
+                    <h2 class="offcanvas-title fs-5" id="menuPrincipalLabel">R&R Clothing Store</h2>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar menú"></button>
+                </div>
 
-                <li class="menu__item">
-                    <a class="menu__link" href="index.html">INICIO<i class="bi bi-house-door"></i></a>
-                </li>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                Inicio <i class="bi bi-house-door ms-1"></i>
+                            </a>
+                        </li>
 
-                <li class="menu__item">
-                    <input type="checkbox" id="submenu-hombre" class="submenu-toggle">
+                        <li class="nav-item dropdown menu-con-submenu">
+                            <label class="nav-link submenu-open d-lg-none" for="submenu-panel-hombre">
+                                Hombre
+                                <span>
+                                    <i class="bi bi-person"></i>
+                                    <i class="bi bi-chevron-right"></i>
+                                </span>
+                            </label>
+                            <a class="nav-link d-none d-lg-flex align-items-center gap-1"
+                            href="hombre.html">
+                                Hombre <i class="bi bi-person ms-1"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="hombre.html#polos-hombre">Polos</a></li>
+                                <li><a class="dropdown-item" href="hombre.html#camisas-hombre">Camisas</a></li>
+                                <li><a class="dropdown-item" href="hombre.html#pantalones-hombre">Pantalones</a></li>
+                                <li><a class="dropdown-item" href="hombre.html#shorts-hombre">Shorts</a></li>
+                            </ul>
+                        </li>
 
-                    <label for="submenu-hombre" class="menu__link">
-                        HOMBRE
-                        <span>
-                            <i class="bi bi-person"></i>
-                            <i class="bi bi-chevron-right"></i>
-                        </span>
-                    </label>
+                        <li class="nav-item dropdown menu-con-submenu">
+                            <label class="nav-link submenu-open d-lg-none" for="submenu-panel-mujer">
+                                Mujer
+                                <span>
+                                    <i class="bi bi-person-standing-dress"></i>
+                                    <i class="bi bi-chevron-right"></i>
+                                </span>
+                            </label>
+                            <a class="nav-link d-none d-lg-flex align-items-center gap-1" href="mujer.html">
+                                Mujer <i class="bi bi-person-standing-dress ms-1"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="mujer.html#blusas-mujer">Blusas</a></li>
+                                <li><a class="dropdown-item" href="mujer.html#faldas-mujer">Faldas</a></li>
+                                <li><a class="dropdown-item" href="mujer.html#jeans-mujer">Jeans</a></li>
+                                <li><a class="dropdown-item" href="mujer.html#vestidos-mujer">Vestidos</a></li>
+                                <li><a class="dropdown-item" href="mujer.html#bikinis-mujer">Bikinis</a></li>
+                            </ul>
+                        </li>
 
-                    <div class="submenu-mobile">
-                        <label for="submenu-hombre" class="submenu-back">
-                            <i class="bi bi-chevron-left"></i>
-                            HOMBRE
+                        <li class="nav-item dropdown menu-con-submenu">
+                            <label class="nav-link submenu-open d-lg-none" for="submenu-panel-ninos">
+                                Niños
+                                <span>
+                                    <i class="bi bi-emoji-smile"></i>
+                                    <i class="bi bi-chevron-right"></i>
+                                </span>
+                            </label>
+                            <a class="nav-link d-none d-lg-flex align-items-center gap-1" href="ninos.html">
+                                Niños <i class="bi bi-emoji-smile ms-1"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="ninos.html#polos-ninos">Polos</a></li>
+                                <li><a class="dropdown-item" href="ninos.html#conjuntos-ninos">Conjuntos</a></li>
+                                <li><a class="dropdown-item" href="ninos.html#shorts-ninos">Shorts</a></li>
+                                <li><a class="dropdown-item" href="ninos.html#buzos-ninos">Buzos</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Nosotros <i class="bi bi-people ms-1"></i></a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="contacto.html">Contacto <i class="bi bi-envelope ms-1"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <section class="mobile-submenu-panel mobile-submenu-panel--hombre" aria-label="Categorías de hombre">
+                    <div class="mobile-submenu-panel__header">
+                        <h3>Hombre</h3>
+                        <label class="mobile-submenu-close" for="submenu-panel-hombre" aria-label="Cerrar submenú hombre">
+                            <i class="bi bi-x-lg"></i>
                         </label>
-
-                        <ul class="submenu">
-                            <li class="submenu__item"><a class="submenu__link" href="hombre.html#polos-hombre">Polos</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="hombre.html#camisas-hombre">Camisas</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="hombre.html#pantalones-hombre">Pantalones</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="#">Casacas</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="hombre.html#shorts-hombre">Shorts</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="#">Calzados</a></li>
-                        </ul>
                     </div>
+                    <ul class="mobile-submenu-list">
+                        <li><a href="hombre.html#polos-hombre">Polos</a></li>
+                        <li><a href="hombre.html#camisas-hombre">Camisas</a></li>
+                        <li><a href="hombre.html#pantalones-hombre">Pantalones</a></li>
+                        <li><a href="hombre.html#shorts-hombre">Shorts</a></li>
+                    </ul>
+                </section>
 
-                </li>
-
-                <li class="menu__item">
-
-                    <input type="checkbox" id="submenu-mujer" class="submenu-toggle">
-                    <label for="submenu-mujer" class="menu__link">
-                        MUJER
-                        <span>
-                            <i class="bi bi-person-standing-dress"></i>
-                            <i class="bi bi-chevron-right"></i>
-                        </span>
-                    </label>
-
-                    <div class="submenu-mobile">
-
-                        <label for="submenu-mujer" class="submenu-back">
-                            <i class="bi bi-chevron-left"></i>
-                            MUJER
+                <section class="mobile-submenu-panel mobile-submenu-panel--mujer" aria-label="Categorías de mujer">
+                    <div class="mobile-submenu-panel__header">
+                        <h3>Mujer</h3>
+                        <label class="mobile-submenu-close" for="submenu-panel-mujer" aria-label="Cerrar submenú mujer">
+                            <i class="bi bi-x-lg"></i>
                         </label>
-
-                        <ul class="submenu">
-                            <li class="submenu__item"><a class="submenu__link" href="mujer.html#blusas-mujer">Blusas</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="mujer.html#faldas-mujer">Falda</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="mujer.html#jeans-mujer">Jeans</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="mujer.html#vestidos-mujer">Vestidos</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="mujer.html#bikinis-mujer">Bikinis</a></li>
-                        </ul>
-
                     </div>
+                    <ul class="mobile-submenu-list">
+                        <li><a href="mujer.html#blusas-mujer">Blusas</a></li>
+                        <li><a href="mujer.html#faldas-mujer">Faldas</a></li>
+                        <li><a href="mujer.html#jeans-mujer">Jeans</a></li>
+                        <li><a href="mujer.html#vestidos-mujer">Vestidos</a></li>
+                        <li><a href="mujer.html#bikinis-mujer">Bikinis</a></li>
+                    </ul>
+                </section>
 
-                </li>
-
-                <li class="menu__item">
-
-                    <input type="checkbox" id="submenu-ninos" class="submenu-toggle">
-                    <label for="submenu-ninos" class="menu__link">
-                        NIÑOS
-                        <span>
-                            <i class="bi bi-emoji-smile"></i>
-                            <i class="bi bi-chevron-right"></i>
-                        </span>
-                    </label>
-
-                    <div class="submenu-mobile">
-
-                        <label for="submenu-ninos" class="submenu-back">
-                            <i class="bi bi-chevron-left"></i>
-                            NIÑOS
+                <section class="mobile-submenu-panel mobile-submenu-panel--ninos" aria-label="Categorías de niños">
+                    <div class="mobile-submenu-panel__header">
+                        <h3>Niños</h3>
+                        <label class="mobile-submenu-close" for="submenu-panel-ninos" aria-label="Cerrar submenú niños">
+                            <i class="bi bi-x-lg"></i>
                         </label>
-
-                        <ul class="submenu">
-                            <li class="submenu__item"><a class="submenu__link" href="ninos.html#polos-ninos">Polos</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="ninos.html#conjuntos-ninos">Conjuntos</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="ninos.html#shorts-ninos">Shorts</a></li>
-                            <li class="submenu__item"><a class="submenu__link" href="ninos.html#buzos-ninos">Buzos</a></li>
-                        </ul>
-
                     </div>
-                </li>
-
-                <li class="menu__item">
-                    <a class="menu__link" href="nosotros.html">NOSOTROS<i class="bi bi-people"></i></a>
-                </li>
-
-                <li class="menu__item">
-                    <a class="menu__link" href="contacto.html">CONTACTO<i class="bi bi-envelope"></i></a>
-                </li>
-            </ul>
+                    <ul class="mobile-submenu-list">
+                        <li><a href="ninos.html#polos-ninos">Polos</a></li>
+                        <li><a href="ninos.html#conjuntos-ninos">Conjuntos</a></li>
+                        <li><a href="ninos.html#shorts-ninos">Shorts</a></li>
+                        <li><a href="ninos.html#buzos-ninos">Buzos</a></li>
+                    </ul>
+                </section>
+            </div>
         </nav>
     </header>
 
     <main>
-        <section class="contacto">
-            <h1>Contáctanos</h1>
+    <section class="container my-5">
+        <div class="card shadow-sm border-0 rounded-4 p-4 p-md-5">
+            <h1 class="text-center fw-bold mb-4">Contáctanos</h1>
 
-            <p>
+            <p class="text-center mb-4">
                 ¿Tienes alguna consulta sobre nuestros productos, tallas, precios o envíos?
                 Escríbenos directamente por WhatsApp o Facebook.
             </p>
 
-            <div class="contacto__info">
-                <h2>Datos de la tienda</h2>
-                <p><strong>Dirección:</strong> Jr. Lima Pst 8 parada municipal, Bagua, Amazonas, Perú</p>
-                <p><strong>Correo:</strong> clothingstore.rr@gmail.com</p>
-                <p><strong>Teléfono:</strong> +51 916 408 971</p>
-            </div>
+            <div class="row g-4">
+                <div class="col-12 col-lg-5">
+                    <div class="card h-100 border-0 bg-light p-4 rounded-4">
+                        <h2 class="h4 fw-bold mb-3">Datos de la tienda</h2>
 
-            <div class="contacto__botones">
-                <a class="boton-whatsapp"
-                href="https://wa.me/51916408971?text=Hola%20R%26R%20Clothing%20Store,%20quiero%20hacer%20una%20consulta"
-                target="_blank">Contactar por WhatsApp</a>
+                        <p>
+                            <strong>Dirección:</strong><br>
+                            Jr. Lima Pst 8 parada municipal, Bagua, Amazonas, Perú
+                        </p>
 
-                <a class="boton-facebook"
-                href="https://www.facebook.com/RyRClothingstore?locale=es_LA"
-                target="_blank">Contactar por Facebook</a>
-            </div>
+                        <p>
+                            <strong>Correo:</strong><br>
+                            clothingstore.rr@gmail.com
+                        </p>
 
-            <form class="formulario-contacto">
-                <h2>Envíanos un mensaje</h2>
+                        <p>
+                            <strong>Teléfono:</strong><br>
+                            +51 916 408 971
+                        </p>
 
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+                        <div class="d-grid gap-3 mt-3">
+                            <a class="btn btn-success"
+                               href="https://wa.me/51916408971?text=Hola%20R%26R%20Clothing%20Store,%20quiero%20hacer%20una%20consulta"
+                               target="_blank">
+                                <i class="bi bi-whatsapp"></i> Contactar por WhatsApp
+                            </a>
 
-                <label for="correo">Correo:</label>
-                <input type="email" id="correo" name="correo" placeholder="Escribe tu correo" required>
+                            <a class="btn btn-primary"
+                               href="https://www.facebook.com/RyRClothingstore?locale=es_LA"
+                               target="_blank">
+                                <i class="bi bi-facebook"></i> Contactar por Facebook
+                            </a>
 
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje" required></textarea>
+                            <a class="btn btn-dark"
+                               href="https://maps.app.goo.gl/Y9uGCVegSHRF2kMF7"
+                               target="_blank">
+                                <i class="bi bi-geo-alt"></i> Ver ubicación en Google Maps
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-                <button type="submit">Enviar mensaje</button>
-            </form>
-        </section>
-    </main>
+                <div class="col-12 col-lg-7">
+                    <form class="card border-0 bg-light p-4 rounded-4">
+                        <h2 class="h4 fw-bold mb-3">Envíanos un mensaje</h2>
 
-    <footer>
-        <section>
-            <h3 class="datos-tienda">Tienda</h3>
-            <address>
-                <p>Jr. Lima Pst 8 parada municipal</p>
-                <p>Bagua, Amazonas, Perú, 15004</p>
-                <p>clothingstore.rr@gmail.com</p>
-                <p>+51 916 408 971</p>
-            </address>
-        </section>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label fw-bold">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" class="form-control"
+                                   placeholder="Escribe tu nombre" required>
+                        </div>
 
-        <section class="atencion-cliente">
-            <h3>ATENCIÓN AL CLIENTE</h3>
-            <p>Formas de Pago</p>
-            <p>Métodos de Envío</p>
-            <p>Cambios y Devoluciones</p>
-            <p>Guía de Tallas</p>
-            <p>Preguntas Frecuentes</p>
-        </section>
+                        <div class="mb-3">
+                            <label for="correo" class="form-label fw-bold">Correo:</label>
+                            <input type="email" id="correo" name="correo" class="form-control"
+                                   placeholder="Escribe tu correo" required>
+                        </div>
 
-        <section class="terminos">
-            <h3>TÉRMINOS Y CONDICIONES</h3>
-            <p>Términos y Condiciones</p>
-            <p>Tratamiento de Datos</p>
-            <p>Política de Cookies</p>
-            <p class="libro-reclamaciones">Libro de Reclamaciones</p>
-            <figure>
-                <img class="libro-reclamaciones-img" src="imagenes/libro-de-reclamaciones.jpg" alt="Libro de Reclamaciones">
-            </figure>
-        </section>
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label fw-bold">Mensaje:</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" class="form-control"
+                                      placeholder="Escribe tu mensaje" required></textarea>
+                        </div>
 
-        <section class="formulario-suscripcion">
-            <h3>NEWSLETTER</h3>
-            <p>Regístrate para mantenerte al tanto de nuestros lanzamientos, descuentos y más.</p>
-
-            <form class="newsletter-form">
-                <input type="email" placeholder="Correo Electrónico" required>
-                <button type="submit">SUSCRIBIRSE</button>
-            </form>
-        </section>
-
-        <div class="redes">
-            <p>¡Síguenos en nuestras <strong>REDES SOCIALES!</strong></p>
-
-            <div class="redes__link">
-                <a href="https://web.facebook.com/RyRClothingstore/about">Facebook</a>
-                <a href="#">Tiktok</a>
-                <a href="#">Instagram</a>
+                        <button type="submit" class="btn btn-warning fw-bold">
+                            Enviar mensaje
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
+    </section>
+</main>
 
-        <div class="copyright">
-            <p>&copy; 2026 R&R Clothing Store - Todos los derechos reservados.</p>
+<footer class="site-footer">
+        <div class="container">
+            <div class="row g-4">
+                <section class="col-12 col-md-6 col-lg-3">
+                    <h3>Tienda</h3>
+                    <address>
+                        <p>Jr. Lima Pst 8 parada municipal</p>
+                        <p>Bagua, Amazonas, Perú, 15004</p>
+                        <p><a href="mailto:clothingstore.rr@gmail.com">clothingstore.rr@gmail.com</a></p>
+                        <p><a href="tel:+51916408971">+51 916 408 971</a></p>
+                    </address>
+                </section>
+
+                <section class="col-12 col-md-6 col-lg-3">
+                    <h3>Atención al cliente</h3>
+                    <ul class="footer-list">
+                        <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalPagos">Formas de pago</button></li>
+                        <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalEnvios">Métodos de envío</button></li>
+                        <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalCambios">Cambios y devoluciones</button></li>
+                        <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalPreguntas">Preguntas frecuentes</button></li>
+                    </ul>
+                </section>
+
+                <section class="col-12 col-md-6 col-lg-3">
+                    <h3>Términos y condiciones</h3>
+                    <ul class="footer-list">
+                        <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalTerminos">Términos y condiciones</button></li>
+                        <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalDatos">Tratamiento de datos</button></li>
+                        <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalCookies">Política de cookies</button></li>
+                        <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalReclamaciones">Libro de reclamaciones</button></li>
+                    </ul>
+                    <img class="libro-reclamaciones-img img-fluid" src="imagenes/libro-de-reclamaciones.jpg" alt="Libro de Reclamaciones">
+                </section>
+
+                <section class="col-12 col-md-6 col-lg-3">
+                    <h3>Newsletter</h3>
+                    <p>Regístrate para conocer lanzamientos, descuentos y novedades.</p>
+
+                    <form class="newsletter-form">
+                        <label class="visually-hidden" for="correo-newsletter">Correo electrónico</label>
+                        <input id="correo-newsletter" class="form-control" type="email" placeholder="Correo electrónico" required>
+                        <button class="btn btn-primary w-100" type="submit">Suscribirse</button>
+                    </form>
+                </section>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="redes">
+                    <p>Síguenos en nuestras <strong>redes sociales</strong></p>
+                    <div class="redes__link">
+                        <a href="https://web.facebook.com/RyRClothingstore/about">Facebook</a>
+                        <span>TikTok</span>
+                        <span>Instagram</span>
+                    </div>
+                </div>
+
+                <p class="copyright">&copy; 2026 R&R Clothing Store - Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
+    <div class="modal fade" id="modalPagos" tabindex="-1" aria-labelledby="modalPagosLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm modal-responsive">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalPagosLabel">Formas de pago</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Aceptamos pagos por Yape, transferencia bancaria y efectivo al momento de la compra.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalEnvios" tabindex="-1" aria-labelledby="modalEnviosLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm modal-responsive">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalEnviosLabel">Métodos de envío</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Realizamos entregas locales en Bagua y coordinamos envíos a otras zonas según disponibilidad.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalCambios" tabindex="-1" aria-labelledby="modalCambiosLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm modal-responsive">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalCambiosLabel">Cambios y devoluciones</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Los cambios se coordinan dentro de las primeras 48 horas, siempre que la prenda esté en buen estado.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalPreguntas" tabindex="-1" aria-labelledby="modalPreguntasLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm modal-responsive">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalPreguntasLabel">Preguntas frecuentes</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Puedes consultar disponibilidad, tallas y precios por nuestros canales de contacto antes de comprar.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalTerminos" tabindex="-1" aria-labelledby="modalTerminosLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm modal-responsive">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalTerminosLabel">Términos y condiciones</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>La compra confirma la aceptación de precios, disponibilidad y condiciones informadas por la tienda.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalDatos" tabindex="-1" aria-labelledby="modalDatosLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm modal-responsive">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalDatosLabel">Tratamiento de datos</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Los datos de contacto se usan únicamente para atender consultas, coordinar pedidos y confirmar entregas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalCookies" tabindex="-1" aria-labelledby="modalCookiesLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm modal-responsive">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalCookiesLabel">Política de cookies</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Este sitio puede usar cookies básicas del navegador para mejorar la navegación del usuario.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalReclamaciones" tabindex="-1" aria-labelledby="modalReclamacionesLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm modal-responsive">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalReclamacionesLabel">Libro de reclamaciones</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Para registrar una consulta o reclamo, comunícate con la tienda por correo o teléfono.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
