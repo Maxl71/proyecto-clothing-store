@@ -178,7 +178,7 @@
                                 Precio máximo
                             </label>
                             <div class="price-range">
-                                <input class="form-range" type="range" min="0" max="150" step="10" value="80" aria-label="Precio máximo">
+                                <input class="form-range filtro-precio" type="range" min="0" max="150" step="10" value="150" aria-label="Precio máximo">
                                 <div class="range-labels">
                                     <span>S/0</span>
                                     <span>S/150+</span>
@@ -220,6 +220,9 @@
                     <h1 class="page-title text-center">
                         Ropa para Hombres
                     </h1>
+                    <p id="resultadoFiltro" class="text-center fw-semibold mb-4" aria-live="polite">
+                        Mueve el filtro para buscar productos por precio.
+                    </p>
 
                     <!-- POLOS -->
                     <section id="polos-hombre" class="mb-5">
@@ -227,7 +230,7 @@
                         <div class="row g-3">
                             <!-- PRODUCTOS -->
                             <!-- Polo 1 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="60">
                                 <div class="product-card">
                                     <img
                                         src="./imagenes/hombre/polo-hombre/Polo-Oversize-Urban-Restricted.png"
@@ -260,7 +263,7 @@
                             </div>
 
                             <!-- Polo 2 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="70">
                                 <div class="product-card">
                                     <img
                                         src="./imagenes/hombre/polo-hombre/Polo-Drifit-Jordan-blanco-con-rayas-negras.png"
@@ -293,7 +296,7 @@
                             </div>
 
                             <!-- Polo 3 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="60">
                                 <div class="product-card">
                                     <img
                                         src="./imagenes/hombre/polo-hombre/Polo-Oversize-Estampado-Urbano-color-beige-con-negro.png"
@@ -322,7 +325,7 @@
                             </div>
 
                             <!-- Polo 4 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90">
                                 <div class="product-card">
                                     <img
                                         src="./imagenes/hombre/polo-hombre/polo-overzide/Polo-oversize-realking.jpg"
@@ -355,7 +358,7 @@
                             </div>
 
                             <!-- Polo 5 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90">
                                 <div class="product-card">
                                     <img
                                         src="./imagenes/hombre/polo-hombre/polo-overzide/Polo-oversize-amiri.jpg"
@@ -388,7 +391,7 @@
                             </div>
 
                             <!-- Polo 6 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90">
                                 <div class="product-card">
                                     <img
                                         src="./imagenes/hombre/polo-hombre/polo-overzide/Polo-oversize-arts.jpg"
@@ -421,7 +424,7 @@
                             </div>
 
                             <!-- Polo 7 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90">
                                 <div class="product-card">
                                     <img
                                         src="./imagenes/hombre/polo-hombre/polo-overzide/Polo-escorpion.jpg"
@@ -992,15 +995,15 @@
                 <!-- PRECIO -->
                 <div class="mb-4">
                     <label class="form-label">
-                                Precio máximo
-                            </label>
-                            <div class="price-range">
-                                <input class="form-range" type="range" min="0" max="150" step="10" value="80" aria-label="Precio máximo">
-                                <div class="range-labels">
-                                    <span>S/0</span>
-                                    <span>S/150+</span>
-                                </div>
+                        Precio máximo
+                        </label>
+                        <div class="price-range">
+                            <input class="form-range filtro-precio" type="range" min="0" max="150" step="10" value="150" aria-label="Precio máximo">
+                            <div class="range-labels">
+                                <span>S/0</span>
+                                <span>S/150+</span>
                             </div>
+                        </div>
                 </div>
 
                 <!-- TALLA -->
@@ -3139,7 +3142,7 @@
         </div>
 
         <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
-
+        <script src="./js/categorias.js"></script>
     </body>
 
 </html>
