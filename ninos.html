@@ -170,68 +170,46 @@
             <div class="row">
 
                 <!-- FILTRO PARA ESCRITORIO -->
-                <aside class="col-lg-3 d-none d-lg-block">
-
-                    <div class="desktop-filter">
-                        <h4 class="mb-4">
-                            Filtrar
-                        </h4>
-
-                        <!-- PRECIO -->
-                        <div class="mb-4">
-
-                            <label class="form-label">
-                                Precio máximo
-                            </label>
-                            <div class="price-range">
-                                <input class="form-range" type="range" min="0" max="150" step="10" value="80" aria-label="Precio máximo">
-                                <div class="range-labels">
-                                    <span>S/0</span>
-                                    <span>S/150+</span>
-                                </div>
+            <aside class="col-lg-3 d-none d-lg-block">
+                <div class="desktop-filter">
+                    <h4 class="mb-4">Filtrar</h4>
+                    <!-- PRECIO -->
+                    <div class="mb-4">
+                        <label class="form-label">Precio máximo</label>
+                        <div class="price-range">
+                            <input class="form-range filtro-precio" type="range" min="0" max="150" step="10" value="150"
+                                aria-label="Precio máximo">
+                            <div class="range-labels">
+                                <span>S/0</span>
+                                <span>S/150+</span>
                             </div>
-
-                        </div>
-
-                        <!-- TALLA -->
-                        <div class="mb-4">
-
-                            <label class="form-label">
-                                Talla
-                            </label>
-
-                            <select class="form-select">
-
-                                <option>Todas</option>
-                                <option>S</option>
-                                <option>M</option>
-                                <option>L</option>
-                                <option>XL</option>
-
-                            </select>
-
-                        </div>
-
-                        <!-- COLOR -->
-                        <div>
-
-                            <label class="form-label">
-                                Color
-                            </label>
-
-                            <select class="form-select">
-
-                                <option>Todos</option>
-                                <option>Negro</option>
-                                <option>Blanco</option>
-                                <option>Gris</option>
-                                <option>Azul</option>
-
-                            </select>
-
                         </div>
                     </div>
-                </aside>
+                    <!-- TALLA -->
+                    <div class="mb-4">
+                        <label class="form-label">Talla</label>
+                        <select class="form-select filtro-talla">
+                            <option value="todas">Todas</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                    </div>
+                    <!-- COLOR -->
+                    <div>
+                        <label class="form-label">Color</label>
+                        <select class="form-select filtro-color">
+                            <option value="todos">Todos</option>
+                            <option value="Negro">Negro</option>
+                            <option value="Blanco">Blanco</option>
+                            <option value="Gris">Gris</option>
+                            <option value="Azul">Azul</option>
+                            <option value="Beige">Beige</option>
+                        </select>
+                    </div>
+                </div>
+            </aside>
 
                 <!-- PRODUCTOS -->
                 <main class="col-12 col-lg-9">
@@ -826,68 +804,50 @@
         </div>
 
         <!-- OFFCANVAS -->
-        <div
-            class="offcanvas offcanvas-bottom product-filter-offcanvas d-lg-none"
-            tabindex="-1"
-            id="mobileFilter">
-
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title">
-                    Filtrar Productos
-                </h5>
-
-                <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="offcanvas">
-                </button>
+    <div class="offcanvas offcanvas-bottom product-filter-offcanvas d-lg-none" tabindex="-1" id="mobileFilter">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Filtrar Productos</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas">
+            </button>
+        </div>
+        <div class="offcanvas-body">
+            <!-- PRECIO -->
+            <div class="mb-4">
+                <label class="form-label">Precio máximo</label>
+                <div class="price-range">
+                    <input class="form-range filtro-precio" type="range" min="0" max="150" step="10" value="150"
+                        aria-label="Precio máximo">
+                    <div class="range-labels">
+                        <span>S/0</span>
+                        <span>S/150+</span>
+                    </div>
+                </div>
             </div>
-
-            <div class="offcanvas-body">
-                <!-- PRECIO -->
-                <div class="mb-4">
-                    <label class="form-label">
-                                Precio máximo
-                            </label>
-                            <div class="price-range">
-                                <input class="form-range" type="range" min="0" max="150" step="10" value="80" aria-label="Precio máximo">
-                                <div class="range-labels">
-                                    <span>S/0</span>
-                                    <span>S/150+</span>
-                                </div>
-                            </div>
-                </div>
-
-                <!-- TALLA -->
-                <div class="mb-4">
-                    <label class="form-label">
-                        Talla
-                    </label>
-                    <select class="form-select">
-                        <option>Todas</option>
-                        <option>S</option>
-                        <option>M</option>
-                        <option>L</option>
-                        <option>XL</option>
-                    </select>
-                </div>
-
-                <!-- COLOR -->
-                <div>
-                    <label class="form-label">
-                        Color
-                    </label>
-                    <select class="form-select">
-                        <option>Todos</option>
-                        <option>Negro</option>
-                        <option>Blanco</option>
-                        <option>Gris</option>
-                        <option>Azul</option>
-                    </select>
-                </div>
-
+            <!-- TALLA -->
+            <div class="mb-4">
+                <label class="form-label">Talla</label>
+                <select class="form-select filtro-talla">
+                    <option value="todas">Todas</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+            </div>
+            <!-- COLOR -->
+            <div>
+                <label class="form-label">Color</label>
+                <select class="form-select filtro-color">
+                    <option value="todos">Todos</option>
+                    <option value="Negro">Negro</option>
+                    <option value="Blanco">Blanco</option>
+                    <option value="Gris">Gris</option>
+                    <option value="Azul">Azul</option>
+                    <option value="Beige">Beige</option>
+                </select>
             </div>
         </div>
+    </div>
 
         <footer class="site-footer">
             <div class="container">

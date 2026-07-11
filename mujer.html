@@ -1,234 +1,219 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>R&R | Ropa para mujer</title>
 
-        <!-- Bootstrap -->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>R&R | Ropa para mujer</title>
 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-        <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <!-- Bootstrap -->
 
-        <!-- CSS Propio -->
-        <link rel="stylesheet" href="./css/estilos.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
 
-    </head>
+    <!-- CSS Propio -->
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
-    <body class="category-page">
-        <header class="site-header sticky-top">
-            <nav class="navbar navbar-expand-lg navbar-dark container py-2" aria-label="Navegación principal">
-                <a class="navbar-brand site-logo" href="index.html" aria-label="R&R Clothing Store">
-                    <img src="imagenes/logo/logo-transparente.png" alt="Logo de R&R Clothing Store">
-                </a>
+</head>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-label="Abrir menú">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+<body class="category-page">
+    <header class="site-header sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark container py-2" aria-label="Navegación principal">
+            <a class="navbar-brand site-logo" href="index.html" aria-label="R&R Clothing Store">
+                <img src="imagenes/logo/logo-transparente.png" alt="Logo de R&R Clothing Store">
+            </a>
 
-                <div class="offcanvas offcanvas-start" tabindex="-1" id="menuPrincipal" aria-labelledby="menuPrincipalLabel">
-                    <input class="mobile-submenu-toggle" type="checkbox" id="submenu-panel-hombre">
-                    <input class="mobile-submenu-toggle" type="checkbox" id="submenu-panel-mujer">
-                    <input class="mobile-submenu-toggle" type="checkbox" id="submenu-panel-ninos">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                    <div class="offcanvas-header">
-                        <h2 class="offcanvas-title fs-5" id="menuPrincipalLabel">R&R Clothing Store</h2>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar menú"></button>
-                    </div>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="menuPrincipal"
+                aria-labelledby="menuPrincipalLabel">
+                <input class="mobile-submenu-toggle" type="checkbox" id="submenu-panel-hombre">
+                <input class="mobile-submenu-toggle" type="checkbox" id="submenu-panel-mujer">
+                <input class="mobile-submenu-toggle" type="checkbox" id="submenu-panel-ninos">
 
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html">
-                                    Inicio <i class="bi bi-house-door ms-1"></i>
-                                </a>
-                            </li>
-
-                            <li class="nav-item dropdown menu-con-submenu">
-                                <label class="nav-link submenu-open d-lg-none" for="submenu-panel-hombre">
-                                    Hombre
-                                    <span>
-                                        <i class="bi bi-person"></i>
-                                        <i class="bi bi-chevron-right"></i>
-                                    </span>
-                                </label>
-                                <a class="nav-link d-none d-lg-flex align-items-center gap-1"
-                                href="hombre.html">
-                                    Hombre <i class="bi bi-person ms-1"></i>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href="hombre.html#polos-hombre">Polos</a></li>
-                                    <li><a class="dropdown-item" href="hombre.html#camisas-hombre">Camisas</a></li>
-                                    <li><a class="dropdown-item" href="hombre.html#pantalones-hombre">Pantalones</a></li>
-                                    <li><a class="dropdown-item" href="hombre.html#shorts-hombre">Shorts</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item dropdown menu-con-submenu">
-                                <label class="nav-link active submenu-open d-lg-none" for="submenu-panel-mujer">
-                                    Mujer
-                                    <span>
-                                        <i class="bi bi-person-standing-dress"></i>
-                                        <i class="bi bi-chevron-right"></i>
-                                    </span>
-                                </label>
-                                <a class="nav-link active d-none d-lg-flex align-items-center gap-1" aria-current="page" href="mujer.html">
-                                    Mujer <i class="bi bi-person-standing-dress ms-1"></i>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href="mujer.html#blusas-mujer">Blusas</a></li>
-                                    <li><a class="dropdown-item" href="mujer.html#faldas-mujer">Faldas</a></li>
-                                    <li><a class="dropdown-item" href="mujer.html#jeans-mujer">Jeans</a></li>
-                                    <li><a class="dropdown-item" href="mujer.html#vestidos-mujer">Vestidos</a></li>
-                                    <li><a class="dropdown-item" href="mujer.html#bikinis-mujer">Bikinis</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item dropdown menu-con-submenu">
-                                <label class="nav-link submenu-open d-lg-none" for="submenu-panel-ninos">
-                                    Niños
-                                    <span>
-                                        <i class="bi bi-emoji-smile"></i>
-                                        <i class="bi bi-chevron-right"></i>
-                                    </span>
-                                </label>
-                                <a class="nav-link d-none d-lg-flex align-items-center gap-1" href="ninos.html">
-                                    Niños <i class="bi bi-emoji-smile ms-1"></i>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href="ninos.html#polos-ninos">Polos</a></li>
-                                    <li><a class="dropdown-item" href="ninos.html#conjuntos-ninos">Conjuntos</a></li>
-                                    <li><a class="dropdown-item" href="ninos.html#shorts-ninos">Shorts</a></li>
-                                    <li><a class="dropdown-item" href="ninos.html#buzos-ninos">Buzos</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="nosotros.html">Nosotros <i class="bi bi-people ms-1"></i></a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="contacto.html">Contacto <i class="bi bi-envelope ms-1"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <section class="mobile-submenu-panel mobile-submenu-panel--hombre" aria-label="Categorías de hombre">
-                        <div class="mobile-submenu-panel__header">
-                            <h3>Hombre</h3>
-                            <label class="mobile-submenu-close" for="submenu-panel-hombre" aria-label="Cerrar submenú hombre">
-                                <i class="bi bi-x-lg"></i>
-                            </label>
-                        </div>
-                        <ul class="mobile-submenu-list">
-                            <li><a href="hombre.html#polos-hombre">Polos</a></li>
-                            <li><a href="hombre.html#camisas-hombre">Camisas</a></li>
-                            <li><a href="hombre.html#pantalones-hombre">Pantalones</a></li>
-                            <li><a href="hombre.html#shorts-hombre">Shorts</a></li>
-                        </ul>
-                    </section>
-
-                    <section class="mobile-submenu-panel mobile-submenu-panel--mujer" aria-label="Categorías de mujer">
-                        <div class="mobile-submenu-panel__header">
-                            <h3>Mujer</h3>
-                            <label class="mobile-submenu-close" for="submenu-panel-mujer" aria-label="Cerrar submenú mujer">
-                                <i class="bi bi-x-lg"></i>
-                            </label>
-                        </div>
-                        <ul class="mobile-submenu-list">
-                            <li><a href="mujer.html#blusas-mujer">Blusas</a></li>
-                            <li><a href="mujer.html#faldas-mujer">Faldas</a></li>
-                            <li><a href="mujer.html#jeans-mujer">Jeans</a></li>
-                            <li><a href="mujer.html#vestidos-mujer">Vestidos</a></li>
-                            <li><a href="mujer.html#bikinis-mujer">Bikinis</a></li>
-                        </ul>
-                    </section>
-
-                    <section class="mobile-submenu-panel mobile-submenu-panel--ninos" aria-label="Categorías de niños">
-                        <div class="mobile-submenu-panel__header">
-                            <h3>Niños</h3>
-                            <label class="mobile-submenu-close" for="submenu-panel-ninos" aria-label="Cerrar submenú niños">
-                                <i class="bi bi-x-lg"></i>
-                            </label>
-                        </div>
-                        <ul class="mobile-submenu-list">
-                            <li><a href="ninos.html#polos-ninos">Polos</a></li>
-                            <li><a href="ninos.html#conjuntos-ninos">Conjuntos</a></li>
-                            <li><a href="ninos.html#shorts-ninos">Shorts</a></li>
-                            <li><a href="ninos.html#buzos-ninos">Buzos</a></li>
-                        </ul>
-                    </section>
+                <div class="offcanvas-header">
+                    <h2 class="offcanvas-title fs-5" id="menuPrincipalLabel">R&R Clothing Store</h2>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Cerrar menú"></button>
                 </div>
-            </nav>
-        </header>
 
-        <div class="container-fluid py-3">
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                Inicio <i class="bi bi-house-door ms-1"></i>
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown menu-con-submenu">
+                            <label class="nav-link submenu-open d-lg-none" for="submenu-panel-hombre">
+                                Hombre
+                                <span>
+                                    <i class="bi bi-person"></i>
+                                    <i class="bi bi-chevron-right"></i>
+                                </span>
+                            </label>
+                            <a class="nav-link d-none d-lg-flex align-items-center gap-1" href="hombre.html">
+                                Hombre <i class="bi bi-person ms-1"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="hombre.html#polos-hombre">Polos</a></li>
+                                <li><a class="dropdown-item" href="hombre.html#camisas-hombre">Camisas</a></li>
+                                <li><a class="dropdown-item" href="hombre.html#pantalones-hombre">Pantalones</a></li>
+                                <li><a class="dropdown-item" href="hombre.html#shorts-hombre">Shorts</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown menu-con-submenu">
+                            <label class="nav-link active submenu-open d-lg-none" for="submenu-panel-mujer">
+                                Mujer
+                                <span>
+                                    <i class="bi bi-person-standing-dress"></i>
+                                    <i class="bi bi-chevron-right"></i>
+                                </span>
+                            </label>
+                            <a class="nav-link active d-none d-lg-flex align-items-center gap-1" aria-current="page"
+                                href="mujer.html">
+                                Mujer <i class="bi bi-person-standing-dress ms-1"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="mujer.html#blusas-mujer">Blusas</a></li>
+                                <li><a class="dropdown-item" href="mujer.html#faldas-mujer">Faldas</a></li>
+                                <li><a class="dropdown-item" href="mujer.html#jeans-mujer">Jeans</a></li>
+                                <li><a class="dropdown-item" href="mujer.html#vestidos-mujer">Vestidos</a></li>
+                                <li><a class="dropdown-item" href="mujer.html#bikinis-mujer">Bikinis</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown menu-con-submenu">
+                            <label class="nav-link submenu-open d-lg-none" for="submenu-panel-ninos">
+                                Niños
+                                <span>
+                                    <i class="bi bi-emoji-smile"></i>
+                                    <i class="bi bi-chevron-right"></i>
+                                </span>
+                            </label>
+                            <a class="nav-link d-none d-lg-flex align-items-center gap-1" href="ninos.html">
+                                Niños <i class="bi bi-emoji-smile ms-1"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="ninos.html#polos-ninos">Polos</a></li>
+                                <li><a class="dropdown-item" href="ninos.html#conjuntos-ninos">Conjuntos</a></li>
+                                <li><a class="dropdown-item" href="ninos.html#shorts-ninos">Shorts</a></li>
+                                <li><a class="dropdown-item" href="ninos.html#buzos-ninos">Buzos</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Nosotros <i class="bi bi-people ms-1"></i></a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto <i class="bi bi-envelope ms-1"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <section class="mobile-submenu-panel mobile-submenu-panel--hombre" aria-label="Categorías de hombre">
+                    <div class="mobile-submenu-panel__header">
+                        <h3>Hombre</h3>
+                        <label class="mobile-submenu-close" for="submenu-panel-hombre"
+                            aria-label="Cerrar submenú hombre">
+                            <i class="bi bi-x-lg"></i>
+                        </label>
+                    </div>
+                    <ul class="mobile-submenu-list">
+                        <li><a href="hombre.html#polos-hombre">Polos</a></li>
+                        <li><a href="hombre.html#camisas-hombre">Camisas</a></li>
+                        <li><a href="hombre.html#pantalones-hombre">Pantalones</a></li>
+                        <li><a href="hombre.html#shorts-hombre">Shorts</a></li>
+                    </ul>
+                </section>
+
+                <section class="mobile-submenu-panel mobile-submenu-panel--mujer" aria-label="Categorías de mujer">
+                    <div class="mobile-submenu-panel__header">
+                        <h3>Mujer</h3>
+                        <label class="mobile-submenu-close" for="submenu-panel-mujer" aria-label="Cerrar submenú mujer">
+                            <i class="bi bi-x-lg"></i>
+                        </label>
+                    </div>
+                    <ul class="mobile-submenu-list">
+                        <li><a href="mujer.html#blusas-mujer">Blusas</a></li>
+                        <li><a href="mujer.html#faldas-mujer">Faldas</a></li>
+                        <li><a href="mujer.html#jeans-mujer">Jeans</a></li>
+                        <li><a href="mujer.html#vestidos-mujer">Vestidos</a></li>
+                        <li><a href="mujer.html#bikinis-mujer">Bikinis</a></li>
+                    </ul>
+                </section>
+
+                <section class="mobile-submenu-panel mobile-submenu-panel--ninos" aria-label="Categorías de niños">
+                    <div class="mobile-submenu-panel__header">
+                        <h3>Niños</h3>
+                        <label class="mobile-submenu-close" for="submenu-panel-ninos" aria-label="Cerrar submenú niños">
+                            <i class="bi bi-x-lg"></i>
+                        </label>
+                    </div>
+                    <ul class="mobile-submenu-list">
+                        <li><a href="ninos.html#polos-ninos">Polos</a></li>
+                        <li><a href="ninos.html#conjuntos-ninos">Conjuntos</a></li>
+                        <li><a href="ninos.html#shorts-ninos">Shorts</a></li>
+                        <li><a href="ninos.html#buzos-ninos">Buzos</a></li>
+                    </ul>
+                </section>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-fluid py-3">
         <!-- Contenido principal -->
         <div class="row">
 
             <!-- FILTRO PARA ESCRITORIO -->
             <aside class="col-lg-3 d-none d-lg-block">
-
                 <div class="desktop-filter">
-                    <h4 class="mb-4">
-                        Filtrar
-                    </h4>
-
+                    <h4 class="mb-4">Filtrar</h4>
                     <!-- PRECIO -->
                     <div class="mb-4">
-
-                        <label class="form-label">
-                                Precio máximo
-                            </label>
-                            <div class="price-range">
-                                <input class="form-range" type="range" min="0" max="150" step="10" value="80" aria-label="Precio máximo">
-                                <div class="range-labels">
-                                    <span>S/0</span>
-                                    <span>S/150+</span>
-                                </div>
+                        <label class="form-label">Precio máximo</label>
+                        <div class="price-range">
+                            <input class="form-range filtro-precio" type="range" min="0" max="150" step="10" value="150"
+                                aria-label="Precio máximo">
+                            <div class="range-labels">
+                                <span>S/0</span>
+                                <span>S/150+</span>
                             </div>
-
+                        </div>
                     </div>
-
                     <!-- TALLA -->
                     <div class="mb-4">
-
-                        <label class="form-label">
-                            Talla
-                        </label>
-
-                        <select class="form-select">
-
-                            <option>Todas</option>
-                            <option>S</option>
-                            <option>M</option>
-                            <option>L</option>
-                            <option>XL</option>
-
+                        <label class="form-label">Talla</label>
+                        <select class="form-select filtro-talla">
+                            <option value="todas">Todas</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
                         </select>
-
                     </div>
-
                     <!-- COLOR -->
                     <div>
-
-                        <label class="form-label">
-                            Color
-                        </label>
-
-                        <select class="form-select">
-
-                            <option>Todos</option>
-                            <option>Negro</option>
-                            <option>Blanco</option>
-                            <option>Gris</option>
-                            <option>Azul</option>
-
+                        <label class="form-label">Color</label>
+                        <select class="form-select filtro-color">
+                            <option value="todos">Todos</option>
+                            <option value="Negro">Negro</option>
+                            <option value="Blanco">Blanco</option>
+                            <option value="Gris">Gris</option>
+                            <option value="Azul">Azul</option>
+                            <option value="Beige">Beige</option>
                         </select>
-
                     </div>
                 </div>
             </aside>
@@ -242,37 +227,26 @@
 
                 <!-- BLUSAS -->
                 <section id="blusas-mujer" class="mb-5">
-                    <h2 class="section-title">
-                        Blusas
-                    </h2>
-
+                    <h2 class="section-title">Blusas</h2>
                     <div class="row g-3">
                         <!-- PRODUCTOS -->
                         <!-- Blusa 1 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="M,L,XL" data-colores="Negro">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/blusa-mujer/blusa-1.jpg"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/blusa-mujer/blusa-1.jpg" class="img-fluid product-image"
                                     alt="Blusa">
                                 <div class="product-info">
                                     <div class="product-name">Blusa de Chalis Rayado</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
+                                        <span class="color-circle" style="background:#6c757d;">
                                         </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
+                                        <span class="color-circle" style="background:#000;">
                                         </span>
                                     </div>
                                     <div class="price">S/ 49.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalBlusa1">
                                             Ver más
                                         </button>
@@ -282,30 +256,22 @@
                         </div>
 
                         <!-- Blusa 2 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="M,L,XL" data-colores="Negro">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/blusa-mujer/blusa-2.jpg"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/blusa-mujer/blusa-2.jpg" class="img-fluid product-image"
                                     alt="Blusa">
                                 <div class="product-info">
                                     <div class="product-name">Blusa de Hilo</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
+                                        <span class="color-circle" style="background:#6c757d;">
                                         </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
+                                        <span class="color-circle" style="background:#000;">
                                         </span>
                                     </div>
                                     <div class="price">S/ 49.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalBlusa2">
                                             Ver más
                                         </button>
@@ -315,30 +281,22 @@
                         </div>
 
                         <!-- Blusa 3 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="M,L,XL" data-colores="Negro">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/blusa-mujer/blusa-3.jpg"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/blusa-mujer/blusa-3.jpg" class="img-fluid product-image"
                                     alt="Blusa">
                                 <div class="product-info">
                                     <div class="product-name">Corset</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
+                                        <span class="color-circle" style="background:#6c757d;">
                                         </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
+                                        <span class="color-circle" style="background:#000;">
                                         </span>
                                     </div>
                                     <div class="price">S/ 49.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalBlusa3">
                                             Ver más
                                         </button>
@@ -348,30 +306,22 @@
                         </div>
 
                         <!-- Blusa 4 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="M,L,XL" data-colores="Negro">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/blusa-mujer/blusa-4.jpg"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/blusa-mujer/blusa-4.jpg" class="img-fluid product-image"
                                     alt="Blusa">
                                 <div class="product-info">
                                     <div class="product-name">Top Bandeau Cuadriculado</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
+                                        <span class="color-circle" style="background:#6c757d;">
                                         </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
+                                        <span class="color-circle" style="background:#000;">
                                         </span>
                                     </div>
                                     <div class="price">S/ 49.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalBlusa4">
                                             Ver más
                                         </button>
@@ -380,42 +330,31 @@
                             </div>
                         </div>
                     </div>
-
                 </section>
 
                 <!-- FALDAS -->
                 <section id="faldas-mujer" class="mb-5">
-                    <h2 class="section-title">
-                        Faldas
-                    </h2>
+                    <h2 class="section-title">Faldas</h2>
 
                     <div class="row g-3">
                         <!-- PRODUCTOS -->
                         <!-- Falda 1 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="M,L,XL" data-colores="Negro">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/falda-mujer/falda-1.jpg"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/falda-mujer/falda-1.jpg" class="img-fluid product-image"
                                     alt="Falda">
                                 <div class="product-info">
                                     <div class="product-name">Falda Short</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
+                                        <span class="color-circle" style="background:#6c757d;">
                                         </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
+                                        <span class="color-circle" style="background:#000;">
                                         </span>
                                     </div>
                                     <div class="price">S/ 49.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalFalda1">
                                             Ver más
                                         </button>
@@ -427,28 +366,20 @@
                         <!-- Falda 2 -->
                         <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/falda-mujer/falda-2.jpg"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/falda-mujer/falda-2.jpg" class="img-fluid product-image"
                                     alt="Falda">
                                 <div class="product-info">
                                     <div class="product-name">Falda Rasgada con Correa</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
+                                        <span class="color-circle" style="background:#6c757d;">
                                         </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
+                                        <span class="color-circle" style="background:#000;">
                                         </span>
                                     </div>
                                     <div class="price">S/ 49.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalFalda2">
                                             Ver más
                                         </button>
@@ -458,30 +389,22 @@
                         </div>
 
                         <!-- Falda 3 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="M,L,XL" data-colores="Negro">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/falda-mujer/falda-3.jpg"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/falda-mujer/falda-3.jpg" class="img-fluid product-image"
                                     alt="Falda">
                                 <div class="product-info">
                                     <div class="product-name">Falda con Cierre</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
+                                        <span class="color-circle" style="background:#6c757d;">
                                         </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
+                                        <span class="color-circle" style="background:#000;">
                                         </span>
                                     </div>
                                     <div class="price">S/ 49.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalFalda3">
                                             Ver más
                                         </button>
@@ -491,30 +414,22 @@
                         </div>
 
                         <!-- Falda 4 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="M,L,XL" data-colores="Negro">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/falda-mujer/falda-4.jpg"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/falda-mujer/falda-4.jpg" class="img-fluid product-image"
                                     alt="Falda">
                                 <div class="product-info">
                                     <div class="product-name">Falda con Cadenas</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
+                                        <span class="color-circle" style="background:#6c757d;">
                                         </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
+                                        <span class="color-circle" style="background:#000;">
                                         </span>
                                     </div>
                                     <div class="price">S/ 49.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalFalda4">
                                             Ver más
                                         </button>
@@ -523,7 +438,6 @@
                             </div>
                         </div>
                     </div>
-
                 </section>
 
                 <!-- PANTALONES -->
@@ -535,30 +449,22 @@
                     <div class="row g-3">
                         <!-- PRODUCTOS -->
                         <!-- Pantalon 1 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="M,L,XL" data-colores="Negro">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/jeans-mujer/pantalon-1.avif"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/jeans-mujer/pantalon-1.avif" class="img-fluid product-image"
                                     alt="Pantalon">
                                 <div class="product-info">
                                     <div class="product-name">Pantalon Casual</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
+                                        <span class="color-circle" style="background:#6c757d;">
                                         </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
+                                        <span class="color-circle" style="background:#000;">
                                         </span>
                                     </div>
                                     <div class="price">S/ 49.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalPantalonM1">
                                             Ver más
                                         </button>
@@ -568,30 +474,22 @@
                         </div>
 
                         <!-- Pantalon 2 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="M,L,XL" data-colores="Negro">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/jeans-mujer/pantalon-2.avif"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/jeans-mujer/pantalon-2.avif" class="img-fluid product-image"
                                     alt="Pantalon">
                                 <div class="product-info">
                                     <div class="product-name">Pantalon Cargo</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
+                                        <span class="color-circle" style="background:#6c757d;">
                                         </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
+                                        <span class="color-circle" style="background:#000;">
                                         </span>
                                     </div>
                                     <div class="price">S/ 49.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalPantalonM2">
                                             Ver más
                                         </button>
@@ -601,30 +499,22 @@
                         </div>
 
                         <!-- Pantalon 3 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="M,L,XL" data-colores="Negro">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/jeans-mujer/pantalon-3.avif"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/jeans-mujer/pantalon-3.avif" class="img-fluid product-image"
                                     alt="Pantalon">
                                 <div class="product-info">
                                     <div class="product-name">Pantalón de Traje Vintage</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
+                                        <span class="color-circle" style="background:#6c757d;">
                                         </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
+                                        <span class="color-circle" style="background:#000;">
                                         </span>
                                     </div>
                                     <div class="price">S/ 49.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalPantalonM3">
                                             Ver más
                                         </button>
@@ -634,30 +524,22 @@
                         </div>
 
                         <!-- Pantalon 4 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="M,L,XL" data-colores="Negro">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/jeans-mujer/pantalon-4.avif"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/jeans-mujer/pantalon-4.avif" class="img-fluid product-image"
                                     alt="Pantalon">
                                 <div class="product-info">
                                     <div class="product-name">Pantalón Jeans Elástico</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
+                                        <span class="color-circle" style="background:#6c757d;">
                                         </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
+                                        <span class="color-circle" style="background:#000;">
                                         </span>
                                     </div>
                                     <div class="price">S/ 49.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalPantalonM4">
                                             Ver más
                                         </button>
@@ -677,30 +559,22 @@
                     <div class="row g-3">
                         <!-- PRODUCTOS -->
                         <!-- Vestido 1 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="M,L,XL" data-colores="Negro">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/vestido-mujer/vestido-1.jpg"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/vestido-mujer/vestido-1.jpg" class="img-fluid product-image"
                                     alt="Vestido">
                                 <div class="product-info">
                                     <div class="product-name">Vestido Manga Princesa</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
+                                        <span class="color-circle" style="background:#6c757d;">
                                         </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
+                                        <span class="color-circle" style="background:#000;">
                                         </span>
                                     </div>
                                     <div class="price">S/ 49.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalVestido1">
                                             Ver más
                                         </button>
@@ -710,30 +584,22 @@
                         </div>
 
                         <!-- Vestido 2 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="M,L,XL" data-colores="Negro">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/vestido-mujer/vestido-2.jpg"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/vestido-mujer/vestido-2.jpg" class="img-fluid product-image"
                                     alt="Vestido">
                                 <div class="product-info">
                                     <div class="product-name">Vestido Manga Ángel</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
+                                        <span class="color-circle" style="background:#6c757d;">
                                         </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
+                                        <span class="color-circle" style="background:#000;">
                                         </span>
                                     </div>
                                     <div class="price">S/ 49.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalVestido2">
                                             Ver más
                                         </button>
@@ -743,30 +609,22 @@
                         </div>
 
                         <!-- Vestido 3 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="M,L,XL" data-colores="Negro">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/vestido-mujer/vestido-3.jpg"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/vestido-mujer/vestido-3.jpg" class="img-fluid product-image"
                                     alt="Vestido">
                                 <div class="product-info">
                                     <div class="product-name">Vestido de Chalis</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
+                                        <span class="color-circle" style="background:#6c757d;">
                                         </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
+                                        <span class="color-circle" style="background:#000;">
                                         </span>
                                     </div>
                                     <div class="price">S/ 49.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalVestido3">
                                             Ver más
                                         </button>
@@ -776,30 +634,22 @@
                         </div>
 
                         <!-- Vestido 4 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="M,L,XL" data-colores="Negro">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/vestido-mujer/vestido-4.jpg"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/vestido-mujer/vestido-4.jpg" class="img-fluid product-image"
                                     alt="Vestido">
                                 <div class="product-info">
                                     <div class="product-name">Vestido Suplex Grueso Floreado</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
+                                        <span class="color-circle" style="background:#6c757d;">
                                         </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
+                                        <span class="color-circle" style="background:#000;">
                                         </span>
                                     </div>
                                     <div class="price">S/ 49.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalVestido4">
                                             Ver más
                                         </button>
@@ -819,30 +669,22 @@
                     <div class="row g-3">
                         <!-- PRODUCTOS -->
                         <!-- Bikini 1 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="M,L,XL" data-colores="Negro">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/bikinis-mujer/bikini-1.jpg"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/bikinis-mujer/bikini-1.jpg" class="img-fluid product-image"
                                     alt="Bikini">
                                 <div class="product-info">
                                     <div class="product-name">Bikini con Sujetador de Cuello</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
+                                        <span class="color-circle" style="background:#6c757d;">
                                         </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
+                                        <span class="color-circle" style="background:#000;">
                                         </span>
                                     </div>
                                     <div class="price">S/ 49.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalBikini1">
                                             Ver más
                                         </button>
@@ -851,30 +693,22 @@
                             </div>
                         </div>
                         <!-- Bikini 2 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="M,L,XL" data-colores="Negro">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/bikinis-mujer/bikini-2.jpg"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/bikinis-mujer/bikini-2.jpg" class="img-fluid product-image"
                                     alt="Bikini">
                                 <div class="product-info">
                                     <div class="product-name">Monokini de un Solo Hombro</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
+                                        <span class="color-circle" style="background:#6c757d;">
                                         </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
+                                        <span class="color-circle" style="background:#000;">
                                         </span>
                                     </div>
                                     <div class="price">S/ 49.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalBikini2">
                                             Ver más
                                         </button>
@@ -883,30 +717,22 @@
                             </div>
                         </div>
                         <!-- Bikini 3 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="M,L,XL" data-colores="Negro">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/bikinis-mujer/bikini-3.jpg"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/bikinis-mujer/bikini-3.jpg" class="img-fluid product-image"
                                     alt="Bikini">
                                 <div class="product-info">
                                     <div class="product-name">Bikini de un Solo Hombro Floreado</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
+                                        <span class="color-circle" style="background:#6c757d;">
                                         </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
+                                        <span class="color-circle" style="background:#000;">
                                         </span>
                                     </div>
                                     <div class="price">S/ 49.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalBikini3">
                                             Ver más
                                         </button>
@@ -915,30 +741,22 @@
                             </div>
                         </div>
                         <!-- Bikini 4 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="M,L,XL" data-colores="Negro">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/bikinis-mujer/bikini-4.jpg"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/bikinis-mujer/bikini-4.jpg" class="img-fluid product-image"
                                     alt="Bikini">
                                 <div class="product-info">
                                     <div class="product-name">Traje de Baño Entero</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
+                                        <span class="color-circle" style="background:#6c757d;">
                                         </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
+                                        <span class="color-circle" style="background:#000;">
                                         </span>
                                     </div>
                                     <div class="price">S/ 49.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalBikini4">
                                             Ver más
                                         </button>
@@ -949,149 +767,137 @@
                     </div>
                 </section>
             </main>
-
         </div>
-        </div>
+    </div>
 
-        <!-- FILTRO PARA MOVIL -->
-        <div class="filter-bar d-lg-none">
-            <button
-                class="btn filter-toggle w-100"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#mobileFilter">
+    <!-- FILTRO PARA MOVIL -->
+    <div class="filter-bar d-lg-none">
+        <button class="btn filter-toggle w-100" data-bs-toggle="offcanvas" data-bs-target="#mobileFilter">
 
-                <i class="bi bi-funnel"></i>
-                Filtrar
+            <i class="bi bi-funnel"></i>
+            Filtrar
+        </button>
+    </div>
+
+    <!-- OFFCANVAS -->
+    <div class="offcanvas offcanvas-bottom product-filter-offcanvas d-lg-none" tabindex="-1" id="mobileFilter">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Filtrar Productos</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas">
             </button>
         </div>
-
-        <!-- OFFCANVAS -->
-        <div
-            class="offcanvas offcanvas-bottom product-filter-offcanvas d-lg-none"
-            tabindex="-1"
-            id="mobileFilter">
-
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title">
-                    Filtrar Productos
-                </h5>
-
-                <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="offcanvas">
-                </button>
+        <div class="offcanvas-body">
+            <!-- PRECIO -->
+            <div class="mb-4">
+                <label class="form-label">Precio máximo</label>
+                <div class="price-range">
+                    <input class="form-range filtro-precio" type="range" min="0" max="150" step="10" value="150"
+                        aria-label="Precio máximo">
+                    <div class="range-labels">
+                        <span>S/0</span>
+                        <span>S/150+</span>
+                    </div>
+                </div>
             </div>
-
-            <div class="offcanvas-body">
-                <!-- PRECIO -->
-                <div class="mb-4">
-                    <label class="form-label">
-                                Precio máximo
-                            </label>
-                            <div class="price-range">
-                                <input class="form-range" type="range" min="0" max="150" step="10" value="80" aria-label="Precio máximo">
-                                <div class="range-labels">
-                                    <span>S/0</span>
-                                    <span>S/150+</span>
-                                </div>
-                            </div>
-                </div>
-
-                <!-- TALLA -->
-                <div class="mb-4">
-                    <label class="form-label">
-                        Talla
-                    </label>
-                    <select class="form-select">
-                        <option>Todas</option>
-                        <option>S</option>
-                        <option>M</option>
-                        <option>L</option>
-                        <option>XL</option>
-                    </select>
-                </div>
-
-                <!-- COLOR -->
-                <div>
-                    <label class="form-label">
-                        Color
-                    </label>
-                    <select class="form-select">
-                        <option>Todos</option>
-                        <option>Negro</option>
-                        <option>Blanco</option>
-                        <option>Gris</option>
-                        <option>Azul</option>
-                    </select>
-                </div>
-
+            <!-- TALLA -->
+            <div class="mb-4">
+                <label class="form-label">Talla</label>
+                <select class="form-select filtro-talla">
+                    <option value="todas">Todas</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+            </div>
+            <!-- COLOR -->
+            <div>
+                <label class="form-label">Color</label>
+                <select class="form-select filtro-color">
+                    <option value="todos">Todos</option>
+                    <option value="Negro">Negro</option>
+                    <option value="Blanco">Blanco</option>
+                    <option value="Gris">Gris</option>
+                    <option value="Azul">Azul</option>
+                    <option value="Beige">Beige</option>
+                </select>
             </div>
         </div>
+    </div>
 
-        <footer class="site-footer">
-            <div class="container">
-                <div class="row g-4">
-                    <section class="col-12 col-md-6 col-lg-3">
-                        <h3>Tienda</h3>
-                        <address>
-                            <p>Jr. Lima Pst 8 parada municipal</p>
-                            <p>Bagua, Amazonas, Perú, 15004</p>
-                            <p><a href="mailto:clothingstore.rr@gmail.com">clothingstore.rr@gmail.com</a></p>
-                            <p><a href="tel:+51916408971">+51 916 408 971</a></p>
-                        </address>
-                    </section>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-4">
+                <section class="col-12 col-md-6 col-lg-3">
+                    <h3>Tienda</h3>
+                    <address>
+                        <p>Jr. Lima Pst 8 parada municipal</p>
+                        <p>Bagua, Amazonas, Perú, 15004</p>
+                        <p><a href="mailto:clothingstore.rr@gmail.com">clothingstore.rr@gmail.com</a></p>
+                        <p><a href="tel:+51916408971">+51 916 408 971</a></p>
+                    </address>
+                </section>
 
-                    <section class="col-12 col-md-6 col-lg-3">
-                        <h3>Atención al cliente</h3>
-                        <ul class="footer-list">
-                            <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalPagos">Formas de pago</button></li>
-                            <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalEnvios">Métodos de envío</button></li>
-                            <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalCambios">Cambios y devoluciones</button></li>
-                            <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalPreguntas">Preguntas frecuentes</button></li>
-                        </ul>
-                    </section>
+                <section class="col-12 col-md-6 col-lg-3">
+                    <h3>Atención al cliente</h3>
+                    <ul class="footer-list">
+                        <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalPagos">Formas de
+                                pago</button></li>
+                        <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalEnvios">Métodos de
+                                envío</button></li>
+                        <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalCambios">Cambios y
+                                devoluciones</button></li>
+                        <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalPreguntas">Preguntas
+                                frecuentes</button></li>
+                    </ul>
+                </section>
 
-                    <section class="col-12 col-md-6 col-lg-3">
-                        <h3>Términos y condiciones</h3>
-                        <ul class="footer-list">
-                            <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalTerminos">Términos y condiciones</button></li>
-                            <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalDatos">Tratamiento de datos</button></li>
-                            <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalCookies">Política de cookies</button></li>
-                            <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalReclamaciones">Libro de reclamaciones</button></li>
-                        </ul>
-                        <img class="libro-reclamaciones-img img-fluid" src="imagenes/libro-de-reclamaciones.jpg" alt="Libro de Reclamaciones">
-                    </section>
+                <section class="col-12 col-md-6 col-lg-3">
+                    <h3>Términos y condiciones</h3>
+                    <ul class="footer-list">
+                        <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalTerminos">Términos y
+                                condiciones</button></li>
+                        <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalDatos">Tratamiento de
+                                datos</button></li>
+                        <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalCookies">Política de
+                                cookies</button></li>
+                        <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalReclamaciones">Libro de
+                                reclamaciones</button></li>
+                    </ul>
+                    <img class="libro-reclamaciones-img img-fluid" src="imagenes/libro-de-reclamaciones.jpg"
+                        alt="Libro de Reclamaciones">
+                </section>
 
-                    <section class="col-12 col-md-6 col-lg-3">
-                        <h3>Newsletter</h3>
-                        <p>Regístrate para conocer lanzamientos, descuentos y novedades.</p>
+                <section class="col-12 col-md-6 col-lg-3">
+                    <h3>Newsletter</h3>
+                    <p>Regístrate para conocer lanzamientos, descuentos y novedades.</p>
 
-                        <form class="newsletter-form">
-                            <label class="visually-hidden" for="correo-newsletter">Correo electrónico</label>
-                            <input id="correo-newsletter" class="form-control" type="email" placeholder="Correo electrónico" required>
-                            <button class="btn btn-primary w-100" type="submit">Suscribirse</button>
-                        </form>
-                    </section>
-                </div>
-
-                <div class="footer-bottom">
-                    <div class="redes">
-                        <p>Síguenos en nuestras <strong>redes sociales</strong></p>
-                        <div class="redes__link">
-                            <a href="https://web.facebook.com/RyRClothingstore/about">Facebook</a>
-                            <span>TikTok</span>
-                            <span>Instagram</span>
-                        </div>
-                    </div>
-
-                    <p class="copyright">&copy; 2026 R&R Clothing Store - Todos los derechos reservados.</p>
-                </div>
+                    <form class="newsletter-form">
+                        <label class="visually-hidden" for="correo-newsletter">Correo electrónico</label>
+                        <input id="correo-newsletter" class="form-control" type="email" placeholder="Correo electrónico"
+                            required>
+                        <button class="btn btn-primary w-100" type="submit">Suscribirse</button>
+                    </form>
+                </section>
             </div>
-        </footer>
 
-        <!-- Bootstrap JS -->
-        <div class="modal fade" id="modalPagos" tabindex="-1" aria-labelledby="modalPagosLabel" aria-hidden="true">
+            <div class="footer-bottom">
+                <div class="redes">
+                    <p>Síguenos en nuestras <strong>redes sociales</strong></p>
+                    <div class="redes__link">
+                        <a href="https://web.facebook.com/RyRClothingstore/about">Facebook</a>
+                        <span>TikTok</span>
+                        <span>Instagram</span>
+                    </div>
+                </div>
+
+                <p class="copyright">&copy; 2026 R&R Clothing Store - Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <div class="modal fade" id="modalPagos" tabindex="-1" aria-labelledby="modalPagosLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-sm modal-responsive">
             <div class="modal-content">
                 <div class="modal-header">
@@ -1127,7 +933,8 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Los cambios se coordinan dentro de las primeras 48 horas, siempre que la prenda esté en buen estado.</p>
+                    <p>Los cambios se coordinan dentro de las primeras 48 horas, siempre que la prenda esté en buen
+                        estado.</p>
                 </div>
             </div>
         </div>
@@ -1141,7 +948,8 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Puedes consultar disponibilidad, tallas y precios por nuestros canales de contacto antes de comprar.</p>
+                    <p>Puedes consultar disponibilidad, tallas y precios por nuestros canales de contacto antes de
+                        comprar.</p>
                 </div>
             </div>
         </div>
@@ -1155,7 +963,8 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
-                    <p>La compra confirma la aceptación de precios, disponibilidad y condiciones informadas por la tienda.</p>
+                    <p>La compra confirma la aceptación de precios, disponibilidad y condiciones informadas por la
+                        tienda.</p>
                 </div>
             </div>
         </div>
@@ -1169,7 +978,8 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Los datos de contacto se usan únicamente para atender consultas, coordinar pedidos y confirmar entregas.</p>
+                    <p>Los datos de contacto se usan únicamente para atender consultas, coordinar pedidos y confirmar
+                        entregas.</p>
                 </div>
             </div>
         </div>
@@ -1189,7 +999,8 @@
         </div>
     </div>
 
-    <div class="modal fade" id="modalReclamaciones" tabindex="-1" aria-labelledby="modalReclamacionesLabel" aria-hidden="true">
+    <div class="modal fade" id="modalReclamaciones" tabindex="-1" aria-labelledby="modalReclamacionesLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-sm modal-responsive">
             <div class="modal-content">
                 <div class="modal-header">
@@ -1204,5 +1015,6 @@
     </div>
 
     <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
-    </body>
+</body>
+
 </html>
