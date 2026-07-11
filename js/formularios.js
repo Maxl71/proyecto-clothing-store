@@ -30,8 +30,19 @@ function inicializarFormularioContacto() {
 
         //Evaluamos si todos los campos pasaron la prueba
         if (nombreValido && correoValido && mensajeValido) {
+
+            // ENVIAR MENSAJE PARA WHATSAPP 
+            // Numero de la tienda de R&R Clothing Store 
+            const numeroWhatsApp = "51916408971";
+            // mensaje combinando los datos del formulario
+            const textoMensaje = `¡Hola R&R Clothing Store!\n\nSoy ${nombre.value.trim()}.\nMi correo es: ${correo.value.trim()}\n\n*Mensaje:*\n${mensaje.value.trim()}`;
+            // Codificamos el texto para que los espacios y saltos de línea funcionen 
+            const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(textoMensaje)}`;
+            // Abrimos WhatsApp en una nueva pestaña
+            window.open(urlWhatsApp, "_blank");
+
             // Si todo está bien mostramos alerta de éxito en color verde )
-            mostrarAlerta(alerta, "Mensaje enviado correctamente. Pronto le contestaremos.", "ok");
+            mostrarAlerta(alerta, "Mensaje Enviado Correctamente. Pronto le contestaremos.", "ok");
             formulario.reset(); 
 
             [nombre, correo, mensaje].forEach((campo) => campo.classList.remove("is-valid"));
@@ -58,6 +69,16 @@ function inicializarNewsletter() {
 
             //Evaluamos si el texto escrito tiene formato de correo
             if (validarCorreo(inputCorreo.value)) {
+                
+                //ENVIAR CORREO PARA WHATSAPP 
+                // Numero de WhatsApp de la tienda
+                const numeroWhatsApp = "51916408971";
+                //Construimos el mensaje de solicitud de suscripción
+                const textoMensaje = `¡Hola R&R Clothing Store!\nQuiero suscribirme para recibir novedades y descuentos.\nMi correo electrónico es: ${inputCorreo.value.trim()}`;
+                //Codificamos el mensaje para la URL
+                const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(textoMensaje)}`;
+                //Abrimos WhatsApp en una nueva pestaña
+                window.open(urlWhatsApp, "_blank"); 
 
                 // ACCIONES SI EL CORREO ES VÁLIDO:
                 inputCorreo.classList.remove("is-invalid"); 
