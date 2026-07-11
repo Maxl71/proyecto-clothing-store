@@ -1,8 +1,8 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
     const carruseles = document.querySelectorAll("[data-product-carousel]");
     const duracionAnimacion = 360;
 
-    carruseles.forEach(function (carrusel) {
+    carruseles.forEach((carrusel) => {
         const filaProductos = carrusel.querySelector(".productos-bootstrap");
         const productos = Array.from(carrusel.querySelectorAll(".product-col")).slice(0, 10);
         const botonAnterior = carrusel.querySelector("[data-carousel-prev]");
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        function obtenerCantidadVisible() {
+        const obtenerCantidadVisible = () => {
             const ancho = window.innerWidth;
 
             if (ancho >= 1400) {
@@ -30,16 +30,16 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             return 2;
-        }
+        };
 
-        function obtenerProducto(indice) {
+        const obtenerProducto = (indice) => {
             const totalProductos = productos.length;
             const indiceSeguro = (indice + totalProductos) % totalProductos;
 
             return productos[indiceSeguro];
-        }
+        };
 
-        function prepararProductos(indiceBase, cantidadVisible, direccion) {
+        const prepararProductos = (indiceBase, cantidadVisible, direccion) => {
             const cantidadRenderizada = Math.min(cantidadVisible + 1, productos.length);
             const inicioRender = direccion === "prev" ? indiceBase - 1 : indiceBase;
 
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 "product-carousel-from-prev"
             );
 
-            productos.forEach(function (producto) {
+            productos.forEach((producto) => {
                 producto.classList.add("d-none");
             });
 
@@ -60,22 +60,22 @@ document.addEventListener("DOMContentLoaded", function () {
                 filaProductos.appendChild(producto);
                 producto.classList.remove("d-none");
             }
-        }
+        };
 
-        function actualizarProductos() {
+        const actualizarProductos = () => {
             const cantidadVisible = Math.min(obtenerCantidadVisible(), productos.length);
 
             prepararProductos(indiceInicial, cantidadVisible, "next");
 
-            productos.forEach(function (producto, indice) {
+            productos.forEach((producto, indice) => {
                 const distancia = (indice - indiceInicial + productos.length) % productos.length;
                 const visible = distancia < cantidadVisible;
 
                 producto.classList.toggle("d-none", !visible);
             });
-        }
+        };
 
-        function moverCarrusel(direccion) {
+        const moverCarrusel = (direccion) => {
             const cantidadVisible = Math.min(obtenerCantidadVisible(), productos.length);
 
             if (animando || productos.length <= cantidadVisible) {
@@ -90,13 +90,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 filaProductos.offsetWidth;
             }
 
-            requestAnimationFrame(function () {
+            requestAnimationFrame(() => {
                 filaProductos.classList.add(
                     direccion === "next" ? "product-carousel-moving-next" : "product-carousel-moving-prev"
                 );
             });
 
-            setTimeout(function () {
+            setTimeout(() => {
                 if (direccion === "next") {
                     indiceInicial = (indiceInicial + 1) % productos.length;
                 } else {
@@ -107,22 +107,22 @@ document.addEventListener("DOMContentLoaded", function () {
                 actualizarProductos();
                 filaProductos.offsetWidth;
 
-                requestAnimationFrame(function () {
+                requestAnimationFrame(() => {
                     filaProductos.classList.remove("product-carousel-reset");
                     animando = false;
                 });
             }, duracionAnimacion + 30);
-        }
+        };
 
-        botonSiguiente.addEventListener("click", function () {
+        botonSiguiente.addEventListener("click", () => {
             moverCarrusel("next");
         });
 
-        botonAnterior.addEventListener("click", function () {
+        botonAnterior.addEventListener("click", () => {
             moverCarrusel("prev");
         });
 
-        window.addEventListener("resize", function () {
+        window.addEventListener("resize", () => {
             if (!animando) {
                 actualizarProductos();
             }
