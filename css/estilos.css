@@ -934,3 +934,43 @@ main .card.shadow-sm:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
 }
+
+
+/*COLORES PARA LOS MENSAJES DE ALERTA EN FORMULARIOS*/
+.js-alerta {
+    margin-top: 12px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.js-alerta--ok {
+    color: #0f5132;
+    background-color: #d1e7dd;
+    border: 1px solid #badbcc;
+}
+
+.js-alerta--error {
+    color: #842029;
+    background-color: #f8d7da;
+    border: 1px solid #f5c2c7;
+}
+
+.js-error {
+    margin-top: 6px;
+    color: #842029;
+    font-size: 0.82rem;
+    font-weight: 800;
+}
+
+.form-control.is-invalid,
+.form-select.is-invalid {
+    border-color: #dc3545 !important;
+    box-shadow: 0 0 0 0.18rem rgba(220, 53, 69, 0.15);
+}
+
+.form-control.is-valid,
+.form-select.is-valid {
+    border-color: #198754 !important;
+    box-shadow: 0 0 0 0.18rem rgba(25, 135, 84, 0.15);
+}
