@@ -169,69 +169,50 @@
             <!-- Contenido principal -->
             <div class="row">
 
-                <!-- FILTRO PARA ESCRITORIO -->
-                <aside class="col-lg-3 d-none d-lg-block">
-
-                    <div class="desktop-filter">
-                        <h4 class="mb-4">
-                            Filtrar
-                        </h4>
-
-                        <!-- PRECIO -->
-                        <div class="mb-4">
-
-                            <label class="form-label">
-                                Precio máximo
-                            </label>
-                            <div class="price-range">
-                                <input class="form-range" type="range" min="0" max="150" step="10" value="80" aria-label="Precio máximo">
-                                <div class="range-labels">
-                                    <span>S/0</span>
-                                    <span>S/150+</span>
-                                </div>
+            <!-- FILTRO PARA ESCRITORIO -->
+            <aside class="col-lg-3 d-none d-lg-block">
+                <div class="desktop-filter">
+                    <h4 class="mb-4">Filtrar</h4>
+                    <!-- PRECIO -->
+                    <div class="mb-4">
+                        <label class="form-label">Precio máximo</label>
+                        <div class="price-range">
+                            <input class="form-range filtro-precio" type="range" min="0" max="150" step="10" value="150"
+                                aria-label="Precio máximo">
+                            <div class="range-labels">
+                                <span>S/0</span>
+                                <span>S/150+</span>
                             </div>
-
-                        </div>
-
-                        <!-- TALLA -->
-                        <div class="mb-4">
-
-                            <label class="form-label">
-                                Talla
-                            </label>
-
-                            <select class="form-select">
-
-                                <option>Todas</option>
-                                <option>S</option>
-                                <option>M</option>
-                                <option>L</option>
-                                <option>XL</option>
-
-                            </select>
-
-                        </div>
-
-                        <!-- COLOR -->
-                        <div>
-
-                            <label class="form-label">
-                                Color
-                            </label>
-
-                            <select class="form-select">
-
-                                <option>Todos</option>
-                                <option>Negro</option>
-                                <option>Blanco</option>
-                                <option>Gris</option>
-                                <option>Azul</option>
-
-                            </select>
-
                         </div>
                     </div>
-                </aside>
+                    <!-- TALLA -->
+                    <div class="mb-4">
+                        <label class="form-label">Talla</label>
+                        <select class="form-select filtro-talla">
+                            <option value="todas">Todas</option>
+                            <option value="8">8</option>
+                            <option value="10">10</option>
+                            <option value="12">12</option>
+                            <option value="14">14</option>
+                            <option value="16">16</option>
+                        </select>
+                    </div>
+                    <!-- COLOR -->
+                    <div>
+                        <label class="form-label">Color</label>
+                        <select class="form-select filtro-color">
+                            <option value="todos">Todos</option>
+                            <option value="Negro">Negro</option>
+                            <option value="Blanco">Blanco</option>
+                            <option value="Gris">Gris</option>
+                            <option value="Azul">Azul</option>
+                            <option value="Beige">Beige</option>
+                        </select>
+                    </div>
+                    <p class="resultado-filtro text-center fw-semibold text-white mt-3 mb-2 px-2" aria-live="polite"></p>
+                    <button type="button" class="btn w-100 btn-limpiar-filtros">Limpiar filtros</button>
+                </div>
+            </aside>
 
                 <!-- PRODUCTOS -->
                 <main class="col-12 col-lg-9">
@@ -249,7 +230,7 @@
                         <div class="row g-3">
                             <!-- PRODUCTOS -->
                             <!-- Polo 1 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="10,12,14" data-colores="Azul,Negro">
                                 <div class="product-card">
                                     <img
                                         src="./imagenes/ninos/polo-ninos/polo-1.jpg"
@@ -282,7 +263,7 @@
                             </div>
 
                             <!-- Polo 2 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="10,12,14" data-colores="Azul,Negro">
                                 <div class="product-card">
                                     <img
                                         src="./imagenes/ninos/polo-ninos/polo-2.jpg"
@@ -315,7 +296,7 @@
                             </div>
 
                             <!-- Polo 3 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="10,12,14" data-colores="Azul,Negro">
                                 <div class="product-card">
                                     <img
                                         src="./imagenes/ninos/polo-ninos/polo-3.jpg"
@@ -348,7 +329,7 @@
                             </div>
 
                             <!-- Polo 4 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="10,12,14" data-colores="Azul,Negro">
                                 <div class="product-card">
                                     <img
                                         src="./imagenes/ninos/polo-ninos/polo-4.jpg"
@@ -392,7 +373,7 @@
                         <div class="row g-3">
                             <!-- PRODUCTOS -->
                             <!-- Conjunto 1 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="10,12,14" data-colores="Azul,Negro">
                                 <div class="product-card">
                                     <img
                                         src="./imagenes/ninos/conjunto-ninos/conjunto-1.avif"
@@ -425,7 +406,7 @@
                             </div>
 
                             <!-- Conjunto 2 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="10,12,14" data-colores="Azul,Negro">
                                 <div class="product-card">
                                     <img
                                         src="./imagenes/ninos/conjunto-ninos/conjunto-2.avif"
@@ -458,7 +439,7 @@
                             </div>
 
                             <!-- Conjunto 3 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="10,12,14" data-colores="Azul,Negro">
                                 <div class="product-card">
                                     <img
                                         src="./imagenes/ninos/conjunto-ninos/conjunto-3.avif"
@@ -491,7 +472,7 @@
                             </div>
 
                             <!-- Conjunto 4 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="10,12,14" data-colores="Azul,Negro">
                                 <div class="product-card">
                                     <img
                                         src="./imagenes/ninos/conjunto-ninos/conjunto-4.avif"
@@ -535,7 +516,7 @@
                         <div class="row g-3">
                             <!-- PRODUCTOS -->
                             <!-- Short 1 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="10,12,14" data-colores="Azul,Negro">
                                 <div class="product-card">
                                     <img
                                         src="./imagenes/ninos/shorts-ninos/short-1.webp"
@@ -568,7 +549,7 @@
                             </div>
 
                             <!-- Short 2 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="10,12,14" data-colores="Azul,Negro">
                                 <div class="product-card">
                                     <img
                                         src="./imagenes/ninos/shorts-ninos/short-2.webp"
@@ -601,7 +582,7 @@
                             </div>
 
                             <!-- Short 3 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="10,12,14" data-colores="Azul,Negro">
                                 <div class="product-card">
                                     <img
                                         src="./imagenes/ninos/shorts-ninos/short-3.webp"
@@ -634,7 +615,7 @@
                             </div>
 
                             <!-- Short 4 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="10,12,14" data-colores="Azul,Negro">
                                 <div class="product-card">
                                     <img
                                         src="./imagenes/ninos/shorts-ninos/short-4.webp"
@@ -677,7 +658,7 @@
                         <div class="row g-3">
                             <!-- PRODUCTOS -->
                             <!-- Buzo 1 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="10,12,14" data-colores="Azul,Negro">
                                 <div class="product-card">
                                     <img
                                         src="./imagenes/ninos/buzos-ninos/buzo-1.webp"
@@ -710,7 +691,7 @@
                             </div>
 
                             <!-- Buzo 2 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="10,12,14" data-colores="Azul,Negro">
                                 <div class="product-card">
                                     <img
                                         src="./imagenes/ninos/buzos-ninos/buzo-2.jpg"
@@ -743,7 +724,7 @@
                             </div>
 
                             <!-- Buzo 3 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="10,12,14" data-colores="Azul,Negro">
                                 <div class="product-card">
                                     <img
                                         src="./imagenes/ninos/buzos-ninos/buzo-3.jpg"
@@ -776,7 +757,7 @@
                             </div>
 
                             <!-- Buzo 4 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="10,12,14" data-colores="Azul,Negro">
                                 <div class="product-card">
                                     <img
                                         src="./imagenes/ninos/buzos-ninos/buzo-4.webp"
@@ -810,9 +791,9 @@
                         </div>
                     </section>
                 </main>
-
             </div>
         </div>
+        
         <!-- FILTRO PARA MOVIL -->
         <div class="filter-bar d-lg-none">
             <button
@@ -826,68 +807,53 @@
         </div>
 
         <!-- OFFCANVAS -->
-        <div
-            class="offcanvas offcanvas-bottom product-filter-offcanvas d-lg-none"
-            tabindex="-1"
-            id="mobileFilter">
-
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title">
-                    Filtrar Productos
-                </h5>
-
-                <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="offcanvas">
-                </button>
-            </div>
-
-            <div class="offcanvas-body">
-                <!-- PRECIO -->
-                <div class="mb-4">
-                    <label class="form-label">
-                                Precio máximo
-                            </label>
-                            <div class="price-range">
-                                <input class="form-range" type="range" min="0" max="150" step="10" value="80" aria-label="Precio máximo">
-                                <div class="range-labels">
-                                    <span>S/0</span>
-                                    <span>S/150+</span>
-                                </div>
-                            </div>
-                </div>
-
-                <!-- TALLA -->
-                <div class="mb-4">
-                    <label class="form-label">
-                        Talla
-                    </label>
-                    <select class="form-select">
-                        <option>Todas</option>
-                        <option>S</option>
-                        <option>M</option>
-                        <option>L</option>
-                        <option>XL</option>
-                    </select>
-                </div>
-
-                <!-- COLOR -->
-                <div>
-                    <label class="form-label">
-                        Color
-                    </label>
-                    <select class="form-select">
-                        <option>Todos</option>
-                        <option>Negro</option>
-                        <option>Blanco</option>
-                        <option>Gris</option>
-                        <option>Azul</option>
-                    </select>
-                </div>
-
-            </div>
+    <div class="offcanvas offcanvas-bottom product-filter-offcanvas d-lg-none" tabindex="-1" id="mobileFilter">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Filtrar Productos</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas">
+            </button>
         </div>
+        <div class="offcanvas-body">
+            <!-- PRECIO -->
+            <div class="mb-4">
+                <label class="form-label">Precio máximo</label>
+                <div class="price-range">
+                    <input class="form-range filtro-precio" type="range" min="0" max="150" step="10" value="150"
+                        aria-label="Precio máximo">
+                    <div class="range-labels">
+                        <span>S/0</span>
+                        <span>S/150+</span>
+                    </div>
+                </div>
+            </div>
+            <!-- TALLA -->
+            <div class="mb-4">
+                <label class="form-label">Talla</label>
+                <select class="form-select filtro-talla">
+                    <option value="todas">Todas</option>git
+                        <option value="8">8</option>
+                        <option value="10">10</option>
+                        <option value="12">12</option>
+                        <option value="14">14</option>
+                        <option value="16">16</option>
+                </select>
+            </div>
+            <!-- COLOR -->
+            <div>
+                <label class="form-label">Color</label>
+                <select class="form-select filtro-color">
+                    <option value="todos">Todos</option>
+                    <option value="Negro">Negro</option>
+                    <option value="Blanco">Blanco</option>
+                    <option value="Gris">Gris</option>
+                    <option value="Azul">Azul</option>
+                    <option value="Beige">Beige</option>
+                </select>
+            </div>
+            <!-- BOTÓN DE LIMPIAR FILTRO -->
+            <button type="button" class="btn w-100 btn-limpiar-filtros">Limpiar filtros</button>
+        </div>
+    </div>
 
         <footer class="site-footer">
             <div class="container">
@@ -1064,5 +1030,6 @@
     </div>
     <script src="js/formularios.js"></script>
     <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/categorias.js"></script>
     </body>
 </html>
