@@ -99,6 +99,32 @@ body {
         border-color: var(--color-fondo);
         box-shadow: 0 0 0 0.2rem rgba(222, 164, 106, 0.22);
     }
+    
+    .btn-limpiar-filtros {
+        border: 1px solid var(--color-fondo);
+        background-color: transparent;
+        color: var(--color-texto-claro);
+        font-weight: 700;
+        padding: 0.65rem 1rem;
+        border-radius: 0.45rem;
+        transition: all 0.25s ease;
+    }
+
+    .btn-limpiar-filtros:hover {
+        background-color: var(--color-fondo);
+        color: var(--color-header-footer);
+        border-color: var(--color-fondo);
+        transform: translateY(-1px);
+    }
+
+    .btn-limpiar-filtros:focus {
+        border-color: var(--color-fondo);
+        box-shadow: 0 0 0 0.2rem rgba(222, 164, 106, 0.22);
+    }
+
+    .btn-limpiar-filtros:active {
+        transform: translateY(0);
+    }
 }
 
 .price-range {

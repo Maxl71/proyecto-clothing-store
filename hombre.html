@@ -213,6 +213,8 @@
                             <option value="Beige">Beige</option>
                         </select>
                     </div>
+                    <p class="resultado-filtro text-center fw-semibold text-white mt-3 mb-2 px-2" aria-live="polite"></p>
+                    <button type="button" class="btn w-100 btn-limpiar-filtros">Limpiar filtros</button>
                 </div>
             </aside>
 
@@ -220,9 +222,9 @@
             <main class="col-12 col-lg-9">
                 <!-- Titulo de la página -->
                 <h1 class="page-title text-center">Ropa para Hombres</h1>
-                <p id="resultadoFiltro" class="text-center fw-semibold mb-4" aria-live="polite">
+                <!-- <p id="resultadoFiltro" class="text-center fw-semibold mb-4" aria-live="polite">
                     Mueve el filtro para buscar productos por precio.
-                </p>
+                </p> -->
 
                 <!-- POLOS -->
                 <section id="polos-hombre" class="mb-5">
@@ -799,8 +801,9 @@
 
     <!-- FILTRO PARA MOVIL -->
     <div class="filter-bar d-lg-none">
-        <button class="btn filter-toggle w-100" data-bs-toggle="offcanvas" data-bs-target="#mobileFilter">
+        <p class="resultado-filtro text-center fw-semibold text-white mb-2" aria-live="polite"></p>
 
+        <button class="btn filter-toggle w-100" data-bs-toggle="offcanvas" data-bs-target="#mobileFilter">
             <i class="bi bi-funnel"></i>
             Filtrar
         </button>
@@ -849,6 +852,8 @@
                     <option value="Beige">Beige</option>
                 </select>
             </div>
+            <!-- BOTÓN DE LIMPIAR FILTRO -->
+            <button type="button" class="btn w-100 btn-limpiar-filtros">Limpiar filtros</button>
         </div>
     </div>
 

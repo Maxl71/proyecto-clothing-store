@@ -197,6 +197,7 @@
                         <label class="form-label">Talla</label>
                         <select class="form-select filtro-talla">
                             <option value="todas">Todas</option>
+                            <option value="XS">XS</option>
                             <option value="S">S</option>
                             <option value="M">M</option>
                             <option value="L">L</option>
@@ -215,6 +216,8 @@
                             <option value="Beige">Beige</option>
                         </select>
                     </div>
+                    <p class="resultado-filtro text-center fw-semibold text-white mt-3 mb-2 px-2" aria-live="polite"></p>
+                    <button type="button" class="btn w-100 btn-limpiar-filtros">Limpiar filtros</button>
                 </div>
             </aside>
 
@@ -231,7 +234,7 @@
                     <div class="row g-3">
                         <!-- PRODUCTOS -->
                         <!-- Blusa 1 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="M,L,XL" data-colores="Negro">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="XS,M,L,XL" data-colores="Negro">
                             <div class="product-card">
                                 <img src="./imagenes/mujer/blusa-mujer/blusa-1.jpg" class="img-fluid product-image"
                                     alt="Blusa">
@@ -364,7 +367,7 @@
                         </div>
 
                         <!-- Falda 2 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="M,L,XL" data-colores="Negro">
                             <div class="product-card">
                                 <img src="./imagenes/mujer/falda-mujer/falda-2.jpg" class="img-fluid product-image"
                                     alt="Falda">
@@ -804,6 +807,7 @@
                 <label class="form-label">Talla</label>
                 <select class="form-select filtro-talla">
                     <option value="todas">Todas</option>
+                    <option value="XS">XS</option>
                     <option value="S">S</option>
                     <option value="M">M</option>
                     <option value="L">L</option>
@@ -822,6 +826,8 @@
                     <option value="Beige">Beige</option>
                 </select>
             </div>
+            <!-- BOTÓN DE LIMPIAR FILTRO -->
+            <button type="button" class="btn w-100 btn-limpiar-filtros">Limpiar filtros</button>
         </div>
     </div>
 
@@ -1015,6 +1021,7 @@
     </div>
 
     <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/categorias.js"></script>
 </body>
 
 </html>
