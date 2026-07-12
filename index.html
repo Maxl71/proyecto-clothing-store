@@ -257,10 +257,19 @@
             </div>
         </section>
 
-        <section class="seccion-productos py-5" id="mas-vendido">
+        <section class="seccion-productos py-5" id="mas-vendido" data-product-carousel>
             <div class="container">
                 <div class="section-heading text-center">
                     <h2>Lo más vendido</h2>
+                </div>
+
+                <div class="product-carousel-controls" aria-label="Controles de productos más vendidos">
+                    <button class="product-carousel-btn" type="button" data-carousel-prev aria-label="Ver productos anteriores">
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+                    <button class="product-carousel-btn" type="button" data-carousel-next aria-label="Ver más productos">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
                 </div>
 
                 <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xxl-5 g-4 productos-bootstrap">
@@ -276,10 +285,19 @@
             </div>
         </section>
 
-        <section class="seccion-productos seccion-productos--clara py-5">
+        <section class="seccion-productos seccion-productos--clara py-5" data-product-carousel>
             <div class="container">
                 <div class="section-heading text-center">
                     <h2>Productos destacados</h2>
+                </div>
+
+                <div class="product-carousel-controls" aria-label="Controles de productos destacados">
+                    <button class="product-carousel-btn" type="button" data-carousel-prev aria-label="Ver productos anteriores">
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+                    <button class="product-carousel-btn" type="button" data-carousel-next aria-label="Ver más productos">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
                 </div>
 
                 <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xxl-5 g-4 productos-bootstrap">
@@ -295,10 +313,19 @@
             </div>
         </section>
 
-        <section class="seccion-productos py-5" id="novedades">
+        <section class="seccion-productos py-5" id="novedades" data-product-carousel>
             <div class="container">
                 <div class="section-heading text-center">
                     <h2>Novedades</h2>
+                </div>
+
+                <div class="product-carousel-controls" aria-label="Controles de novedades">
+                    <button class="product-carousel-btn" type="button" data-carousel-prev aria-label="Ver productos anteriores">
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+                    <button class="product-carousel-btn" type="button" data-carousel-next aria-label="Ver más productos">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
                 </div>
 
                 <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xxl-5 g-4 productos-bootstrap">
@@ -823,8 +850,9 @@
             </div>
         </div>
     </div>
-
+    <script src="js/formularios.js"></script>
     <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
 

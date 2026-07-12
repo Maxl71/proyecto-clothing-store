@@ -526,6 +526,94 @@ body {
     align-items: stretch;
 }
 
+[data-product-carousel] .productos-bootstrap {
+    --carousel-visible: 2;
+    flex-wrap: nowrap;
+    overflow: visible;
+    transition: transform 0.36s ease;
+    will-change: transform;
+}
+
+[data-product-carousel] .product-col {
+    flex: 0 0 calc(100% / var(--carousel-visible));
+    max-width: calc(100% / var(--carousel-visible));
+}
+
+[data-product-carousel] .productos-bootstrap.product-carousel-moving-next {
+    transform: translateX(calc(-100% / var(--carousel-visible)));
+}
+
+[data-product-carousel] .productos-bootstrap.product-carousel-from-prev {
+    transition: none;
+    transform: translateX(calc(-100% / var(--carousel-visible)));
+}
+
+[data-product-carousel] .productos-bootstrap.product-carousel-moving-prev {
+    transition: transform 0.36s ease;
+    transform: translateX(0);
+}
+
+[data-product-carousel] .productos-bootstrap.product-carousel-reset {
+    transition: none;
+    transform: translateX(0);
+}
+
+[data-product-carousel] .container {
+    position: relative;
+}
+
+.product-carousel-controls {
+    position: absolute;
+    top: 42%;
+    right: 4px;
+    left: 4px;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+
+.product-carousel-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    color: var(--color-fondo);
+    background-color: var(--color-texto-oscuro);
+    border: 1px solid var(--color-fondo);
+    border-radius: 50%;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+    pointer-events: auto;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+        color: var(--color-texto-oscuro);
+        background-color: var(--color-fondo);
+        transform: scale(1.06);
+    }
+
+    i {
+        font-size: 1.15rem;
+        line-height: 1;
+    }
+}
+
+@media (min-width: 768px) {
+    .product-carousel-controls {
+        right: -34px;
+        left: -34px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .product-carousel-controls {
+        right: -42px;
+        left: -42px;
+    }
+}
+
 .product-col {
     display: flex;
 }
@@ -871,4 +959,44 @@ main .card.shadow-sm {
 main .card.shadow-sm:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+/*COLORES PARA LOS MENSAJES DE ALERTA EN FORMULARIOS*/
+.js-alerta {
+    margin-top: 12px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.js-alerta--ok {
+    color: #0f5132;
+    background-color: #d1e7dd;
+    border: 1px solid #badbcc;
+}
+
+.js-alerta--error {
+    color: #842029;
+    background-color: #f8d7da;
+    border: 1px solid #f5c2c7;
+}
+
+.js-error {
+    margin-top: 6px;
+    color: #842029;
+    font-size: 0.82rem;
+    font-weight: 800;
+}
+
+.form-control.is-invalid,
+.form-select.is-invalid {
+    border-color: #dc3545 !important;
+    box-shadow: 0 0 0 0.18rem rgba(220, 53, 69, 0.15);
+}
+
+.form-control.is-valid,
+.form-select.is-valid {
+    border-color: #198754 !important;
+    box-shadow: 0 0 0 0.18rem rgba(25, 135, 84, 0.15);
 }
