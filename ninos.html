@@ -1,965 +1,1781 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>R&R | Ropa para niños</title>
 
-        <!-- Bootstrap -->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>R&R | Ropa para niños</title>
 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-        <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <!-- Bootstrap -->
 
-        <!-- CSS Propio -->
-        <link rel="stylesheet" href="./css/estilos.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css" />
 
-    </head>
+    <!-- CSS Propio -->
+    <link rel="stylesheet" href="./css/estilos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+</head>
 
-    <body class="category-page">
-        <header class="site-header sticky-top">
-            <nav class="navbar navbar-expand-lg navbar-dark container py-2" aria-label="Navegación principal">
-                <a class="navbar-brand site-logo" href="index.html" aria-label="R&R Clothing Store">
-                    <img src="imagenes/logo/logo-transparente.png" alt="Logo de R&R Clothing Store">
-                </a>
+<body class="category-page">
+    <header class="site-header sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark container py-2" aria-label="Navegación principal">
+            <a class="navbar-brand site-logo" href="index.html" aria-label="R&R Clothing Store">
+                <img src="imagenes/logo/logo-transparente.png" alt="Logo de R&R Clothing Store" />
+            </a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-label="Abrir menú">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <div class="offcanvas offcanvas-start" tabindex="-1" id="menuPrincipal" aria-labelledby="menuPrincipalLabel">
-                    <input class="mobile-submenu-toggle" type="checkbox" id="submenu-panel-hombre">
-                    <input class="mobile-submenu-toggle" type="checkbox" id="submenu-panel-mujer">
-                    <input class="mobile-submenu-toggle" type="checkbox" id="submenu-panel-ninos">
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="menuPrincipal"
+                aria-labelledby="menuPrincipalLabel">
+                <input class="mobile-submenu-toggle" type="checkbox" id="submenu-panel-hombre" />
+                <input class="mobile-submenu-toggle" type="checkbox" id="submenu-panel-mujer" />
+                <input class="mobile-submenu-toggle" type="checkbox" id="submenu-panel-ninos" />
 
-                    <div class="offcanvas-header">
-                        <h2 class="offcanvas-title fs-5" id="menuPrincipalLabel">R&R Clothing Store</h2>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar menú"></button>
-                    </div>
-
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html">
-                                    Inicio <i class="bi bi-house-door ms-1"></i>
-                                </a>
-                            </li>
-
-                            <li class="nav-item dropdown menu-con-submenu">
-                                <label class="nav-link submenu-open d-lg-none" for="submenu-panel-hombre">
-                                    Hombre
-                                    <span>
-                                        <i class="bi bi-person"></i>
-                                        <i class="bi bi-chevron-right"></i>
-                                    </span>
-                                </label>
-                                <a class="nav-link d-none d-lg-flex align-items-center gap-1"
-                                href="hombre.html">
-                                    Hombre <i class="bi bi-person ms-1"></i>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href="hombre.html#polos-hombre">Polos</a></li>
-                                    <li><a class="dropdown-item" href="hombre.html#camisas-hombre">Camisas</a></li>
-                                    <li><a class="dropdown-item" href="hombre.html#pantalones-hombre">Pantalones</a></li>
-                                    <li><a class="dropdown-item" href="hombre.html#shorts-hombre">Shorts</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item dropdown menu-con-submenu">
-                                <label class="nav-link submenu-open d-lg-none" for="submenu-panel-mujer">
-                                    Mujer
-                                    <span>
-                                        <i class="bi bi-person-standing-dress"></i>
-                                        <i class="bi bi-chevron-right"></i>
-                                    </span>
-                                </label>
-                                <a class="nav-link d-none d-lg-flex align-items-center gap-1" href="mujer.html">
-                                    Mujer <i class="bi bi-person-standing-dress ms-1"></i>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href="mujer.html#blusas-mujer">Blusas</a></li>
-                                    <li><a class="dropdown-item" href="mujer.html#faldas-mujer">Faldas</a></li>
-                                    <li><a class="dropdown-item" href="mujer.html#jeans-mujer">Jeans</a></li>
-                                    <li><a class="dropdown-item" href="mujer.html#vestidos-mujer">Vestidos</a></li>
-                                    <li><a class="dropdown-item" href="mujer.html#bikinis-mujer">Bikinis</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item dropdown menu-con-submenu">
-                                <label class="nav-link active submenu-open d-lg-none" for="submenu-panel-ninos">
-                                    Niños
-                                    <span>
-                                        <i class="bi bi-emoji-smile"></i>
-                                        <i class="bi bi-chevron-right"></i>
-                                    </span>
-                                </label>
-                                <a class="nav-link active d-none d-lg-flex align-items-center gap-1" aria-current="page" href="ninos.html">
-                                    Niños <i class="bi bi-emoji-smile ms-1"></i>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href="ninos.html#polos-ninos">Polos</a></li>
-                                    <li><a class="dropdown-item" href="ninos.html#conjuntos-ninos">Conjuntos</a></li>
-                                    <li><a class="dropdown-item" href="ninos.html#shorts-ninos">Shorts</a></li>
-                                    <li><a class="dropdown-item" href="ninos.html#buzos-ninos">Buzos</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="nosotros.html">Nosotros <i class="bi bi-people ms-1"></i></a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="contacto.html">Contacto <i class="bi bi-envelope ms-1"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <section class="mobile-submenu-panel mobile-submenu-panel--hombre" aria-label="Categorías de hombre">
-                        <div class="mobile-submenu-panel__header">
-                            <h3>Hombre</h3>
-                            <label class="mobile-submenu-close" for="submenu-panel-hombre" aria-label="Cerrar submenú hombre">
-                                <i class="bi bi-x-lg"></i>
-                            </label>
-                        </div>
-                        <ul class="mobile-submenu-list">
-                            <li><a href="hombre.html#polos-hombre">Polos</a></li>
-                            <li><a href="hombre.html#camisas-hombre">Camisas</a></li>
-                            <li><a href="hombre.html#pantalones-hombre">Pantalones</a></li>
-                            <li><a href="hombre.html#shorts-hombre">Shorts</a></li>
-                        </ul>
-                    </section>
-
-                    <section class="mobile-submenu-panel mobile-submenu-panel--mujer" aria-label="Categorías de mujer">
-                        <div class="mobile-submenu-panel__header">
-                            <h3>Mujer</h3>
-                            <label class="mobile-submenu-close" for="submenu-panel-mujer" aria-label="Cerrar submenú mujer">
-                                <i class="bi bi-x-lg"></i>
-                            </label>
-                        </div>
-                        <ul class="mobile-submenu-list">
-                            <li><a href="mujer.html#blusas-mujer">Blusas</a></li>
-                            <li><a href="mujer.html#faldas-mujer">Faldas</a></li>
-                            <li><a href="mujer.html#jeans-mujer">Jeans</a></li>
-                            <li><a href="mujer.html#vestidos-mujer">Vestidos</a></li>
-                            <li><a href="mujer.html#bikinis-mujer">Bikinis</a></li>
-                        </ul>
-                    </section>
-
-                    <section class="mobile-submenu-panel mobile-submenu-panel--ninos" aria-label="Categorías de niños">
-                        <div class="mobile-submenu-panel__header">
-                            <h3>Niños</h3>
-                            <label class="mobile-submenu-close" for="submenu-panel-ninos" aria-label="Cerrar submenú niños">
-                                <i class="bi bi-x-lg"></i>
-                            </label>
-                        </div>
-                        <ul class="mobile-submenu-list">
-                            <li><a href="ninos.html#polos-ninos">Polos</a></li>
-                            <li><a href="ninos.html#conjuntos-ninos">Conjuntos</a></li>
-                            <li><a href="ninos.html#shorts-ninos">Shorts</a></li>
-                            <li><a href="ninos.html#buzos-ninos">Buzos</a></li>
-                        </ul>
-                    </section>
+                <div class="offcanvas-header">
+                    <h2 class="offcanvas-title fs-5" id="menuPrincipalLabel">
+                        R&R Clothing Store
+                    </h2>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Cerrar menú"></button>
                 </div>
-            </nav>
-        </header>
 
-        <div class="container-fluid py-3">
-            <!-- Contenido principal -->
-            <div class="row">
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                Inicio <i class="bi bi-house-door ms-1"></i>
+                            </a>
+                        </li>
 
-                <!-- FILTRO PARA ESCRITORIO -->
-                <aside class="col-lg-3 d-none d-lg-block">
-
-                    <div class="desktop-filter">
-                        <h4 class="mb-4">
-                            Filtrar
-                        </h4>
-
-                        <!-- PRECIO -->
-                        <div class="mb-4">
-
-                            <label class="form-label">
-                                Precio máximo
+                        <li class="nav-item dropdown menu-con-submenu">
+                            <label class="nav-link submenu-open d-lg-none" for="submenu-panel-hombre">
+                                Hombre
+                                <span>
+                                    <i class="bi bi-person"></i>
+                                    <i class="bi bi-chevron-right"></i>
+                                </span>
                             </label>
-                            <div class="price-range">
-                                <input class="form-range" type="range" min="0" max="150" step="10" value="80" aria-label="Precio máximo">
-                                <div class="range-labels">
-                                    <span>S/0</span>
-                                    <span>S/150+</span>
-                                </div>
+                            <a class="nav-link d-none d-lg-flex align-items-center gap-1" href="hombre.html">
+                                Hombre <i class="bi bi-person ms-1"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li>
+                                    <a class="dropdown-item" href="hombre.html#polos-hombre">Polos</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="hombre.html#camisas-hombre">Camisas</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="hombre.html#pantalones-hombre">Pantalones</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="hombre.html#shorts-hombre">Shorts</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="hombre.html#casacas-hombre">Casacas</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown menu-con-submenu">
+                            <label class="nav-link submenu-open d-lg-none" for="submenu-panel-mujer">
+                                Mujer
+                                <span>
+                                    <i class="bi bi-person-standing-dress"></i>
+                                    <i class="bi bi-chevron-right"></i>
+                                </span>
+                            </label>
+                            <a class="nav-link d-none d-lg-flex align-items-center gap-1" href="mujer.html">
+                                Mujer <i class="bi bi-person-standing-dress ms-1"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li>
+                                    <a class="dropdown-item" href="mujer.html#blusas-mujer">Blusas</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="mujer.html#faldas-mujer">Faldas</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="mujer.html#pantalones-mujer">Pantalones</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="mujer.html#vestidos-mujer">Vestidos</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="mujer.html#bikinis-mujer">Bikinis</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown menu-con-submenu">
+                            <label class="nav-link active submenu-open d-lg-none" for="submenu-panel-ninos">
+                                Niños
+                                <span>
+                                    <i class="bi bi-emoji-smile"></i>
+                                    <i class="bi bi-chevron-right"></i>
+                                </span>
+                            </label>
+                            <a class="nav-link active d-none d-lg-flex align-items-center gap-1" aria-current="page"
+                                href="ninos.html">
+                                Niños <i class="bi bi-emoji-smile ms-1"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li>
+                                    <a class="dropdown-item" href="ninos.html#polos-ninos">Polos</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="ninos.html#conjuntos-ninos">Conjuntos</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="ninos.html#shorts-ninos">Shorts</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="ninos.html#buzos-ninos">Buzos</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Nosotros <i class="bi bi-people ms-1"></i></a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto <i class="bi bi-envelope ms-1"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <section class="mobile-submenu-panel mobile-submenu-panel--hombre" aria-label="Categorías de hombre">
+                    <div class="mobile-submenu-panel__header">
+                        <h3>Hombre</h3>
+                        <label class="mobile-submenu-close" for="submenu-panel-hombre"
+                            aria-label="Cerrar submenú hombre">
+                            <i class="bi bi-x-lg"></i>
+                        </label>
+                    </div>
+                    <ul class="mobile-submenu-list">
+                        <li><a href="hombre.html#polos-hombre">Polos</a></li>
+                        <li><a href="hombre.html#camisas-hombre">Camisas</a></li>
+                        <li><a href="hombre.html#pantalones-hombre">Pantalones</a></li>
+                        <li><a href="hombre.html#shorts-hombre">Shorts</a></li>
+                        <li><a href="hombre.html#casacas-hombre">Casacas</a></li>
+                    </ul>
+                </section>
+
+                <section class="mobile-submenu-panel mobile-submenu-panel--mujer" aria-label="Categorías de mujer">
+                    <div class="mobile-submenu-panel__header">
+                        <h3>Mujer</h3>
+                        <label class="mobile-submenu-close" for="submenu-panel-mujer" aria-label="Cerrar submenú mujer">
+                            <i class="bi bi-x-lg"></i>
+                        </label>
+                    </div>
+                    <ul class="mobile-submenu-list">
+                        <li><a href="mujer.html#blusas-mujer">Blusas</a></li>
+                        <li><a href="mujer.html#faldas-mujer">Faldas</a></li>
+                        <li><a href="mujer.html#pantalones-mujer">Pantalones</a></li>
+                        <li><a href="mujer.html#vestidos-mujer">Vestidos</a></li>
+                        <li><a href="mujer.html#bikinis-mujer">Bikinis</a></li>
+                    </ul>
+                </section>
+
+                <section class="mobile-submenu-panel mobile-submenu-panel--ninos" aria-label="Categorías de niños">
+                    <div class="mobile-submenu-panel__header">
+                        <h3>Niños</h3>
+                        <label class="mobile-submenu-close" for="submenu-panel-ninos" aria-label="Cerrar submenú niños">
+                            <i class="bi bi-x-lg"></i>
+                        </label>
+                    </div>
+                    <ul class="mobile-submenu-list">
+                        <li><a href="ninos.html#polos-ninos">Polos</a></li>
+                        <li><a href="ninos.html#conjuntos-ninos">Conjuntos</a></li>
+                        <li><a href="ninos.html#shorts-ninos">Shorts</a></li>
+                        <li><a href="ninos.html#buzos-ninos">Buzos</a></li>
+                    </ul>
+                </section>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-fluid py-3">
+        <!-- Contenido principal -->
+        <div class="row">
+            <!-- FILTRO PARA ESCRITORIO -->
+            <aside class="col-lg-3 d-none d-lg-block">
+                <div class="desktop-filter">
+                    <h4 class="mb-4">Filtrar</h4>
+                    <!-- PRECIO -->
+                    <div class="mb-4">
+                        <label class="form-label">Precio máximo</label>
+                        <div class="price-range">
+                            <input class="form-range filtro-precio" type="range" min="0" max="150" step="10" value="150"
+                                aria-label="Precio máximo" />
+                            <div class="range-labels">
+                                <span>S/0</span>
+                                <span>S/150+</span>
                             </div>
-
-                        </div>
-
-                        <!-- TALLA -->
-                        <div class="mb-4">
-
-                            <label class="form-label">
-                                Talla
-                            </label>
-
-                            <select class="form-select">
-
-                                <option>Todas</option>
-                                <option>S</option>
-                                <option>M</option>
-                                <option>L</option>
-                                <option>XL</option>
-
-                            </select>
-
-                        </div>
-
-                        <!-- COLOR -->
-                        <div>
-
-                            <label class="form-label">
-                                Color
-                            </label>
-
-                            <select class="form-select">
-
-                                <option>Todos</option>
-                                <option>Negro</option>
-                                <option>Blanco</option>
-                                <option>Gris</option>
-                                <option>Azul</option>
-
-                            </select>
-
                         </div>
                     </div>
-                </aside>
+                    <!-- TALLA -->
+                    <div class="mb-4">
+                        <label class="form-label">Talla</label>
+                        <select class="form-select filtro-talla">
+                            <option value="todas">Todas</option>
+                            <option value="8">8</option>
+                            <option value="10">10</option>
+                            <option value="12">12</option>
+                            <option value="14">14</option>
+                            <option value="16">16</option>
+                        </select>
+                    </div>
+                    <!-- COLOR -->
+                    <div>
+                        <label class="form-label">Color</label>
+                        <select class="form-select filtro-color">
+                            <option value="todos">Todos</option>
+                            <option value="Negro">Negro</option>
+                            <option value="Blanco">Blanco</option>
+                            <option value="Gris">Gris</option>
+                            <option value="Azul">Azul</option>
+                            <option value="Beige">Beige</option>
+                            <option value="Rojo">Rojo</option>
+                            <option value="Celeste">Celeste</option>
+                            <option value="Verde">Verde</option>
+                            <option value="Amarillo">Amarillo</option>
+                        </select>
+                    </div>
+                    <p class="resultado-filtro text-center fw-semibold text-white mt-3 mb-2 px-2" aria-live="polite">
+                    </p>
+                    <button type="button" class="btn w-100 btn-limpiar-filtros">
+                        Limpiar filtros
+                    </button>
+                </div>
+            </aside>
 
-                <!-- PRODUCTOS -->
-                <main class="col-12 col-lg-9">
-                    <!-- Titulo de la página -->
-                    <h1 class="page-title text-center">
-                        Ropa para Niños
-                    </h1>
-
-                    <!-- POLOS -->
-                    <section id="polos-ninos" class="mb-5">
-                        <h2 class="section-title">
-                            Polos
-                        </h2>
-
-                        <div class="row g-3">
-                            <!-- PRODUCTOS -->
-                            <!-- Polo 1 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
-                                <div class="product-card">
-                                    <img
-                                        src="./imagenes/ninos/polo-ninos/polo-1.jpg"
-                                        class="img-fluid product-image"
-                                        alt="Polo">
-                                    <div class="product-info">
-                                        <div class="product-name">Polo con Cuello</div>
-                                        <div class="color-title">Color:</div>
-                                        <div class="colors">
-                                            <span
-                                                class="color-circle"
-                                                style="background:#6c757d;">
-                                            </span>
-                                            <span
-                                                class="color-circle"
-                                                style="background:#000;">
-                                            </span>
-                                        </div>
-                                        <div class="price">S/ 49.90</div>
-                                        <div class="d-grid mt-3">
-                                            <button
-                                                class="btn btn-outline-dark btn-product"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#modalPoloN1">
-                                                Ver más
-                                            </button>
-                                        </div>
+            <!-- PRODUCTOS -->
+            <main class="col-12 col-lg-9">
+                <!-- Titulo de la página -->
+                <h1 class="page-title text-center">Ropa para Niños</h1>
+                <!-- POLOS -->
+                <section id="polos-ninos" class="mb-5">
+                    <h2 class="section-title">Polos</h2>
+                    <div class="row g-3">
+                        <!-- PRODUCTOS -->
+                        <!-- Polo 1 -->
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="29.90" data-tallas="10,12,14,16" data-colores="Blanco">
+                            <div class="product-card">
+                                <img src="./imagenes/ninos/polo-ninos/polo-1.jpg" class="img-fluid product-image"
+                                    alt="Polo" />
+                                <div class="product-info">
+                                    <div class="product-name">Polo con Cuello</div>
+                                    <div class="color-title">Color:</div>
+                                    <div class="colors">
+                                        <span class="color-circle" style="background: #ffffff"></span>
                                     </div>
-                                </div>
-                            </div>
-
-                            <!-- Polo 2 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
-                                <div class="product-card">
-                                    <img
-                                        src="./imagenes/ninos/polo-ninos/polo-2.jpg"
-                                        class="img-fluid product-image"
-                                        alt="Polo">
-                                    <div class="product-info">
-                                        <div class="product-name">Polo cuello redondo</div>
-                                        <div class="color-title">Color:</div>
-                                        <div class="colors">
-                                            <span
-                                                class="color-circle"
-                                                style="background:#6c757d;">
-                                            </span>
-                                            <span
-                                                class="color-circle"
-                                                style="background:#000;">
-                                            </span>
-                                        </div>
-                                        <div class="price">S/ 49.90</div>
-                                        <div class="d-grid mt-3">
-                                            <button
-                                                class="btn btn-outline-dark btn-product"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#modalPoloN2">
-                                                Ver más
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Polo 3 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
-                                <div class="product-card">
-                                    <img
-                                        src="./imagenes/ninos/polo-ninos/polo-3.jpg"
-                                        class="img-fluid product-image"
-                                        alt="Polo">
-                                    <div class="product-info">
-                                        <div class="product-name">Bividi</div>
-                                        <div class="color-title">Color:</div>
-                                        <div class="colors">
-                                            <span
-                                                class="color-circle"
-                                                style="background:#6c757d;">
-                                            </span>
-                                            <span
-                                                class="color-circle"
-                                                style="background:#000;">
-                                            </span>
-                                        </div>
-                                        <div class="price">S/ 49.90</div>
-                                        <div class="d-grid mt-3">
-                                            <button
-                                                class="btn btn-outline-dark btn-product"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#modalPoloN3">
-                                                Ver más
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Polo 4 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
-                                <div class="product-card">
-                                    <img
-                                        src="./imagenes/ninos/polo-ninos/polo-4.jpg"
-                                        class="img-fluid product-image"
-                                        alt="Polo">
-                                    <div class="product-info">
-                                        <div class="product-name">Polo cola de pato</div>
-                                        <div class="color-title">Color:</div>
-                                        <div class="colors">
-                                            <span
-                                                class="color-circle"
-                                                style="background:#6c757d;">
-                                            </span>
-                                            <span
-                                                class="color-circle"
-                                                style="background:#000;">
-                                            </span>
-                                        </div>
-                                        <div class="price">S/ 49.90</div>
-                                        <div class="d-grid mt-3">
-                                            <button
-                                                class="btn btn-outline-dark btn-product"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#modalPoloN4">
-                                                Ver más
-                                            </button>
-                                        </div>
+                                    <div class="price">S/ 29.90</div>
+                                    <div class="d-grid mt-3">
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
+                                            data-bs-target="#modalPoloN1">
+                                            Ver más
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                    </section>
-
-                    <!-- CONJUNTOS -->
-                    <section id="conjuntos-ninos" class="mb-5">
-                        <h2 class="section-title">
-                            Conjuntos
-                        </h2>
-
-                        <div class="row g-3">
-                            <!-- PRODUCTOS -->
-                            <!-- Conjunto 1 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
-                                <div class="product-card">
-                                    <img
-                                        src="./imagenes/ninos/conjunto-ninos/conjunto-1.avif"
-                                        class="img-fluid product-image"
-                                        alt="Conjunto">
-                                    <div class="product-info">
-                                        <div class="product-name">Conjunto Rey León</div>
-                                        <div class="color-title">Color:</div>
-                                        <div class="colors">
-                                            <span
-                                                class="color-circle"
-                                                style="background:#6c757d;">
-                                            </span>
-                                            <span
-                                                class="color-circle"
-                                                style="background:#000;">
-                                            </span>
-                                        </div>
-                                        <div class="price">S/ 49.90</div>
-                                        <div class="d-grid mt-3">
-                                            <button
-                                                class="btn btn-outline-dark btn-product"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#modalConjuntoN1">
-                                                Ver más
-                                            </button>
-                                        </div>
+                        <!-- Polo 2 -->
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="39.90" data-tallas="12,14" data-colores="Negro">
+                            <div class="product-card">
+                                <img src="./imagenes/ninos/polo-ninos/polo-2.jpg" class="img-fluid product-image"
+                                    alt="Polo" />
+                                <div class="product-info">
+                                    <div class="product-name">Polo cuello redondo</div>
+                                    <div class="color-title">Color:</div>
+                                    <div class="colors">
+                                        <span class="color-circle" style="background: #000"></span>
                                     </div>
-                                </div>
-                            </div>
-
-                            <!-- Conjunto 2 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
-                                <div class="product-card">
-                                    <img
-                                        src="./imagenes/ninos/conjunto-ninos/conjunto-2.avif"
-                                        class="img-fluid product-image"
-                                        alt="Conjunto">
-                                    <div class="product-info">
-                                        <div class="product-name">Conjunto Camisa Short Garfield</div>
-                                        <div class="color-title">Color:</div>
-                                        <div class="colors">
-                                            <span
-                                                class="color-circle"
-                                                style="background:#6c757d;">
-                                            </span>
-                                            <span
-                                                class="color-circle"
-                                                style="background:#000;">
-                                            </span>
-                                        </div>
-                                        <div class="price">S/ 49.90</div>
-                                        <div class="d-grid mt-3">
-                                            <button
-                                                class="btn btn-outline-dark btn-product"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#modalConjuntoN2">
-                                                Ver más
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Conjunto 3 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
-                                <div class="product-card">
-                                    <img
-                                        src="./imagenes/ninos/conjunto-ninos/conjunto-3.avif"
-                                        class="img-fluid product-image"
-                                        alt="Conjunto">
-                                    <div class="product-info">
-                                        <div class="product-name">Conjunto Chompa Pantalón Hombre Araña</div>
-                                        <div class="color-title">Color:</div>
-                                        <div class="colors">
-                                            <span
-                                                class="color-circle"
-                                                style="background:#6c757d;">
-                                            </span>
-                                            <span
-                                                class="color-circle"
-                                                style="background:#000;">
-                                            </span>
-                                        </div>
-                                        <div class="price">S/ 49.90</div>
-                                        <div class="d-grid mt-3">
-                                            <button
-                                                class="btn btn-outline-dark btn-product"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#modalConjuntoN3">
-                                                Ver más
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Conjunto 4 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
-                                <div class="product-card">
-                                    <img
-                                        src="./imagenes/ninos/conjunto-ninos/conjunto-4.avif"
-                                        class="img-fluid product-image"
-                                        alt="Conjunto">
-                                    <div class="product-info">
-                                        <div class="product-name">Conjunto Deportivo</div>
-                                        <div class="color-title">Color:</div>
-                                        <div class="colors">
-                                            <span
-                                                class="color-circle"
-                                                style="background:#6c757d;">
-                                            </span>
-                                            <span
-                                                class="color-circle"
-                                                style="background:#000;">
-                                            </span>
-                                        </div>
-                                        <div class="price">S/ 49.90</div>
-                                        <div class="d-grid mt-3">
-                                            <button
-                                                class="btn btn-outline-dark btn-product"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#modalConjuntoN4">
-                                                Ver más
-                                            </button>
-                                        </div>
+                                    <div class="price">S/ 49.90</div>
+                                    <div class="d-grid mt-3">
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
+                                            data-bs-target="#modalPoloN2">
+                                            Ver más
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                    </section>
-
-                    <!-- SHORTS -->
-                    <section id="shorts-ninos" class="mb-5">
-                        <h2 class="section-title">
-                            Shorts
-                        </h2>
-
-                        <div class="row g-3">
-                            <!-- PRODUCTOS -->
-                            <!-- Short 1 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
-                                <div class="product-card">
-                                    <img
-                                        src="./imagenes/ninos/shorts-ninos/short-1.webp"
-                                        class="img-fluid product-image"
-                                        alt="Short">
-                                    <div class="product-info">
-                                        <div class="product-name">Bermuda Niño Manu Nude</div>
-                                        <div class="color-title">Color:</div>
-                                        <div class="colors">
-                                            <span
-                                                class="color-circle"
-                                                style="background:#6c757d;">
-                                            </span>
-                                            <span
-                                                class="color-circle"
-                                                style="background:#000;">
-                                            </span>
-                                        </div>
-                                        <div class="price">S/ 49.90</div>
-                                        <div class="d-grid mt-3">
-                                            <button
-                                                class="btn btn-outline-dark btn-product"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#modalShortN1">
-                                                Ver más
-                                            </button>
-                                        </div>
+                        <!-- Polo 3 -->
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="24.90" data-tallas="10,14" data-colores="Rojo">
+                            <div class="product-card">
+                                <img src="./imagenes/ninos/polo-ninos/polo-3.jpg" class="img-fluid product-image"
+                                    alt="Polo" />
+                                <div class="product-info">
+                                    <div class="product-name">Bividi</div>
+                                    <div class="color-title">Color:</div>
+                                    <div class="colors">
+                                        <span class="color-circle" style="background: #c11515"></span>
                                     </div>
-                                </div>
-                            </div>
-
-                            <!-- Short 2 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
-                                <div class="product-card">
-                                    <img
-                                        src="./imagenes/ninos/shorts-ninos/short-2.webp"
-                                        class="img-fluid product-image"
-                                        alt="Short">
-                                    <div class="product-info">
-                                        <div class="product-name">Bermuda Denim Niño Olio Bleach</div>
-                                        <div class="color-title">Color:</div>
-                                        <div class="colors">
-                                            <span
-                                                class="color-circle"
-                                                style="background:#6c757d;">
-                                            </span>
-                                            <span
-                                                class="color-circle"
-                                                style="background:#000;">
-                                            </span>
-                                        </div>
-                                        <div class="price">S/ 49.90</div>
-                                        <div class="d-grid mt-3">
-                                            <button
-                                                class="btn btn-outline-dark btn-product"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#modalShortN2">
-                                                Ver más
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Short 3 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
-                                <div class="product-card">
-                                    <img
-                                        src="./imagenes/ninos/shorts-ninos/short-3.webp"
-                                        class="img-fluid product-image"
-                                        alt="Short">
-                                    <div class="product-info">
-                                        <div class="product-name">Bermuda Niño Mateo Rojo Tomate</div>
-                                        <div class="color-title">Color:</div>
-                                        <div class="colors">
-                                            <span
-                                                class="color-circle"
-                                                style="background:#6c757d;">
-                                            </span>
-                                            <span
-                                                class="color-circle"
-                                                style="background:#000;">
-                                            </span>
-                                        </div>
-                                        <div class="price">S/ 49.90</div>
-                                        <div class="d-grid mt-3">
-                                            <button
-                                                class="btn btn-outline-dark btn-product"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#modalShortN3">
-                                                Ver más
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Short 4 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
-                                <div class="product-card">
-                                    <img
-                                        src="./imagenes/ninos/shorts-ninos/short-4.webp"
-                                        class="img-fluid product-image"
-                                        alt="Short">
-                                    <div class="product-info">
-                                        <div class="product-name">Bermuda Niño Piero Print Verde Frost</div>
-                                        <div class="color-title">Color:</div>
-                                        <div class="colors">
-                                            <span
-                                                class="color-circle"
-                                                style="background:#6c757d;">
-                                            </span>
-                                            <span
-                                                class="color-circle"
-                                                style="background:#000;">
-                                            </span>
-                                        </div>
-                                        <div class="price">S/ 49.90</div>
-                                        <div class="d-grid mt-3">
-                                            <button
-                                                class="btn btn-outline-dark btn-product"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#modalShortN4">
-                                                Ver más
-                                            </button>
-                                        </div>
+                                    <div class="price">S/ 24.90</div>
+                                    <div class="d-grid mt-3">
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
+                                            data-bs-target="#modalPoloN3">
+                                            Ver más
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </section>
-
-                    <!-- BUZOS -->
-                    <section id="buzos-ninos" class="mb-5">
-                        <h2 class="section-title">
-                            Buzos
-                        </h2>
-
-                        <div class="row g-3">
-                            <!-- PRODUCTOS -->
-                            <!-- Buzo 1 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
-                                <div class="product-card">
-                                    <img
-                                        src="./imagenes/ninos/buzos-ninos/buzo-1.webp"
-                                        class="img-fluid product-image"
-                                        alt="Buzo">
-                                    <div class="product-info">
-                                        <div class="product-name">Pantalon De Buzo Circus Puño Solido</div>
-                                        <div class="color-title">Color:</div>
-                                        <div class="colors">
-                                            <span
-                                                class="color-circle"
-                                                style="background:#6c757d;">
-                                            </span>
-                                            <span
-                                                class="color-circle"
-                                                style="background:#000;">
-                                            </span>
-                                        </div>
-                                        <div class="price">S/ 49.90</div>
-                                        <div class="d-grid mt-3">
-                                            <button
-                                                class="btn btn-outline-dark btn-product"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#modalBuzoN1">
-                                                Ver más
-                                            </button>
-                                        </div>
+                        <!-- Polo 4 -->
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="29.90" data-tallas="10,12,14" data-colores="Blanco">
+                            <div class="product-card">
+                                <img src="./imagenes/ninos/polo-ninos/polo-4.jpg" class="img-fluid product-image"
+                                    alt="Polo" />
+                                <div class="product-info">
+                                    <div class="product-name">Polo cola de pato</div>
+                                    <div class="color-title">Color:</div>
+                                    <div class="colors">
+                                        <span class="color-circle" style="background: #ffffff"></span>
                                     </div>
-                                </div>
-                            </div>
-
-                            <!-- Buzo 2 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
-                                <div class="product-card">
-                                    <img
-                                        src="./imagenes/ninos/buzos-ninos/buzo-2.jpg"
-                                        class="img-fluid product-image"
-                                        alt="Buzo">
-                                    <div class="product-info">
-                                        <div class="product-name">Buzo Hoodie Wolverine</div>
-                                        <div class="color-title">Color:</div>
-                                        <div class="colors">
-                                            <span
-                                                class="color-circle"
-                                                style="background:#6c757d;">
-                                            </span>
-                                            <span
-                                                class="color-circle"
-                                                style="background:#000;">
-                                            </span>
-                                        </div>
-                                        <div class="price">S/ 49.90</div>
-                                        <div class="d-grid mt-3">
-                                            <button
-                                                class="btn btn-outline-dark btn-product"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#modalBuzoN2">
-                                                Ver más
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Buzo 3 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
-                                <div class="product-card">
-                                    <img
-                                        src="./imagenes/ninos/buzos-ninos/buzo-3.jpg"
-                                        class="img-fluid product-image"
-                                        alt="Buzo">
-                                    <div class="product-info">
-                                        <div class="product-name">Buzo Diseño Pikachu</div>
-                                        <div class="color-title">Color:</div>
-                                        <div class="colors">
-                                            <span
-                                                class="color-circle"
-                                                style="background:#6c757d;">
-                                            </span>
-                                            <span
-                                                class="color-circle"
-                                                style="background:#000;">
-                                            </span>
-                                        </div>
-                                        <div class="price">S/ 49.90</div>
-                                        <div class="d-grid mt-3">
-                                            <button
-                                                class="btn btn-outline-dark btn-product"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#modalBuzoN3">
-                                                Ver más
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Buzo 4 -->
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
-                                <div class="product-card">
-                                    <img
-                                        src="./imagenes/ninos/buzos-ninos/buzo-4.webp"
-                                        class="img-fluid product-image"
-                                        alt="Buzo">
-                                    <div class="product-info">
-                                        <div class="product-name">Pantalon Jogger French Terry Caius2-Disney Charcoal</div>
-                                        <div class="color-title">Color:</div>
-                                        <div class="colors">
-                                            <span
-                                                class="color-circle"
-                                                style="background:#6c757d;">
-                                            </span>
-                                            <span
-                                                class="color-circle"
-                                                style="background:#000;">
-                                            </span>
-                                        </div>
-                                        <div class="price">S/ 49.90</div>
-                                        <div class="d-grid mt-3">
-                                            <button
-                                                class="btn btn-outline-dark btn-product"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#modalBuzoN4">
-                                                Ver más
-                                            </button>
-                                        </div>
+                                    <div class="price">S/ 29.90</div>
+                                    <div class="d-grid mt-3">
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
+                                            data-bs-target="#modalPoloN4">
+                                            Ver más
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </section>
-                </main>
+                    </div>
+                </section>
 
-            </div>
+                <!-- CONJUNTOS -->
+                <section id="conjuntos-ninos" class="mb-5">
+                    <h2 class="section-title">Conjuntos</h2>
+                    <div class="row g-3">
+                        <!-- PRODUCTOS -->
+                        <!-- Conjunto 1 -->
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="59.90" data-tallas="10,12,14" data-colores="Beige,Negro">
+                            <div class="product-card">
+                                <img src="./imagenes/ninos/conjunto-ninos/conjunto-1.avif"
+                                    class="img-fluid product-image" alt="Conjunto" />
+                                <div class="product-info">
+                                    <div class="product-name">Conjunto Rey León</div>
+                                    <div class="color-title">Color:</div>
+                                    <div class="colors">
+                                        <span class="color-circle" style="background: #dacabb"></span>
+                                    </div>
+                                    <div class="price">S/ 59.90</div>
+                                    <div class="d-grid mt-3">
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
+                                            data-bs-target="#modalConjuntoN1">
+                                            Ver más
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Conjunto 2 -->
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="69.90" data-tallas="10,12,14,16" data-colores="Blanco">
+                            <div class="product-card">
+                                <img src="./imagenes/ninos/conjunto-ninos/conjunto-2.avif"
+                                    class="img-fluid product-image" alt="Conjunto" />
+                                <div class="product-info">
+                                    <div class="product-name">Conjunto Camisa Short Garfield</div>
+                                    <div class="color-title">Color:</div>
+                                    <div class="colors">
+                                        <span class="color-circle" style="background: #eef1f3"></span>
+                                    </div>
+                                    <div class="price">S/ 69.90</div>
+                                    <div class="d-grid mt-3">
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
+                                            data-bs-target="#modalConjuntoN2">
+                                            Ver más
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Conjunto 3 -->
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="14,16" data-colores="Rojo,Negro">
+                            <div class="product-card">
+                                <img src="./imagenes/ninos/conjunto-ninos/conjunto-3.avif"
+                                    class="img-fluid product-image" alt="Conjunto" />
+                                <div class="product-info">
+                                    <div class="product-name">
+                                        Conjunto Chompa Pantalón Hombre Araña
+                                    </div>
+                                    <div class="color-title">Color:</div>
+                                    <div class="colors">
+                                        <span class="color-circle" style="background: #000000"></span>
+                                    </div>
+                                    <div class="price">S/ 49.90</div>
+                                    <div class="d-grid mt-3">
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
+                                            data-bs-target="#modalConjuntoN3">
+                                            Ver más
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Conjunto 4 -->
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="89.90" data-tallas="12,14" data-colores="Negro,Blanco">
+                            <div class="product-card">
+                                <img src="./imagenes/ninos/conjunto-ninos/conjunto-4.avif"
+                                    class="img-fluid product-image" alt="Conjunto" />
+                                <div class="product-info">
+                                    <div class="product-name">Conjunto Deportivo</div>
+                                    <div class="color-title">Color:</div>
+                                    <div class="colors">
+                                        <span class="color-circle" style="background: #d5dade"></span>
+                                    </div>
+                                    <div class="price">S/ 89.90</div>
+                                    <div class="d-grid mt-3">
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
+                                            data-bs-target="#modalConjuntoN4">
+                                            Ver más
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SHORTS -->
+                <section id="shorts-ninos" class="mb-5">
+                    <h2 class="section-title">Shorts</h2>
+                    <div class="row g-3">
+                        <!-- PRODUCTOS -->
+                        <!-- Short 1 -->
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="10,12,14" data-colores="Beige">
+                            <div class="product-card">
+                                <img src="./imagenes/ninos/shorts-ninos/short-1.webp" class="img-fluid product-image"
+                                    alt="Short" />
+                                <div class="product-info">
+                                    <div class="product-name">Bermuda Niño Manu Nude</div>
+                                    <div class="color-title">Color:</div>
+                                    <div class="colors">
+                                        <span class="color-circle" style="background: #d4c4b8"></span>
+                                    </div>
+                                    <div class="price">S/ 49.90</div>
+                                    <div class="d-grid mt-3">
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
+                                            data-bs-target="#modalShortN1">
+                                            Ver más
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Short 2 -->
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="59.90" data-tallas="14" data-colores="Celeste">
+                            <div class="product-card">
+                                <img src="./imagenes/ninos/shorts-ninos/short-2.webp" class="img-fluid product-image"
+                                    alt="Short" />
+                                <div class="product-info">
+                                    <div class="product-name">
+                                        Bermuda Denim Niño Olio Bleach
+                                    </div>
+                                    <div class="color-title">Color:</div>
+                                    <div class="colors">
+                                        <span class="color-circle" style="background: #95aeaf"></span>
+                                    </div>
+                                    <div class="price">S/ 59.90</div>
+                                    <div class="d-grid mt-3">
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
+                                            data-bs-target="#modalShortN2">
+                                            Ver más
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Short 3 -->
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="24.90" data-tallas="10,12" data-colores="Rojo">
+                            <div class="product-card">
+                                <img src="./imagenes/ninos/shorts-ninos/short-3.webp" class="img-fluid product-image"
+                                    alt="Short" />
+                                <div class="product-info">
+                                    <div class="product-name">
+                                        Bermuda Niño Mateo Rojo Tomate
+                                    </div>
+                                    <div class="color-title">Color:</div>
+                                    <div class="colors">
+                                        <span class="color-circle" style="background: #b7002b"></span>
+                                    </div>
+                                    <div class="price">S/ 24.90</div>
+                                    <div class="d-grid mt-3">
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
+                                            data-bs-target="#modalShortN3">
+                                            Ver más
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Short 4 -->
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="10,12,14" data-colores="Verde">
+                            <div class="product-card">
+                                <img src="./imagenes/ninos/shorts-ninos/short-4.webp" class="img-fluid product-image"
+                                    alt="Short" />
+                                <div class="product-info">
+                                    <div class="product-name">
+                                        Bermuda Niño Piero Print Verde Frost
+                                    </div>
+                                    <div class="color-title">Color:</div>
+                                    <div class="colors">
+                                        <span class="color-circle" style="background: #62746b"></span>
+                                    </div>
+                                    <div class="price">S/ 49.90</div>
+                                    <div class="d-grid mt-3">
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
+                                            data-bs-target="#modalShortN4">
+                                            Ver más
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- BUZOS -->
+                <section id="buzos-ninos" class="mb-5">
+                    <h2 class="section-title">Buzos</h2>
+                    <div class="row g-3">
+                        <!-- PRODUCTOS -->
+                        <!-- Buzo 1 -->
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="79.90" data-tallas="10,12,14,16" data-colores="Celeste">
+                            <div class="product-card">
+                                <img src="./imagenes/ninos/buzos-ninos/buzo-1.webp" class="img-fluid product-image"
+                                    alt="Buzo" />
+                                <div class="product-info">
+                                    <div class="product-name">
+                                        Pantalon De Buzo Circus Puño Solido
+                                    </div>
+                                    <div class="color-title">Color:</div>
+                                    <div class="colors">
+                                        <span class="color-circle" style="background: #557ba5"></span>
+                                    </div>
+                                    <div class="price">S/ 79.90</div>
+                                    <div class="d-grid mt-3">
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
+                                            data-bs-target="#modalBuzoN1">
+                                            Ver más
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Buzo 2 -->
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="59.90" data-tallas="14,16" data-colores="Gris">
+                            <div class="product-card">
+                                <img src="./imagenes/ninos/buzos-ninos/buzo-2.jpg" class="img-fluid product-image"
+                                    alt="Buzo" />
+                                <div class="product-info">
+                                    <div class="product-name">Buzo Hoodie Wolverine</div>
+                                    <div class="color-title">Color:</div>
+                                    <div class="colors">
+                                        <span class="color-circle" style="background: #6d6d6b"></span>
+                                    </div>
+                                    <div class="price">S/ 59.90</div>
+                                    <div class="d-grid mt-3">
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
+                                            data-bs-target="#modalBuzoN2">
+                                            Ver más
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Buzo 3 -->
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="69.90" data-tallas="12,14,16" data-colores="Amarillo">
+                            <div class="product-card">
+                                <img src="./imagenes/ninos/buzos-ninos/buzo-3.jpg" class="img-fluid product-image"
+                                    alt="Buzo" />
+                                <div class="product-info">
+                                    <div class="product-name">Buzo Diseño Pikachu</div>
+                                    <div class="color-title">Color:</div>
+                                    <div class="colors">
+                                        <span class="color-circle" style="background: #deda00"></span>
+                                    </div>
+                                    <div class="price">S/ 69.90</div>
+                                    <div class="d-grid mt-3">
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
+                                            data-bs-target="#modalBuzoN3">
+                                            Ver más
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Buzo 4 -->
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="59.90" data-tallas="14,16" data-colores="Gris">
+                            <div class="product-card">
+                                <img src="./imagenes/ninos/buzos-ninos/buzo-4.webp" class="img-fluid product-image"
+                                    alt="Buzo" />
+                                <div class="product-info">
+                                    <div class="product-name">
+                                        Pantalon Jogger French Terry Caius2-Disney Charcoal
+                                    </div>
+                                    <div class="color-title">Color:</div>
+                                    <div class="colors">
+                                        <span class="color-circle" style="background: #adb1b4"></span>
+                                    </div>
+                                    <div class="price">S/ 59.90</div>
+                                    <div class="d-grid mt-3">
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
+                                            data-bs-target="#modalBuzoN4">
+                                            Ver más
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
         </div>
-        <!-- FILTRO PARA MOVIL -->
-        <div class="filter-bar d-lg-none">
-            <button
-                class="btn filter-toggle w-100"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#mobileFilter">
+    </div>
 
-                <i class="bi bi-funnel"></i>
-                Filtrar
+    <!-- FILTRO PARA MOVIL -->
+    <div class="filter-bar d-lg-none">
+        <button class="btn filter-toggle w-100" data-bs-toggle="offcanvas" data-bs-target="#mobileFilter">
+            <i class="bi bi-funnel"></i>
+            Filtrar
+        </button>
+    </div>
+
+    <!-- OFFCANVAS -->
+    <div class="offcanvas offcanvas-bottom product-filter-offcanvas d-lg-none" tabindex="-1" id="mobileFilter">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Filtrar Productos</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <!-- PRECIO -->
+            <div class="mb-4">
+                <label class="form-label">Precio máximo</label>
+                <div class="price-range">
+                    <input class="form-range filtro-precio" type="range" min="0" max="150" step="10" value="150"
+                        aria-label="Precio máximo" />
+                    <div class="range-labels">
+                        <span>S/0</span>
+                        <span>S/150+</span>
+                    </div>
+                </div>
+            </div>
+            <!-- TALLA -->
+            <div class="mb-4">
+                <label class="form-label">Talla</label>
+                <select class="form-select filtro-talla">
+                    <option value="todas">Todas</option>
+                    <option value="8">8</option>
+                    <option value="10">10</option>
+                    <option value="12">12</option>
+                    <option value="14">14</option>
+                    <option value="16">16</option>
+                </select>
+            </div>
+            <!-- COLOR -->
+            <div>
+                <label class="form-label">Color</label>
+                <select class="form-select filtro-color">
+                    <option value="todos">Todos</option>
+                    <option value="Negro">Negro</option>
+                    <option value="Blanco">Blanco</option>
+                    <option value="Gris">Gris</option>
+                    <option value="Azul">Azul</option>
+                    <option value="Beige">Beige</option>
+                    <option value="Rojo">Rojo</option>
+                    <option value="Celeste">Celeste</option>
+                    <option value="Verde">Verde</option>
+                    <option value="Amarillo">Amarillo</option>
+                </select>
+            </div>
+            <!-- BOTÓN DE LIMPIAR FILTRO -->
+            <button type="button" class="btn w-100 btn-limpiar-filtros mt-3">
+                Limpiar filtros
             </button>
         </div>
+    </div>
 
-        <!-- OFFCANVAS -->
-        <div
-            class="offcanvas offcanvas-bottom product-filter-offcanvas d-lg-none"
-            tabindex="-1"
-            id="mobileFilter">
-
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title">
-                    Filtrar Productos
-                </h5>
-
-                <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="offcanvas">
-                </button>
-            </div>
-
-            <div class="offcanvas-body">
-                <!-- PRECIO -->
-                <div class="mb-4">
-                    <label class="form-label">
-                                Precio máximo
-                            </label>
-                            <div class="price-range">
-                                <input class="form-range" type="range" min="0" max="150" step="10" value="80" aria-label="Precio máximo">
-                                <div class="range-labels">
-                                    <span>S/0</span>
-                                    <span>S/150+</span>
-                                </div>
+    <!-- MODAL PRODUCTO -->
+    <!-- Modal - Polos -->
+    <!-- Modal polo 1 -->
+    <div class="modal fade" id="modalPoloN1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-producto-ajustado">
+            <div class="modal-content modal-producto-contenido">
+                <!-- CABECERA -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Polo con Cuello</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <!-- CONTENIDO -->
+                <div class="modal-body modal-producto-cuerpo">
+                    <!-- CARRUSEL -->
+                    <div id="carouselPoloN1" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/ninos/polo-ninos/polo-1.jpg"
+                                    class="img-fluid d-block w-100 modal-producto-imagen" alt="Polo">
                             </div>
+                        </div>
+                        <!-- FLECHA IZQUIERDA -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPoloN1"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon">
+                            </span>
+                        </button>
+                        <!-- FLECHA DERECHA -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselPoloN1"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon">
+                            </span>
+                        </button>
+                    </div>
+                    <!-- INFORMACION -->
+                    <div class="mt-4">
+                        <h4>Polo con Cuello</h4>
+                        <hr>
+                        <p><strong>Material:</strong> 100% Algodón</p>
+                        <p><strong>Diseño:</strong> Liso.</p>
+                        <p><strong>Tallas:</strong> 10, 12, 14 y 16.</p>
+                        <p><strong>Colores:</strong> Blanco.</p>
+                        <p>
+                            <strong>Descripción:</strong>
+                            Polo de algodón con cuello clásico, ideal para un look casual y cómodo. Perfecto para el día a día de los niños.
+                        </p>
+                        <h3 class="mt-3">S/ 29.90</h3>
+                    </div>
                 </div>
-
-                <!-- TALLA -->
-                <div class="mb-4">
-                    <label class="form-label">
-                        Talla
-                    </label>
-                    <select class="form-select">
-                        <option>Todas</option>
-                        <option>S</option>
-                        <option>M</option>
-                        <option>L</option>
-                        <option>XL</option>
-                    </select>
+                <!-- PIE -->
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Polo%20para%20niños%20con%20cuello"
+                        target="_blank" class="btn btn-success w-100">
+                        <i class="bi bi-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
                 </div>
-
-                <!-- COLOR -->
-                <div>
-                    <label class="form-label">
-                        Color
-                    </label>
-                    <select class="form-select">
-                        <option>Todos</option>
-                        <option>Negro</option>
-                        <option>Blanco</option>
-                        <option>Gris</option>
-                        <option>Azul</option>
-                    </select>
-                </div>
-
             </div>
         </div>
-
-        <footer class="site-footer">
-            <div class="container">
-                <div class="row g-4">
-                    <section class="col-12 col-md-6 col-lg-3">
-                        <h3>Tienda</h3>
-                        <address>
-                            <p>Jr. Lima Pst 8 parada municipal</p>
-                            <p>Bagua, Amazonas, Perú, 15004</p>
-                            <p><a href="mailto:clothingstore.rr@gmail.com">clothingstore.rr@gmail.com</a></p>
-                            <p><a href="tel:+51916408971">+51 916 408 971</a></p>
-                        </address>
-                    </section>
-
-                    <section class="col-12 col-md-6 col-lg-3">
-                        <h3>Atención al cliente</h3>
-                        <ul class="footer-list">
-                            <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalPagos">Formas de pago</button></li>
-                            <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalEnvios">Métodos de envío</button></li>
-                            <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalCambios">Cambios y devoluciones</button></li>
-                            <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalPreguntas">Preguntas frecuentes</button></li>
-                        </ul>
-                    </section>
-
-                    <section class="col-12 col-md-6 col-lg-3">
-                        <h3>Términos y condiciones</h3>
-                        <ul class="footer-list">
-                            <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalTerminos">Términos y condiciones</button></li>
-                            <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalDatos">Tratamiento de datos</button></li>
-                            <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalCookies">Política de cookies</button></li>
-                            <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalReclamaciones">Libro de reclamaciones</button></li>
-                        </ul>
-                        <img class="libro-reclamaciones-img img-fluid" src="imagenes/libro-de-reclamaciones.jpg" alt="Libro de Reclamaciones">
-                    </section>
-
-                    <section class="col-12 col-md-6 col-lg-3">
-                        <h3>Newsletter</h3>
-                        <p>Regístrate para conocer lanzamientos, descuentos y novedades.</p>
-
-                        <form class="newsletter-form">
-                            <label class="visually-hidden" for="correo-newsletter">Correo electrónico</label>
-                            <input id="correo-newsletter" class="form-control" type="email" placeholder="Correo electrónico" required>
-                            <button class="btn btn-primary w-100" type="submit">Suscribirse</button>
-                        </form>
-                    </section>
+    </div>
+    <!-- Modal polo 2 -->
+    <div class="modal fade" id="modalPoloN2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-producto-ajustado">
+            <div class="modal-content modal-producto-contenido">
+                <!-- CABECERA -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Polo cuello redondo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
                 </div>
-
-                <div class="footer-bottom">
-                    <div class="redes">
-                        <p>Síguenos en nuestras <strong>redes sociales</strong></p>
-                        <div class="redes__link">
-                            <a href="https://web.facebook.com/RyRClothingstore/about">Facebook</a>
-                            <span>TikTok</span>
-                            <span>Instagram</span>
+                <!-- CONTENIDO -->
+                <div class="modal-body modal-producto-cuerpo">
+                    <!-- CARRUSEL -->
+                    <div id="carouselPoloN2" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/ninos/polo-ninos/polo-2.jpg"
+                                    class="img-fluid d-block w-100 modal-producto-imagen" alt="Polo">
+                            </div>
                         </div>
+                        <!-- FLECHA IZQUIERDA -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPoloN2"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon">
+                            </span>
+                        </button>
+                        <!-- FLECHA DERECHA -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselPoloN2"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon">
+                            </span>
+                        </button>
                     </div>
-
-                    <p class="copyright">&copy; 2026 R&R Clothing Store - Todos los derechos reservados.</p>
+                    <!-- INFORMACION -->
+                    <div class="mt-4">
+                        <h4>Polo cuello redondo</h4>
+                        <hr>
+                        <p><strong>Material:</strong> Algodón</p>
+                        <p><strong>Diseño:</strong> Liso.</p>
+                        <p><strong>Tallas:</strong> 12 y 14.</p>
+                        <p><strong>Colores:</strong> Negro.</p>
+                        <p>
+                            <strong>Descripción:</strong>
+                            Polo de algodón con cuello clásico, ideal para un look casual y cómodo. Perfecto para el día a día de los niños.
+                        </p>
+                        <h3 class="mt-3">S/ 39.90</h3>
+                    </div>
+                </div>
+                <!-- PIE -->
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Polo%20cuello%20redondo"
+                        target="_blank" class="btn btn-success w-100">
+                        <i class="bi bi-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
                 </div>
             </div>
-        </footer>
+        </div>
+    </div>
+    <!-- Modal polo 3 -->
+    <div class="modal fade" id="modalPoloN3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-producto-ajustado">
+            <div class="modal-content modal-producto-contenido">
+                <!-- CABECERA -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Bividi</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <!-- CONTENIDO -->
+                <div class="modal-body modal-producto-cuerpo">
+                    <!-- CARRUSEL -->
+                    <div id="carouselPoloN3" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/ninos/polo-ninos/polo-3.jpg"
+                                    class="img-fluid d-block w-100 modal-producto-imagen" alt="Polo">
+                            </div>
+                        </div>
+                        <!-- FLECHA IZQUIERDA -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPoloN3"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon">
+                            </span>
+                        </button>
+                        <!-- FLECHA DERECHA -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselPoloN3"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon">
+                            </span>
+                        </button>
+                    </div>
+                    <!-- INFORMACION -->
+                    <div class="mt-4">
+                        <h4>Bividi</h4>
+                        <hr>
+                        <p><strong>Material:</strong> 100% Algodón</p>
+                        <p><strong>Diseño:</strong> Liso.</p>
+                        <p><strong>Tallas:</strong> 10 y 14.</p>
+                        <p><strong>Colores:</strong> Blanco.</p>
+                        <p>
+                            <strong>Descripción:</strong>
+                            Bividi de algodón, ideal para un look casual y cómodo. Perfecto para el día a día de los niños.
+                        </p>
+                        <h3 class="mt-3">S/ 24.90</h3>
+                    </div>
+                </div>
+                <!-- PIE -->
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Bividi%20para%20niños"
+                        target="_blank" class="btn btn-success w-100">
+                        <i class="bi bi-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal polo 4 -->
+    <div class="modal fade" id="modalPoloN4" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-producto-ajustado">
+            <div class="modal-content modal-producto-contenido">
+                <!-- CABECERA -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Polo cola de pato</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <!-- CONTENIDO -->
+                <div class="modal-body modal-producto-cuerpo">
+                    <!-- CARRUSEL -->
+                    <div id="carouselPoloN4" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/ninos/polo-ninos/polo-4.jpg"
+                                    class="img-fluid d-block w-100 modal-producto-imagen" alt="Polo">
+                            </div>
+                        </div>
+                        <!-- FLECHA IZQUIERDA -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPoloN4"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon">
+                            </span>
+                        </button>
+                        <!-- FLECHA DERECHA -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselPoloN4"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon">
+                            </span>
+                        </button>
+                    </div>
+                    <!-- INFORMACION -->
+                    <div class="mt-4">
+                        <h4>Polo cola de pato</h4>
+                        <hr>
+                        <p><strong>Material:</strong> 100% Algodón</p>
+                        <p><strong>Diseño:</strong> Liso.</p>
+                        <p><strong>Tallas:</strong> 10, 12 y 14.</p>
+                        <p><strong>Colores:</strong> Blanco.</p>
+                        <p>
+                            <strong>Descripción:</strong>
+                            Polo cola de pato de algodón, ideal para un look casual y cómodo. Perfecto para el día a día de los niños.
+                        </p>
+                        <h3 class="mt-3">S/ 29.90</h3>
+                    </div>
+                </div>
+                <!-- PIE -->
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Polo%20cola%20de%20pato"
+                        target="_blank" class="btn btn-success w-100">
+                        <i class="bi bi-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <!-- Bootstrap JS -->
-        <div class="modal fade" id="modalPagos" tabindex="-1" aria-labelledby="modalPagosLabel" aria-hidden="true">
+    <!-- Modal - Conjuntos -->
+    <!-- Modal conjunto 1 -->
+    <div class="modal fade" id="modalConjuntoN1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-producto-ajustado">
+            <div class="modal-content modal-producto-contenido">
+                <!-- CABECERA -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Conjunto Rey León</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <!-- CONTENIDO -->
+                <div class="modal-body modal-producto-cuerpo">
+                    <!-- CARRUSEL -->
+                    <div id="carouselConjuntoN1" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/ninos/conjunto-ninos/conjunto-1.avif"
+                                    class="img-fluid d-block w-100 modal-producto-imagen" alt="Conjunto">
+                            </div>
+                        </div>
+                        <!-- FLECHA IZQUIERDA -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselConjuntoN1"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon">
+                            </span>
+                        </button>
+                        <!-- FLECHA DERECHA -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselConjuntoN1"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon">
+                            </span>
+                        </button>
+                    </div>
+                    <!-- INFORMACION -->
+                    <div class="mt-4">
+                        <h4>Conjunto Rey León</h4>
+                        <hr>
+                        <p><strong>Material:</strong> 100% Algodón</p>
+                        <p><strong>Diseño:</strong> Liso.</p>
+                        <p><strong>Tallas:</strong> 10, 12 y 14.</p>
+                        <p><strong>Colores:</strong> Blanco.</p>
+                        <p>
+                            <strong>Descripción:</strong>
+                            Conjunto de algodón con diseño de Rey León, ideal para un look casual y cómodo. Perfecto para el día a día de los niños.
+                        </p>
+                        <h3 class="mt-3">S/ 59.90</h3>
+                    </div>
+                </div>
+                <!-- PIE -->
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Conjunto%20para%20niños%20con%20diseño%20de%20Rey%20León"
+                        target="_blank" class="btn btn-success w-100">
+                        <i class="bi bi-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal conjunto 2 -->
+    <div class="modal fade" id="modalConjuntoN2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-producto-ajustado">
+            <div class="modal-content modal-producto-contenido">
+                <!-- CABECERA -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Conjunto Camisa Short Garfield</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <!-- CONTENIDO -->
+                <div class="modal-body modal-producto-cuerpo">
+                    <!-- CARRUSEL -->
+                    <div id="carouselConjuntoN2" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/ninos/conjunto-ninos/conjunto-2.avif"
+                                    class="img-fluid d-block w-100 modal-producto-imagen" alt="Conjunto">
+                            </div>
+                        </div>
+                        <!-- FLECHA IZQUIERDA -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselConjuntoN2"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon">
+                            </span>
+                        </button>
+                        <!-- FLECHA DERECHA -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselConjuntoN2"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon">
+                            </span>
+                        </button>
+                    </div>
+                    <!-- INFORMACION -->
+                    <div class="mt-4">
+                        <h4>Conjunto Camisa Short Garfield</h4>
+                        <hr>
+                        <p><strong>Material:</strong> 100% Algodón</p>
+                        <p><strong>Diseño:</strong> Liso.</p>
+                        <p><strong>Tallas:</strong> 10, 12, 14 y 16.</p>
+                        <p><strong>Colores:</strong> Blanco.</p>
+                        <p>
+                            <strong>Descripción:</strong>
+                            Conjunto de algodón con diseño de Garfield, ideal para un look casual y cómodo. Perfecto para el día a día de los niños.
+                        </p>
+                        <h3 class="mt-3">S/ 69.90</h3>
+                    </div>
+                </div>
+                <!-- PIE -->
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Conjunto%20para%20niños%20con%20diseño%20de%20Garfield"
+                        target="_blank" class="btn btn-success w-100">
+                        <i class="bi bi-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal conjunto 3 -->
+    <div class="modal fade" id="modalConjuntoN3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-producto-ajustado">
+            <div class="modal-content modal-producto-contenido">
+                <!-- CABECERA -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Conjunto Chompa Pantalón Hombre Araña</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <!-- CONTENIDO -->
+                <div class="modal-body modal-producto-cuerpo">
+                    <!-- CARRUSEL -->
+                    <div id="carouselConjuntoN3" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/ninos/conjunto-ninos/conjunto-3.avif"
+                                    class="img-fluid d-block w-100 modal-producto-imagen" alt="Conjunto">
+                            </div>
+                        </div>
+                        <!-- FLECHA IZQUIERDA -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselConjuntoN3"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon">
+                            </span>
+                        </button>
+                        <!-- FLECHA DERECHA -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselConjuntoN3"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon">
+                            </span>
+                        </button>
+                    </div>
+                    <!-- INFORMACION -->
+                    <div class="mt-4">
+                        <h4>Conjunto Chompa Pantalón Hombre Araña</h4>
+                        <hr>
+                        <p><strong>Material:</strong> 100% Algodón</p>
+                        <p><strong>Diseño:</strong> Liso.</p>
+                        <p><strong>Tallas:</strong> 14 y 16.</p>
+                        <p><strong>Colores:</strong> Rojo con Negro.</p>
+                        <p>
+                            <strong>Descripción:</strong>
+                            Conjunto de algodón con diseño de Araña, ideal para un look casual y cómodo. Perfecto para el día a día de los niños.
+                        </p>
+                        <h3 class="mt-3">S/ 49.90</h3>
+                    </div>
+                </div>
+                <!-- PIE -->
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Conjunto%20para%20niños%20con%20diseño%20de%20Araña"
+                        target="_blank" class="btn btn-success w-100">
+                        <i class="bi bi-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal conjunto 4 -->
+    <div class="modal fade" id="modalConjuntoN4" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-producto-ajustado">
+            <div class="modal-content modal-producto-contenido">
+                <!-- CABECERA -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Conjunto Deportivo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <!-- CONTENIDO -->
+                <div class="modal-body modal-producto-cuerpo">
+                    <!-- CARRUSEL -->
+                    <div id="carouselConjuntoN4" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/ninos/conjunto-ninos/conjunto-4.avif"
+                                    class="img-fluid d-block w-100 modal-producto-imagen" alt="Conjunto">
+                            </div>
+                        </div>
+                        <!-- FLECHA IZQUIERDA -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselConjuntoN4"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon">
+                            </span>
+                        </button>
+                        <!-- FLECHA DERECHA -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselConjuntoN4"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon">
+                            </span>
+                        </button>
+                    </div>
+                    <!-- INFORMACION -->
+                    <div class="mt-4">
+                        <h4>Conjunto Deportivo</h4>
+                        <hr>
+                        <p><strong>Material:</strong> 100% Algodón</p>
+                        <p><strong>Diseño:</strong> Liso.</p>
+                        <p><strong>Tallas:</strong> 10, 12, 14 y 16.</p>
+                        <p><strong>Colores:</strong> Blanco.</p>
+                        <p>
+                            <strong>Descripción:</strong>
+                            Conjunto de algodón con diseño deportivo, ideal para un look casual y cómodo. Perfecto para el día a día de los niños.
+                        </p>
+                        <h3 class="mt-3">S/ 89.90</h3>
+                    </div>
+                </div>
+                <!-- PIE -->
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Conjunto%20para%20niños%20con%20diseño%20de%20Deportivo"
+                        target="_blank" class="btn btn-success w-100">
+                        <i class="bi bi-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal - Shorts -->
+    <!-- Modal short 1 -->
+    <div class="modal fade" id="modalShortN1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-producto-ajustado">
+            <div class="modal-content modal-producto-contenido">
+                <!-- CABECERA -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Bermuda Niño Manu Nude</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <!-- CONTENIDO -->
+                <div class="modal-body modal-producto-cuerpo">
+                    <!-- CARRUSEL -->
+                    <div id="carouselShortN1" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/ninos/shorts-ninos/short-1.webp"
+                                    class="img-fluid d-block w-100 modal-producto-imagen" alt="Short">
+                            </div>
+                        </div>
+                        <!-- FLECHA IZQUIERDA -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselShortN1"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon">
+                            </span>
+                        </button>
+                        <!-- FLECHA DERECHA -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselShortN1"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon">
+                            </span>
+                        </button>
+                    </div>
+                    <!-- INFORMACION -->
+                    <div class="mt-4">
+                        <h4>Bermuda Niño Manu Nude</h4>
+                        <hr>
+                        <p><strong>Material:</strong> Algodón</p>
+                        <p><strong>Diseño:</strong> Liso.</p>
+                        <p><strong>Tallas:</strong> 10, 12 y 14.</p>
+                        <p><strong>Colores:</strong> Beige.</p>
+                        <p>
+                            <strong>Descripción:</strong>
+                            Bermuda de algodón con cintura elástica, ideal para un look casual y cómodo. Perfecto para el día a día de los niños.
+                        </p>
+                        <h3 class="mt-3">S/ 49.90</h3>
+                    </div>
+                </div>
+                <!-- PIE -->
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Bermuda%20para%20niños%20Manu%20Nude"
+                        target="_blank" class="btn btn-success w-100">
+                        <i class="bi bi-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal short 2 -->
+    <div class="modal fade" id="modalShortN2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-producto-ajustado">
+            <div class="modal-content modal-producto-contenido">
+                <!-- CABECERA -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Bermuda Denim Niño Olio Bleach</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <!-- CONTENIDO -->
+                <div class="modal-body modal-producto-cuerpo">
+                    <!-- CARRUSEL -->
+                    <div id="carouselShortN2" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/ninos/shorts-ninos/short-2.webp"
+                                    class="img-fluid d-block w-100 modal-producto-imagen" alt="Short">
+                            </div>
+                        </div>
+                        <!-- FLECHA IZQUIERDA -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselShortN2"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon">
+                            </span>
+                        </button>
+                        <!-- FLECHA DERECHA -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselShortN2"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon">
+                            </span>
+                        </button>
+                    </div>
+                    <!-- INFORMACION -->
+                    <div class="mt-4">
+                        <h4>Bermuda Denim Niño Olio Bleach</h4>
+                        <hr>
+                        <p><strong>Material:</strong> Jean</p>
+                        <p><strong>Diseño:</strong> Liso.</p>
+                        <p><strong>Tallas:</strong> 14.</p>
+                        <p><strong>Colores:</strong> Celeste.</p>
+                        <p>
+                            <strong>Descripción:</strong>
+                            Bermuda Denim de jean con cintura elástica, ideal para un look casual y cómodo. Perfecto para el día a día de los niños.
+                        </p>
+                        <h3 class="mt-3">S/ 59.90</h3>
+                    </div>
+                </div>
+                <!-- PIE -->
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Bermuda%20para%20niños%20Olio%20Bleach"
+                        target="_blank" class="btn btn-success w-100">
+                        <i class="bi bi-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal short 3 -->
+    <div class="modal fade" id="modalShortN3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-producto-ajustado">
+            <div class="modal-content modal-producto-contenido">
+                <!-- CABECERA -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Bermuda Niño Mateo Rojo Tomate</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <!-- CONTENIDO -->
+                <div class="modal-body modal-producto-cuerpo">
+                    <!-- CARRUSEL -->
+                    <div id="carouselShortN3" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/ninos/shorts-ninos/short-3.webp"
+                                    class="img-fluid d-block w-100 modal-producto-imagen" alt="Short">
+                            </div>
+                        </div>
+                        <!-- FLECHA IZQUIERDA -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselShortN3"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon">
+                            </span>
+                        </button>
+                        <!-- FLECHA DERECHA -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselShortN3"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon">
+                            </span>
+                        </button>
+                    </div>
+                    <!-- INFORMACION -->
+                    <div class="mt-4">
+                        <h4>Bermuda Niño Mateo Rojo Tomate</h4>
+                        <hr>
+                        <p><strong>Material:</strong> Algodón</p>
+                        <p><strong>Diseño:</strong> Liso.</p>
+                        <p><strong>Tallas:</strong> 10 y 12.</p>
+                        <p><strong>Colores:</strong> Rojo.</p>
+                        <p>
+                            <strong>Descripción:</strong>
+                            Bermuda de algodón con cintura elástica, ideal para un look casual y cómodo. Perfecto para el día a día de los niños.
+                        </p>
+                        <h3 class="mt-3">S/ 24.90</h3>
+                    </div>
+                </div>
+                <!-- PIE -->
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Bermuda%20para%20niños%20Mateo%20Rojo%20Tomate"
+                        target="_blank" class="btn btn-success w-100">
+                        <i class="bi bi-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal short 4 -->
+    <div class="modal fade" id="modalShortN4" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-producto-ajustado">
+            <div class="modal-content modal-producto-contenido">
+                <!-- CABECERA -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Bermuda Niño Piero Print Verde Frost</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <!-- CONTENIDO -->
+                <div class="modal-body modal-producto-cuerpo">
+                    <!-- CARRUSEL -->
+                    <div id="carouselShortN4" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/ninos/shorts-ninos/short-4.webp"
+                                    class="img-fluid d-block w-100 modal-producto-imagen" alt="Short">
+                            </div>
+                        </div>
+                        <!-- FLECHA IZQUIERDA -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselShortN4"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon">
+                            </span>
+                        </button>
+                        <!-- FLECHA DERECHA -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselShortN4"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon">
+                            </span>
+                        </button>
+                    </div>
+                    <!-- INFORMACION -->
+                    <div class="mt-4">
+                        <h4>Bermuda Niño Piero Print Verde Frost</h4>
+                        <hr>
+                        <p><strong>Material:</strong> Poliéster</p>
+                        <p><strong>Diseño:</strong> Liso.</p>
+                        <p><strong>Tallas:</strong> 10, 12 y 14.</p>
+                        <p><strong>Colores:</strong> Verde.</p>
+                        <p>
+                            <strong>Descripción:</strong>
+                            Bermuda de poliéster con cintura elástica, ideal para un look casual y cómodo. Perfecto para el día a día de los niños.
+                        </p>
+                        <h3 class="mt-3">S/ 49.90</h3>
+                    </div>
+                </div>
+                <!-- PIE -->
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Bermuda%20para%20niños%20Piero%20Print%20Verde%20Frost"
+                        target="_blank" class="btn btn-success w-100">
+                        <i class="bi bi-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal - Buzos -->
+    <!-- Modal buzo 1 -->
+    <div class="modal fade" id="modalBuzoN1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-producto-ajustado">
+            <div class="modal-content modal-producto-contenido">
+                <!-- CABECERA -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Pantalon De Buzo Circus Puño Solido</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <!-- CONTENIDO -->
+                <div class="modal-body modal-producto-cuerpo">
+                    <!-- CARRUSEL -->
+                    <div id="carouselBuzoN1" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/ninos/buzos-ninos/buzo-1.webp"
+                                    class="img-fluid d-block w-100 modal-producto-imagen" alt="Buzo">
+                            </div>
+                        </div>
+                        <!-- FLECHA IZQUIERDA -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselBuzoN1"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon">
+                            </span>
+                        </button>
+                        <!-- FLECHA DERECHA -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselBuzoN1"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon">
+                            </span>
+                        </button>
+                    </div>
+                    <!-- INFORMACION -->
+                    <div class="mt-4">
+                        <h4>Pantalon De Buzo Circus Puño Solido</h4>
+                        <hr>
+                        <p><strong>Material:</strong> Algodón</p>
+                        <p><strong>Diseño:</strong> Liso.</p>
+                        <p><strong>Tallas:</strong> 10, 12, 14 y 16.</p>
+                        <p><strong>Colores:</strong> Celeste.</p>
+                        <p>
+                            <strong>Descripción:</strong>
+                            Pantalon de algodón con puño solido, ideal para un look casual y cómodo. Perfecto para el día a día de los niños.
+                        </p>
+                        <h3 class="mt-3">S/ 79.90</h3>
+                    </div>
+                </div>
+                <!-- PIE -->
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Pantalon%20De%20Buzo%20Circus%20Puño%20Solido"
+                        target="_blank" class="btn btn-success w-100">
+                        <i class="bi bi-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal buzo 2 -->
+    <div class="modal fade" id="modalBuzoN2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-producto-ajustado">
+            <div class="modal-content modal-producto-contenido">
+                <!-- CABECERA -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Buzo Hoodie Wolverine</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <!-- CONTENIDO -->
+                <div class="modal-body modal-producto-cuerpo">
+                    <!-- CARRUSEL -->
+                    <div id="carouselBuzoN2" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/ninos/buzos-ninos/buzo-2.jpg"
+                                    class="img-fluid d-block w-100 modal-producto-imagen" alt="Buzo">
+                            </div>
+                        </div>
+                        <!-- FLECHA IZQUIERDA -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselBuzoN2"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon">
+                            </span>
+                        </button>
+                        <!-- FLECHA DERECHA -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselBuzoN2"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon">
+                            </span>
+                        </button>
+                    </div>
+                    <!-- INFORMACION -->
+                    <div class="mt-4">
+                        <h4>Buzo Hoodie Wolverine</h4>
+                        <hr>
+                        <p><strong>Material:</strong> Algodón</p>
+                        <p><strong>Diseño:</strong> Con capucha.</p>
+                        <p><strong>Tallas:</strong> 14 y 16.</p>
+                        <p><strong>Colores:</strong> Gris.</p>
+                        <p>
+                            <strong>Descripción:</strong>
+                            Buzo con capucha de algodón, ideal para un look casual y cómodo. Perfecto para el día a día de los niños.
+                        </p>
+                        <h3 class="mt-3">S/ 59.90</h3>
+                    </div>
+                </div>
+                <!-- PIE -->
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Buzo%20Hoodie%20Wolverine"
+                        target="_blank" class="btn btn-success w-100">
+                        <i class="bi bi-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal buzo 3 -->
+    <div class="modal fade" id="modalBuzoN3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-producto-ajustado">
+            <div class="modal-content modal-producto-contenido">
+                <!-- CABECERA -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Buzo Diseño Pikachu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <!-- CONTENIDO -->
+                <div class="modal-body modal-producto-cuerpo">
+                    <!-- CARRUSEL -->
+                    <div id="carouselBuzoN3" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/ninos/buzos-ninos/buzo-3.jpg"
+                                    class="img-fluid d-block w-100 modal-producto-imagen" alt="Buzo">
+                            </div>
+                        </div>
+                        <!-- FLECHA IZQUIERDA -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselBuzoN3"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon">
+                            </span>
+                        </button>
+                        <!-- FLECHA DERECHA -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselBuzoN3"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon">
+                            </span>
+                        </button>
+                    </div>
+                    <!-- INFORMACION -->
+                    <div class="mt-4">
+                        <h4>Buzo Diseño Pikachu</h4>
+                        <hr>
+                        <p><strong>Material:</strong> Algodón</p>
+                        <p><strong>Diseño:</strong> Liso.</p>
+                        <p><strong>Tallas:</strong> 12, 14 y 16.</p>
+                        <p><strong>Colores:</strong> Amarillo.</p>
+                        <p>
+                            <strong>Descripción:</strong>
+                            Buzo de algodón con diseño de Pikachu, ideal para un look casual y cómodo. Perfecto para el día a día de los niños.
+                        </p>
+                        <h3 class="mt-3">S/ 69.90</h3>
+                    </div>
+                </div>
+                <!-- PIE -->
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Buzo%20Diseño%20Pikachu"
+                        target="_blank" class="btn btn-success w-100">
+                        <i class="bi bi-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal buzo 4 -->
+    <div class="modal fade" id="modalBuzoN4" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-producto-ajustado">
+            <div class="modal-content modal-producto-contenido">
+                <!-- CABECERA -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Pantalon Jogger French Terry Caius2-Disney Charcoal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <!-- CONTENIDO -->
+                <div class="modal-body modal-producto-cuerpo">
+                    <!-- CARRUSEL -->
+                    <div id="carouselBuzoN4" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/ninos/buzos-ninos/buzo-4.webp"
+                                    class="img-fluid d-block w-100 modal-producto-imagen" alt="Buzo">
+                            </div>
+                        </div>
+                        <!-- FLECHA IZQUIERDA -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselBuzoN4"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon">
+                            </span>
+                        </button>
+                        <!-- FLECHA DERECHA -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselBuzoN4"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon">
+                            </span>
+                        </button>
+                    </div>
+                    <!-- INFORMACION -->
+                    <div class="mt-4">
+                        <h4>Pantalon Jogger French Terry Caius2-Disney Charcoal</h4>
+                        <hr>
+                        <p><strong>Material:</strong> Algodón</p>
+                        <p><strong>Diseño:</strong> Liso.</p>
+                        <p><strong>Tallas:</strong> 14 y 16.</p>
+                        <p><strong>Colores:</strong> Gris.</p>
+                        <p>
+                            <strong>Descripción:</strong>
+                            Pantalon jogger de algodón con diseño de Disney, ideal para un look casual y cómodo. Perfecto para el día a día de los niños.
+                        </p>
+                        <h3 class="mt-3">S/ 59.90</h3>
+                    </div>
+                </div>
+                <!-- PIE -->
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Pantalon%20Jogger%20French%20Terry%20Caius2-Disney%20Charcoal"
+                        target="_blank" class="btn btn-success w-100">
+                        <i class="bi bi-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-4">
+                <section class="col-12 col-md-6 col-lg-3">
+                    <h3>Tienda</h3>
+                    <address>
+                        <p>Jr. Lima Pst 8 parada municipal</p>
+                        <p>Bagua, Amazonas, Perú, 15004</p>
+                        <p>
+                            <a href="mailto:clothingstore.rr@gmail.com">clothingstore.rr@gmail.com</a>
+                        </p>
+                        <p><a href="tel:+51916408971">+51 916 408 971</a></p>
+                    </address>
+                </section>
+
+                <section class="col-12 col-md-6 col-lg-3">
+                    <h3>Atención al cliente</h3>
+                    <ul class="footer-list">
+                        <li>
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#modalPagos">
+                                Formas de pago
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#modalEnvios">
+                                Métodos de envío
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#modalCambios">
+                                Cambios y devoluciones
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#modalPreguntas">
+                                Preguntas frecuentes
+                            </button>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="col-12 col-md-6 col-lg-3">
+                    <h3>Términos y condiciones</h3>
+                    <ul class="footer-list">
+                        <li>
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#modalTerminos">
+                                Términos y condiciones
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#modalDatos">
+                                Tratamiento de datos
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#modalCookies">
+                                Política de cookies
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#modalReclamaciones">
+                                Libro de reclamaciones
+                            </button>
+                        </li>
+                    </ul>
+                    <img class="libro-reclamaciones-img img-fluid" src="imagenes/libro-de-reclamaciones.jpg"
+                        alt="Libro de Reclamaciones" />
+                </section>
+
+                <section class="col-12 col-md-6 col-lg-3">
+                    <h3>Newsletter</h3>
+                    <p>Regístrate para conocer lanzamientos, descuentos y novedades.</p>
+
+                    <form class="newsletter-form">
+                        <label class="visually-hidden" for="correo-newsletter">Correo electrónico</label>
+                        <input id="correo-newsletter" class="form-control" type="email" placeholder="Correo electrónico"
+                            required />
+                        <button class="btn btn-primary w-100" type="submit">
+                            Suscribirse
+                        </button>
+                    </form>
+                </section>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="redes">
+                    <p>Síguenos en nuestras <strong>redes sociales</strong></p>
+                    <div class="redes__link">
+                        <a href="https://web.facebook.com/RyRClothingstore/about">Facebook</a>
+                        <span>TikTok</span>
+                        <span>Instagram</span>
+                    </div>
+                </div>
+
+                <p class="copyright">
+                    &copy; 2026 R&R Clothing Store - Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <div class="modal fade" id="modalPagos" tabindex="-1" aria-labelledby="modalPagosLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-sm modal-responsive">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h2 class="modal-title fs-5" id="modalPagosLabel">Formas de pago</h2>
+                    <h2 class="modal-title fs-5" id="modalPagosLabel">
+                        Formas de pago
+                    </h2>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Aceptamos pagos por Yape, transferencia bancaria y efectivo al momento de la compra.</p>
+                    <p>
+                        Aceptamos pagos por Yape, transferencia bancaria y efectivo al
+                        momento de la compra.
+                    </p>
                 </div>
             </div>
         </div>
@@ -969,11 +1785,16 @@
         <div class="modal-dialog modal-dialog-centered modal-sm modal-responsive">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h2 class="modal-title fs-5" id="modalEnviosLabel">Métodos de envío</h2>
+                    <h2 class="modal-title fs-5" id="modalEnviosLabel">
+                        Métodos de envío
+                    </h2>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Realizamos entregas locales en Bagua y coordinamos envíos a otras zonas según disponibilidad.</p>
+                    <p>
+                        Realizamos entregas locales en Bagua y coordinamos envíos a otras
+                        zonas según disponibilidad.
+                    </p>
                 </div>
             </div>
         </div>
@@ -983,11 +1804,16 @@
         <div class="modal-dialog modal-dialog-centered modal-sm modal-responsive">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h2 class="modal-title fs-5" id="modalCambiosLabel">Cambios y devoluciones</h2>
+                    <h2 class="modal-title fs-5" id="modalCambiosLabel">
+                        Cambios y devoluciones
+                    </h2>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Los cambios se coordinan dentro de las primeras 48 horas, siempre que la prenda esté en buen estado.</p>
+                    <p>
+                        Los cambios se coordinan dentro de las primeras 48 horas, siempre
+                        que la prenda esté en buen estado.
+                    </p>
                 </div>
             </div>
         </div>
@@ -997,11 +1823,16 @@
         <div class="modal-dialog modal-dialog-centered modal-sm modal-responsive">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h2 class="modal-title fs-5" id="modalPreguntasLabel">Preguntas frecuentes</h2>
+                    <h2 class="modal-title fs-5" id="modalPreguntasLabel">
+                        Preguntas frecuentes
+                    </h2>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Puedes consultar disponibilidad, tallas y precios por nuestros canales de contacto antes de comprar.</p>
+                    <p>
+                        Puedes consultar disponibilidad, tallas y precios por nuestros
+                        canales de contacto antes de comprar.
+                    </p>
                 </div>
             </div>
         </div>
@@ -1011,11 +1842,16 @@
         <div class="modal-dialog modal-dialog-centered modal-sm modal-responsive">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h2 class="modal-title fs-5" id="modalTerminosLabel">Términos y condiciones</h2>
+                    <h2 class="modal-title fs-5" id="modalTerminosLabel">
+                        Términos y condiciones
+                    </h2>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
-                    <p>La compra confirma la aceptación de precios, disponibilidad y condiciones informadas por la tienda.</p>
+                    <p>
+                        La compra confirma la aceptación de precios, disponibilidad y
+                        condiciones informadas por la tienda.
+                    </p>
                 </div>
             </div>
         </div>
@@ -1025,11 +1861,16 @@
         <div class="modal-dialog modal-dialog-centered modal-sm modal-responsive">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h2 class="modal-title fs-5" id="modalDatosLabel">Tratamiento de datos</h2>
+                    <h2 class="modal-title fs-5" id="modalDatosLabel">
+                        Tratamiento de datos
+                    </h2>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Los datos de contacto se usan únicamente para atender consultas, coordinar pedidos y confirmar entregas.</p>
+                    <p>
+                        Los datos de contacto se usan únicamente para atender consultas,
+                        coordinar pedidos y confirmar entregas.
+                    </p>
                 </div>
             </div>
         </div>
@@ -1039,30 +1880,43 @@
         <div class="modal-dialog modal-dialog-centered modal-sm modal-responsive">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h2 class="modal-title fs-5" id="modalCookiesLabel">Política de cookies</h2>
+                    <h2 class="modal-title fs-5" id="modalCookiesLabel">
+                        Política de cookies
+                    </h2>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Este sitio puede usar cookies básicas del navegador para mejorar la navegación del usuario.</p>
+                    <p>
+                        Este sitio puede usar cookies básicas del navegador para mejorar
+                        la navegación del usuario.
+                    </p>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="modal fade" id="modalReclamaciones" tabindex="-1" aria-labelledby="modalReclamacionesLabel" aria-hidden="true">
+    <div class="modal fade" id="modalReclamaciones" tabindex="-1" aria-labelledby="modalReclamacionesLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-sm modal-responsive">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h2 class="modal-title fs-5" id="modalReclamacionesLabel">Libro de reclamaciones</h2>
+                    <h2 class="modal-title fs-5" id="modalReclamacionesLabel">
+                        Libro de reclamaciones
+                    </h2>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Para registrar una consulta o reclamo, comunícate con la tienda por correo o teléfono.</p>
+                    <p>
+                        Para registrar una consulta o reclamo, comunícate con la tienda
+                        por correo o teléfono.
+                    </p>
                 </div>
             </div>
         </div>
     </div>
-
+    <script src="js/formularios.js"></script>
     <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
-    </body>
+    <script src="./js/categorias.js"></script>
+</body>
+
 </html>

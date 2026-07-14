@@ -1,235 +1,232 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>R&R | Ropa para mujer</title>
 
-        <!-- Bootstrap -->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>R&R | Ropa para mujer</title>
 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-        <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <!-- Bootstrap -->
 
-        <!-- CSS Propio -->
-        <link rel="stylesheet" href="./css/estilos.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
 
-    </head>
+    <!-- CSS Propio -->
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
-    <body class="category-page">
-        <header class="site-header sticky-top">
-            <nav class="navbar navbar-expand-lg navbar-dark container py-2" aria-label="Navegación principal">
-                <a class="navbar-brand site-logo" href="index.html" aria-label="R&R Clothing Store">
-                    <img src="imagenes/logo/logo-transparente.png" alt="Logo de R&R Clothing Store">
-                </a>
+</head>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-label="Abrir menú">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+<body class="category-page">
+    <header class="site-header sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark container py-2" aria-label="Navegación principal">
+            <a class="navbar-brand site-logo" href="index.html" aria-label="R&R Clothing Store">
+                <img src="imagenes/logo/logo-transparente.png" alt="Logo de R&R Clothing Store">
+            </a>
 
-                <div class="offcanvas offcanvas-start" tabindex="-1" id="menuPrincipal" aria-labelledby="menuPrincipalLabel">
-                    <input class="mobile-submenu-toggle" type="checkbox" id="submenu-panel-hombre">
-                    <input class="mobile-submenu-toggle" type="checkbox" id="submenu-panel-mujer">
-                    <input class="mobile-submenu-toggle" type="checkbox" id="submenu-panel-ninos">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                    <div class="offcanvas-header">
-                        <h2 class="offcanvas-title fs-5" id="menuPrincipalLabel">R&R Clothing Store</h2>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar menú"></button>
-                    </div>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="menuPrincipal"
+                aria-labelledby="menuPrincipalLabel">
+                <input class="mobile-submenu-toggle" type="checkbox" id="submenu-panel-hombre">
+                <input class="mobile-submenu-toggle" type="checkbox" id="submenu-panel-mujer">
+                <input class="mobile-submenu-toggle" type="checkbox" id="submenu-panel-ninos">
 
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html">
-                                    Inicio <i class="bi bi-house-door ms-1"></i>
-                                </a>
-                            </li>
-
-                            <li class="nav-item dropdown menu-con-submenu">
-                                <label class="nav-link submenu-open d-lg-none" for="submenu-panel-hombre">
-                                    Hombre
-                                    <span>
-                                        <i class="bi bi-person"></i>
-                                        <i class="bi bi-chevron-right"></i>
-                                    </span>
-                                </label>
-                                <a class="nav-link d-none d-lg-flex align-items-center gap-1"
-                                href="hombre.html">
-                                    Hombre <i class="bi bi-person ms-1"></i>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href="hombre.html#polos-hombre">Polos</a></li>
-                                    <li><a class="dropdown-item" href="hombre.html#camisas-hombre">Camisas</a></li>
-                                    <li><a class="dropdown-item" href="hombre.html#pantalones-hombre">Pantalones</a></li>
-                                    <li><a class="dropdown-item" href="hombre.html#shorts-hombre">Shorts</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item dropdown menu-con-submenu">
-                                <label class="nav-link active submenu-open d-lg-none" for="submenu-panel-mujer">
-                                    Mujer
-                                    <span>
-                                        <i class="bi bi-person-standing-dress"></i>
-                                        <i class="bi bi-chevron-right"></i>
-                                    </span>
-                                </label>
-                                <a class="nav-link active d-none d-lg-flex align-items-center gap-1" aria-current="page" href="mujer.html">
-                                    Mujer <i class="bi bi-person-standing-dress ms-1"></i>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href="mujer.html#blusas-mujer">Blusas</a></li>
-                                    <li><a class="dropdown-item" href="mujer.html#faldas-mujer">Faldas</a></li>
-                                    <li><a class="dropdown-item" href="mujer.html#jeans-mujer">Jeans</a></li>
-                                    <li><a class="dropdown-item" href="mujer.html#vestidos-mujer">Vestidos</a></li>
-                                    <li><a class="dropdown-item" href="mujer.html#bikinis-mujer">Bikinis</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item dropdown menu-con-submenu">
-                                <label class="nav-link submenu-open d-lg-none" for="submenu-panel-ninos">
-                                    Niños
-                                    <span>
-                                        <i class="bi bi-emoji-smile"></i>
-                                        <i class="bi bi-chevron-right"></i>
-                                    </span>
-                                </label>
-                                <a class="nav-link d-none d-lg-flex align-items-center gap-1" href="ninos.html">
-                                    Niños <i class="bi bi-emoji-smile ms-1"></i>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href="ninos.html#polos-ninos">Polos</a></li>
-                                    <li><a class="dropdown-item" href="ninos.html#conjuntos-ninos">Conjuntos</a></li>
-                                    <li><a class="dropdown-item" href="ninos.html#shorts-ninos">Shorts</a></li>
-                                    <li><a class="dropdown-item" href="ninos.html#buzos-ninos">Buzos</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="nosotros.html">Nosotros <i class="bi bi-people ms-1"></i></a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="contacto.html">Contacto <i class="bi bi-envelope ms-1"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <section class="mobile-submenu-panel mobile-submenu-panel--hombre" aria-label="Categorías de hombre">
-                        <div class="mobile-submenu-panel__header">
-                            <h3>Hombre</h3>
-                            <label class="mobile-submenu-close" for="submenu-panel-hombre" aria-label="Cerrar submenú hombre">
-                                <i class="bi bi-x-lg"></i>
-                            </label>
-                        </div>
-                        <ul class="mobile-submenu-list">
-                            <li><a href="hombre.html#polos-hombre">Polos</a></li>
-                            <li><a href="hombre.html#camisas-hombre">Camisas</a></li>
-                            <li><a href="hombre.html#pantalones-hombre">Pantalones</a></li>
-                            <li><a href="hombre.html#shorts-hombre">Shorts</a></li>
-                        </ul>
-                    </section>
-
-                    <section class="mobile-submenu-panel mobile-submenu-panel--mujer" aria-label="Categorías de mujer">
-                        <div class="mobile-submenu-panel__header">
-                            <h3>Mujer</h3>
-                            <label class="mobile-submenu-close" for="submenu-panel-mujer" aria-label="Cerrar submenú mujer">
-                                <i class="bi bi-x-lg"></i>
-                            </label>
-                        </div>
-                        <ul class="mobile-submenu-list">
-                            <li><a href="mujer.html#blusas-mujer">Blusas</a></li>
-                            <li><a href="mujer.html#faldas-mujer">Faldas</a></li>
-                            <li><a href="mujer.html#jeans-mujer">Jeans</a></li>
-                            <li><a href="mujer.html#vestidos-mujer">Vestidos</a></li>
-                            <li><a href="mujer.html#bikinis-mujer">Bikinis</a></li>
-                        </ul>
-                    </section>
-
-                    <section class="mobile-submenu-panel mobile-submenu-panel--ninos" aria-label="Categorías de niños">
-                        <div class="mobile-submenu-panel__header">
-                            <h3>Niños</h3>
-                            <label class="mobile-submenu-close" for="submenu-panel-ninos" aria-label="Cerrar submenú niños">
-                                <i class="bi bi-x-lg"></i>
-                            </label>
-                        </div>
-                        <ul class="mobile-submenu-list">
-                            <li><a href="ninos.html#polos-ninos">Polos</a></li>
-                            <li><a href="ninos.html#conjuntos-ninos">Conjuntos</a></li>
-                            <li><a href="ninos.html#shorts-ninos">Shorts</a></li>
-                            <li><a href="ninos.html#buzos-ninos">Buzos</a></li>
-                        </ul>
-                    </section>
+                <div class="offcanvas-header">
+                    <h2 class="offcanvas-title fs-5" id="menuPrincipalLabel">R&R Clothing Store</h2>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Cerrar menú"></button>
                 </div>
-            </nav>
-        </header>
 
-        <div class="container-fluid py-3">
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                Inicio <i class="bi bi-house-door ms-1"></i>
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown menu-con-submenu">
+                            <label class="nav-link submenu-open d-lg-none" for="submenu-panel-hombre">
+                                Hombre
+                                <span>
+                                    <i class="bi bi-person"></i>
+                                    <i class="bi bi-chevron-right"></i>
+                                </span>
+                            </label>
+                            <a class="nav-link d-none d-lg-flex align-items-center gap-1" href="hombre.html">
+                                Hombre <i class="bi bi-person ms-1"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="hombre.html#polos-hombre">Polos</a></li>
+                                <li><a class="dropdown-item" href="hombre.html#camisas-hombre">Camisas</a></li>
+                                <li><a class="dropdown-item" href="hombre.html#pantalones-hombre">Pantalones</a></li>
+                                <li><a class="dropdown-item" href="hombre.html#shorts-hombre">Shorts</a></li>
+                                <li><a class="dropdown-item" href="hombre.html#casacas-hombre">Casacas</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown menu-con-submenu">
+                            <label class="nav-link active submenu-open d-lg-none" for="submenu-panel-mujer">
+                                Mujer
+                                <span>
+                                    <i class="bi bi-person-standing-dress"></i>
+                                    <i class="bi bi-chevron-right"></i>
+                                </span>
+                            </label>
+                            <a class="nav-link active d-none d-lg-flex align-items-center gap-1" aria-current="page"
+                                href="mujer.html">
+                                Mujer <i class="bi bi-person-standing-dress ms-1"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="mujer.html#blusas-mujer">Blusas</a></li>
+                                <li><a class="dropdown-item" href="mujer.html#faldas-mujer">Faldas</a></li>
+                                <li><a class="dropdown-item" href="mujer.html#pantalones-mujer">Pantalones</a></li>
+                                <li><a class="dropdown-item" href="mujer.html#vestidos-mujer">Vestidos</a></li>
+                                <li><a class="dropdown-item" href="mujer.html#bikinis-mujer">Bikinis</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown menu-con-submenu">
+                            <label class="nav-link submenu-open d-lg-none" for="submenu-panel-ninos">
+                                Niños
+                                <span>
+                                    <i class="bi bi-emoji-smile"></i>
+                                    <i class="bi bi-chevron-right"></i>
+                                </span>
+                            </label>
+                            <a class="nav-link d-none d-lg-flex align-items-center gap-1" href="ninos.html">
+                                Niños <i class="bi bi-emoji-smile ms-1"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="ninos.html#polos-ninos">Polos</a></li>
+                                <li><a class="dropdown-item" href="ninos.html#conjuntos-ninos">Conjuntos</a></li>
+                                <li><a class="dropdown-item" href="ninos.html#shorts-ninos">Shorts</a></li>
+                                <li><a class="dropdown-item" href="ninos.html#buzos-ninos">Buzos</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Nosotros <i class="bi bi-people ms-1"></i></a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto <i class="bi bi-envelope ms-1"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <section class="mobile-submenu-panel mobile-submenu-panel--hombre" aria-label="Categorías de hombre">
+                    <div class="mobile-submenu-panel__header">
+                        <h3>Hombre</h3>
+                        <label class="mobile-submenu-close" for="submenu-panel-hombre"
+                            aria-label="Cerrar submenú hombre">
+                            <i class="bi bi-x-lg"></i>
+                        </label>
+                    </div>
+                    <ul class="mobile-submenu-list">
+                        <li><a href="hombre.html#polos-hombre">Polos</a></li>
+                        <li><a href="hombre.html#camisas-hombre">Camisas</a></li>
+                        <li><a href="hombre.html#pantalones-hombre">Pantalones</a></li>
+                        <li><a href="hombre.html#shorts-hombre">Shorts</a></li>
+                        <li><a href="hombre.html#casacas-hombre">Casacas</a></li>
+                    </ul>
+                </section>
+
+                <section class="mobile-submenu-panel mobile-submenu-panel--mujer" aria-label="Categorías de mujer">
+                    <div class="mobile-submenu-panel__header">
+                        <h3>Mujer</h3>
+                        <label class="mobile-submenu-close" for="submenu-panel-mujer" aria-label="Cerrar submenú mujer">
+                            <i class="bi bi-x-lg"></i>
+                        </label>
+                    </div>
+                    <ul class="mobile-submenu-list">
+                        <li><a href="mujer.html#blusas-mujer">Blusas</a></li>
+                        <li><a href="mujer.html#faldas-mujer">Faldas</a></li>
+                        <li><a href="mujer.html#pantalones-mujer">Pantalones</a></li>
+                        <li><a href="mujer.html#vestidos-mujer">Vestidos</a></li>
+                        <li><a href="mujer.html#bikinis-mujer">Bikinis</a></li>
+                    </ul>
+                </section>
+
+                <section class="mobile-submenu-panel mobile-submenu-panel--ninos" aria-label="Categorías de niños">
+                    <div class="mobile-submenu-panel__header">
+                        <h3>Niños</h3>
+                        <label class="mobile-submenu-close" for="submenu-panel-ninos" aria-label="Cerrar submenú niños">
+                            <i class="bi bi-x-lg"></i>
+                        </label>
+                    </div>
+                    <ul class="mobile-submenu-list">
+                        <li><a href="ninos.html#polos-ninos">Polos</a></li>
+                        <li><a href="ninos.html#conjuntos-ninos">Conjuntos</a></li>
+                        <li><a href="ninos.html#shorts-ninos">Shorts</a></li>
+                        <li><a href="ninos.html#buzos-ninos">Buzos</a></li>
+                    </ul>
+                </section>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-fluid py-3">
         <!-- Contenido principal -->
         <div class="row">
 
             <!-- FILTRO PARA ESCRITORIO -->
             <aside class="col-lg-3 d-none d-lg-block">
-
                 <div class="desktop-filter">
-                    <h4 class="mb-4">
-                        Filtrar
-                    </h4>
-
+                    <h4 class="mb-4">Filtrar</h4>
                     <!-- PRECIO -->
                     <div class="mb-4">
-
-                        <label class="form-label">
-                                Precio máximo
-                            </label>
-                            <div class="price-range">
-                                <input class="form-range" type="range" min="0" max="150" step="10" value="80" aria-label="Precio máximo">
-                                <div class="range-labels">
-                                    <span>S/0</span>
-                                    <span>S/150+</span>
-                                </div>
+                        <label class="form-label">Precio máximo</label>
+                        <div class="price-range">
+                            <input class="form-range filtro-precio" type="range" min="0" max="150" step="10" value="150"
+                                aria-label="Precio máximo">
+                            <div class="range-labels">
+                                <span>S/0</span>
+                                <span>S/150+</span>
                             </div>
-
+                        </div>
                     </div>
-
                     <!-- TALLA -->
                     <div class="mb-4">
-
-                        <label class="form-label">
-                            Talla
-                        </label>
-
-                        <select class="form-select">
-
-                            <option>Todas</option>
-                            <option>S</option>
-                            <option>M</option>
-                            <option>L</option>
-                            <option>XL</option>
-
+                        <label class="form-label">Talla</label>
+                        <select class="form-select filtro-talla">
+                            <option value="todas">Todas</option>
+                            <option value="XS">XS</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
                         </select>
-
                     </div>
-
                     <!-- COLOR -->
                     <div>
-
-                        <label class="form-label">
-                            Color
-                        </label>
-
-                        <select class="form-select">
-
-                            <option>Todos</option>
-                            <option>Negro</option>
-                            <option>Blanco</option>
-                            <option>Gris</option>
-                            <option>Azul</option>
-
+                        <label class="form-label">Color</label>
+                        <select class="form-select filtro-color">
+                            <option value="todos">Todos</option>
+                            <option value="Negro">Negro</option>
+                            <option value="Blanco">Blanco</option>
+                            <option value="Gris">Gris</option>
+                            <option value="Azul">Azul</option>
+                            <option value="Beige">Beige</option>
+                            <option value="Celeste">Celeste</option>
+                            <option value="Rosa">Rosa</option>
+                            <option value="Verde">Verde</option>
+                            <option value="Morado">Morado</option>
+                            <option value="Rojo">Rojo</option>
+                            <option value="Marron">Marrón</option>
+                            <option value="Dorado">Dorado</option>
                         </select>
-
                     </div>
+                    <p class="resultado-filtro text-center fw-semibold text-white mt-3 mb-2 px-2" aria-live="polite"></p>
+                    <button type="button" class="btn w-100 btn-limpiar-filtros">Limpiar filtros</button>
                 </div>
             </aside>
 
@@ -242,37 +239,23 @@
 
                 <!-- BLUSAS -->
                 <section id="blusas-mujer" class="mb-5">
-                    <h2 class="section-title">
-                        Blusas
-                    </h2>
-
+                    <h2 class="section-title">Blusas</h2>
                     <div class="row g-3">
                         <!-- PRODUCTOS -->
                         <!-- Blusa 1 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="79.90" data-tallas="XS,S,M" data-colores="Rosa">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/blusa-mujer/blusa-1.jpg"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/blusa-mujer/blusa-1.jpg" class="img-fluid product-image"
                                     alt="Blusa">
                                 <div class="product-info">
                                     <div class="product-name">Blusa de Chalis Rayado</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
-                                        </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
-                                        </span>
+                                        <span class="color-circle" style="background:#c7b2b9;"></span>
                                     </div>
-                                    <div class="price">S/ 49.90</div>
+                                    <div class="price">S/ 79.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalBlusa1">
                                             Ver más
                                         </button>
@@ -280,32 +263,20 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- Blusa 2 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="XS,S,M,L" data-colores="Verde">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/blusa-mujer/blusa-2.jpg"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/blusa-mujer/blusa-2.jpg" class="img-fluid product-image"
                                     alt="Blusa">
                                 <div class="product-info">
                                     <div class="product-name">Blusa de Hilo</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
-                                        </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
-                                        </span>
+                                        <span class="color-circle" style="background:#124828;"></span>
                                     </div>
                                     <div class="price">S/ 49.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalBlusa2">
                                             Ver más
                                         </button>
@@ -313,32 +284,21 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- Blusa 3 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="39.90" data-tallas="M,L,XL" data-colores="Morado,Rojo">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/blusa-mujer/blusa-3.jpg"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/blusa-mujer/blusa-3.jpg" class="img-fluid product-image"
                                     alt="Blusa">
                                 <div class="product-info">
                                     <div class="product-name">Corset</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
-                                        </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
-                                        </span>
+                                        <span class="color-circle" style="background:#c7bbdf;"></span>
+                                        <span class="color-circle" style="background:#ad0306;"></span>
                                     </div>
-                                    <div class="price">S/ 49.90</div>
+                                    <div class="price">S/ 39.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalBlusa3">
                                             Ver más
                                         </button>
@@ -346,32 +306,23 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- Blusa 4 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="S,M" data-colores="Negro,Rojo">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/blusa-mujer/blusa-4.jpg"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/blusa-mujer/blusa-4.jpg" class="img-fluid product-image"
                                     alt="Blusa">
                                 <div class="product-info">
                                     <div class="product-name">Top Bandeau Cuadriculado</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
+                                        <span class="color-circle" style="background:#02030c;">
                                         </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
+                                        <span class="color-circle" style="background:#b55e73;">
                                         </span>
                                     </div>
                                     <div class="price">S/ 49.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalBlusa4">
                                             Ver más
                                         </button>
@@ -379,43 +330,49 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Blusa 5 -->
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="79.00" data-tallas="L" data-colores="Celeste">
+                            <div class="product-card">
+                                <img src="./imagenes/mujer/blusa-mujer/Blusa Jean Rigido - Dama.png" class="img-fluid product-image"
+                                    alt="Blusa">
+                                <div class="product-info">
+                                    <div class="product-name">Blusa Jean Rigido - Dama</div>
+                                    <div class="color-title">Color:</div>
+                                    <div class="colors">
+                                        <span class="color-circle" style="background:#bcd6f4;"></span>
+                                    </div>
+                                    <div class="price">S/ 79.00</div>
+                                    <div class="d-grid mt-3">
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
+                                            data-bs-target="#modalBlusa5">
+                                            Ver más
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
                 </section>
 
                 <!-- FALDAS -->
                 <section id="faldas-mujer" class="mb-5">
-                    <h2 class="section-title">
-                        Faldas
-                    </h2>
-
+                    <h2 class="section-title">Faldas</h2>
                     <div class="row g-3">
                         <!-- PRODUCTOS -->
                         <!-- Falda 1 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="79.90" data-tallas="XS,S,M,L" data-colores="Azul">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/falda-mujer/falda-1.jpg"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/falda-mujer/falda-1.jpg" class="img-fluid product-image"
                                     alt="Falda">
                                 <div class="product-info">
                                     <div class="product-name">Falda Short</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
-                                        </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
-                                        </span>
+                                        <span class="color-circle" style="background:#0a4e7e;"></span>
                                     </div>
-                                    <div class="price">S/ 49.90</div>
+                                    <div class="price">S/ 79.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalFalda1">
                                             Ver más
                                         </button>
@@ -423,32 +380,20 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- Falda 2 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="59.90" data-tallas="M,L" data-colores="Celeste">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/falda-mujer/falda-2.jpg"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/falda-mujer/falda-2.jpg" class="img-fluid product-image"
                                     alt="Falda">
                                 <div class="product-info">
                                     <div class="product-name">Falda Rasgada con Correa</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
-                                        </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
-                                        </span>
+                                        <span class="color-circle" style="background:#bbc3ce;"></span>
                                     </div>
-                                    <div class="price">S/ 49.90</div>
+                                    <div class="price">S/ 59.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalFalda2">
                                             Ver más
                                         </button>
@@ -456,32 +401,20 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- Falda 3 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="S,M,XL" data-colores="Negro">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/falda-mujer/falda-3.jpg"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/falda-mujer/falda-3.jpg" class="img-fluid product-image"
                                     alt="Falda">
                                 <div class="product-info">
                                     <div class="product-name">Falda con Cierre</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
-                                        </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
-                                        </span>
+                                        <span class="color-circle" style="background:#000;"></span>
                                     </div>
                                     <div class="price">S/ 49.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalFalda3">
                                             Ver más
                                         </button>
@@ -489,32 +422,20 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- Falda 4 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="59.90" data-tallas="M,L,XL" data-colores="Azul">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/falda-mujer/falda-4.jpg"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/falda-mujer/falda-4.jpg" class="img-fluid product-image"
                                     alt="Falda">
                                 <div class="product-info">
                                     <div class="product-name">Falda con Cadenas</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
-                                        </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
-                                        </span>
+                                        <span class="color-circle" style="background:#5086c6;"></span>
                                     </div>
-                                    <div class="price">S/ 49.90</div>
+                                    <div class="price">S/ 59.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalFalda4">
                                             Ver más
                                         </button>
@@ -523,7 +444,6 @@
                             </div>
                         </div>
                     </div>
-
                 </section>
 
                 <!-- PANTALONES -->
@@ -531,34 +451,22 @@
                     <h2 class="section-title">
                         Pantalones
                     </h2>
-
                     <div class="row g-3">
                         <!-- PRODUCTOS -->
                         <!-- Pantalon 1 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="34.90" data-tallas="S,M,L" data-colores="Rosa">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/jeans-mujer/pantalon-1.avif"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/jeans-mujer/pantalon-1.avif" class="img-fluid product-image"
                                     alt="Pantalon">
                                 <div class="product-info">
                                     <div class="product-name">Pantalon Casual</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
-                                        </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
-                                        </span>
+                                        <span class="color-circle" style="background:#a95656;"></span>
                                     </div>
-                                    <div class="price">S/ 49.90</div>
+                                    <div class="price">S/ 34.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalPantalonM1">
                                             Ver más
                                         </button>
@@ -566,32 +474,20 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- Pantalon 2 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="M" data-colores="Verde">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/jeans-mujer/pantalon-2.avif"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/jeans-mujer/pantalon-2.avif" class="img-fluid product-image"
                                     alt="Pantalon">
                                 <div class="product-info">
                                     <div class="product-name">Pantalon Cargo</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
-                                        </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
-                                        </span>
+                                        <span class="color-circle" style="background:#455238;"></span>
                                     </div>
                                     <div class="price">S/ 49.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalPantalonM2">
                                             Ver más
                                         </button>
@@ -599,32 +495,20 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- Pantalon 3 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="89.90" data-tallas="S,M" data-colores="Marron">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/jeans-mujer/pantalon-3.avif"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/jeans-mujer/pantalon-3.avif" class="img-fluid product-image"
                                     alt="Pantalon">
                                 <div class="product-info">
                                     <div class="product-name">Pantalón de Traje Vintage</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
-                                        </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
-                                        </span>
+                                        <span class="color-circle" style="background:#64523c;"></span>
                                     </div>
-                                    <div class="price">S/ 49.90</div>
+                                    <div class="price">S/ 89.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalPantalonM3">
                                             Ver más
                                         </button>
@@ -632,32 +516,20 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- Pantalon 4 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="S,M" data-colores="Azul">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/jeans-mujer/pantalon-4.avif"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/jeans-mujer/pantalon-4.avif" class="img-fluid product-image"
                                     alt="Pantalon">
                                 <div class="product-info">
                                     <div class="product-name">Pantalón Jeans Elástico</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
-                                        </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
-                                        </span>
+                                        <span class="color-circle" style="background:#0b1c36;"></span>
                                     </div>
                                     <div class="price">S/ 49.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalPantalonM4">
                                             Ver más
                                         </button>
@@ -673,34 +545,22 @@
                     <h2 class="section-title">
                         Vestidos
                     </h2>
-
                     <div class="row g-3">
                         <!-- PRODUCTOS -->
                         <!-- Vestido 1 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="S,M,L" data-colores="Rojo">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/vestido-mujer/vestido-1.jpg"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/vestido-mujer/vestido-1.jpg" class="img-fluid product-image"
                                     alt="Vestido">
                                 <div class="product-info">
                                     <div class="product-name">Vestido Manga Princesa</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
-                                        </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
-                                        </span>
+                                        <span class="color-circle" style="background:#9e0116;"></span>
                                     </div>
                                     <div class="price">S/ 49.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalVestido1">
                                             Ver más
                                         </button>
@@ -708,32 +568,20 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- Vestido 2 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="59.90" data-tallas="XS,M,L" data-colores="Verde">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/vestido-mujer/vestido-2.jpg"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/vestido-mujer/vestido-2.jpg" class="img-fluid product-image"
                                     alt="Vestido">
                                 <div class="product-info">
                                     <div class="product-name">Vestido Manga Ángel</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
-                                        </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
-                                        </span>
+                                        <span class="color-circle" style="background:#343621;"></span>
                                     </div>
                                     <div class="price">S/ 49.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalVestido2">
                                             Ver más
                                         </button>
@@ -741,32 +589,20 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- Vestido 3 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="M,L,XL" data-colores="Rosa">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/vestido-mujer/vestido-3.jpg"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/vestido-mujer/vestido-3.jpg" class="img-fluid product-image"
                                     alt="Vestido">
                                 <div class="product-info">
                                     <div class="product-name">Vestido de Chalis</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
-                                        </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
-                                        </span>
+                                        <span class="color-circle" style="background:#f6cdc7;"></span>
                                     </div>
                                     <div class="price">S/ 49.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalVestido3">
                                             Ver más
                                         </button>
@@ -774,32 +610,20 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- Vestido 4 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="M,L,XL" data-colores="Negro">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/vestido-mujer/vestido-4.jpg"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/vestido-mujer/vestido-4.jpg" class="img-fluid product-image"
                                     alt="Vestido">
                                 <div class="product-info">
                                     <div class="product-name">Vestido Suplex Grueso Floreado</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
-                                        </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
-                                        </span>
+                                        <span class="color-circle" style="background:#000;"></span>
                                     </div>
                                     <div class="price">S/ 49.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalVestido4">
                                             Ver más
                                         </button>
@@ -815,34 +639,22 @@
                     <h2 class="section-title">
                         Bikinis
                     </h2>
-
                     <div class="row g-3">
                         <!-- PRODUCTOS -->
                         <!-- Bikini 1 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="69.90" data-tallas="XS,S,M" data-colores="Rosa">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/bikinis-mujer/bikini-1.jpg"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/bikinis-mujer/bikini-1.jpg" class="img-fluid product-image"
                                     alt="Bikini">
                                 <div class="product-info">
                                     <div class="product-name">Bikini con Sujetador de Cuello</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
-                                        </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
-                                        </span>
+                                        <span class="color-circle" style="background:#de3170;"></span>
                                     </div>
-                                    <div class="price">S/ 49.90</div>
+                                    <div class="price">S/ 69.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalBikini1">
                                             Ver más
                                         </button>
@@ -851,30 +663,19 @@
                             </div>
                         </div>
                         <!-- Bikini 2 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="XS,S,M,L,XL" data-colores="Dorado">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/bikinis-mujer/bikini-2.jpg"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/bikinis-mujer/bikini-2.jpg" class="img-fluid product-image"
                                     alt="Bikini">
                                 <div class="product-info">
                                     <div class="product-name">Monokini de un Solo Hombro</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
-                                        </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
-                                        </span>
+                                        <span class="color-circle" style="background:#f38d45;"></span>
                                     </div>
                                     <div class="price">S/ 49.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalBikini2">
                                             Ver más
                                         </button>
@@ -883,30 +684,19 @@
                             </div>
                         </div>
                         <!-- Bikini 3 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="44.90" data-tallas="S,M,L" data-colores="Rosa">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/bikinis-mujer/bikini-3.jpg"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/bikinis-mujer/bikini-3.jpg" class="img-fluid product-image"
                                     alt="Bikini">
                                 <div class="product-info">
                                     <div class="product-name">Bikini de un Solo Hombro Floreado</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
-                                        </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
-                                        </span>
+                                        <span class="color-circle" style="background:#ef88b3;"></span>
                                     </div>
                                     <div class="price">S/ 49.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalBikini3">
                                             Ver más
                                         </button>
@@ -915,30 +705,20 @@
                             </div>
                         </div>
                         <!-- Bikini 4 -->
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3 product-col" data-precio="49.90" data-tallas="M,L,XL" data-colores="Negro">
                             <div class="product-card">
-                                <img
-                                    src="./imagenes/mujer/bikinis-mujer/bikini-4.jpg"
-                                    class="img-fluid product-image"
+                                <img src="./imagenes/mujer/bikinis-mujer/bikini-4.jpg" class="img-fluid product-image"
                                     alt="Bikini">
                                 <div class="product-info">
                                     <div class="product-name">Traje de Baño Entero</div>
                                     <div class="color-title">Color:</div>
                                     <div class="colors">
-                                        <span
-                                            class="color-circle"
-                                            style="background:#6c757d;">
-                                        </span>
-                                        <span
-                                            class="color-circle"
-                                            style="background:#000;">
+                                        <span class="color-circle" style="background:#000;">
                                         </span>
                                     </div>
                                     <div class="price">S/ 49.90</div>
                                     <div class="d-grid mt-3">
-                                        <button
-                                            class="btn btn-outline-dark btn-product"
-                                            data-bs-toggle="modal"
+                                        <button class="btn btn-outline-dark btn-product" data-bs-toggle="modal"
                                             data-bs-target="#modalBikini4">
                                             Ver más
                                         </button>
@@ -949,149 +729,1397 @@
                     </div>
                 </section>
             </main>
-
         </div>
-        </div>
+    </div>
 
-        <!-- FILTRO PARA MOVIL -->
-        <div class="filter-bar d-lg-none">
-            <button
-                class="btn filter-toggle w-100"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#mobileFilter">
+    <!-- FILTRO PARA MOVIL -->
+    <div class="filter-bar d-lg-none">
+        <button class="btn filter-toggle w-100" data-bs-toggle="offcanvas" data-bs-target="#mobileFilter">
 
-                <i class="bi bi-funnel"></i>
-                Filtrar
+            <i class="bi bi-funnel"></i>
+            Filtrar
+        </button>
+    </div>
+
+    <!-- OFFCANVAS -->
+    <div class="offcanvas offcanvas-bottom product-filter-offcanvas d-lg-none" tabindex="-1" id="mobileFilter">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Filtrar Productos</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas">
             </button>
         </div>
-
-        <!-- OFFCANVAS -->
-        <div
-            class="offcanvas offcanvas-bottom product-filter-offcanvas d-lg-none"
-            tabindex="-1"
-            id="mobileFilter">
-
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title">
-                    Filtrar Productos
-                </h5>
-
-                <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="offcanvas">
-                </button>
+        <div class="offcanvas-body">
+            <!-- PRECIO -->
+            <div class="mb-4">
+                <label class="form-label">Precio máximo</label>
+                <div class="price-range">
+                    <input class="form-range filtro-precio" type="range" min="0" max="150" step="10" value="150"
+                        aria-label="Precio máximo">
+                    <div class="range-labels">
+                        <span>S/0</span>
+                        <span>S/150+</span>
+                    </div>
+                </div>
             </div>
+            <!-- TALLA -->
+            <div class="mb-4">
+                <label class="form-label">Talla</label>
+                <select class="form-select filtro-talla">
+                    <option value="todas">Todas</option>
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+            </div>
+            <!-- COLOR -->
+            <div>
+                <label class="form-label">Color</label>
+                <select class="form-select filtro-color">
+                    <option value="todos">Todos</option>
+                    <option value="Negro">Negro</option>
+                    <option value="Blanco">Blanco</option>
+                    <option value="Gris">Gris</option>
+                    <option value="Azul">Azul</option>
+                    <option value="Beige">Beige</option>
+                    <option value="Celeste">Celeste</option>
+                    <option value="Rosa">Rosa</option>
+                    <option value="Verde">Verde</option>
+                    <option value="Morado">Morado</option>
+                    <option value="Rojo">Rojo</option>
+                    <option value="Marron">Marrón</option>
+                    <option value="Dorado">Dorado</option>
+                </select>
+            </div>
+            <!-- BOTÓN DE LIMPIAR FILTRO -->
+            <button type="button" class="btn w-100 btn-limpiar-filtros mt-3">Limpiar filtros</button>
+        </div>
+    </div>
 
-            <div class="offcanvas-body">
-                <!-- PRECIO -->
-                <div class="mb-4">
-                    <label class="form-label">
-                                Precio máximo
-                            </label>
-                            <div class="price-range">
-                                <input class="form-range" type="range" min="0" max="150" step="10" value="80" aria-label="Precio máximo">
-                                <div class="range-labels">
-                                    <span>S/0</span>
-                                    <span>S/150+</span>
-                                </div>
+    <!-- MODAL PRODUCTO -->
+    <!-- Modal - Blusas -->
+    <!-- Modal blusa 1 -->
+    <div class="modal fade" id="modalBlusa1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-producto-ajustado">
+            <div class="modal-content modal-producto-contenido">
+                <!-- CABECERA -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Blusa de Chalis Rayado</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <!-- CONTENIDO -->
+                <div class="modal-body modal-producto-cuerpo">
+                    <!-- CARRUSEL -->
+                    <div id="carouselBlusa1" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/mujer/blusa-mujer/blusa-1.jpg"
+                                    class="img-fluid d-block w-100 modal-producto-imagen" alt="Blusa">
                             </div>
+                        </div>
+                        <!-- FLECHA IZQUIERDA -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselBlusa1"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon">
+                            </span>
+                        </button>
+                        <!-- FLECHA DERECHA -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselBlusa1"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon">
+                            </span>
+                        </button>
+                    </div>
+                    <!-- INFORMACION -->
+                    <div class="mt-4">
+                        <h4>Blusa de Chalis Rayado</h4>
+                        <hr>
+                        <p><strong>Material:</strong> Tela</p>
+                        <p><strong>Diseño:</strong> Liso.</p>
+                        <p><strong>Tallas:</strong> XS, S, M.</p>
+                        <p><strong>Colores:</strong> Rosa.</p>
+                        <p>
+                            <strong>Descripción:</strong>
+                            Blusa de chalis rayado, con diseño elegante y cómodo, ideal para ocasiones casuales o formales.
+                        </p>
+                        <h3 class="mt-3">S/ 79.90</h3>
+                    </div>
                 </div>
-
-                <!-- TALLA -->
-                <div class="mb-4">
-                    <label class="form-label">
-                        Talla
-                    </label>
-                    <select class="form-select">
-                        <option>Todas</option>
-                        <option>S</option>
-                        <option>M</option>
-                        <option>L</option>
-                        <option>XL</option>
-                    </select>
+                <!-- PIE -->
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20de%20la%20Blusa%20de%20Chalis%20Rayado"
+                        target="_blank" class="btn btn-success w-100">
+                        <i class="bi bi-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
                 </div>
-
-                <!-- COLOR -->
-                <div>
-                    <label class="form-label">
-                        Color
-                    </label>
-                    <select class="form-select">
-                        <option>Todos</option>
-                        <option>Negro</option>
-                        <option>Blanco</option>
-                        <option>Gris</option>
-                        <option>Azul</option>
-                    </select>
-                </div>
-
             </div>
         </div>
-
-        <footer class="site-footer">
-            <div class="container">
-                <div class="row g-4">
-                    <section class="col-12 col-md-6 col-lg-3">
-                        <h3>Tienda</h3>
-                        <address>
-                            <p>Jr. Lima Pst 8 parada municipal</p>
-                            <p>Bagua, Amazonas, Perú, 15004</p>
-                            <p><a href="mailto:clothingstore.rr@gmail.com">clothingstore.rr@gmail.com</a></p>
-                            <p><a href="tel:+51916408971">+51 916 408 971</a></p>
-                        </address>
-                    </section>
-
-                    <section class="col-12 col-md-6 col-lg-3">
-                        <h3>Atención al cliente</h3>
-                        <ul class="footer-list">
-                            <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalPagos">Formas de pago</button></li>
-                            <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalEnvios">Métodos de envío</button></li>
-                            <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalCambios">Cambios y devoluciones</button></li>
-                            <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalPreguntas">Preguntas frecuentes</button></li>
-                        </ul>
-                    </section>
-
-                    <section class="col-12 col-md-6 col-lg-3">
-                        <h3>Términos y condiciones</h3>
-                        <ul class="footer-list">
-                            <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalTerminos">Términos y condiciones</button></li>
-                            <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalDatos">Tratamiento de datos</button></li>
-                            <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalCookies">Política de cookies</button></li>
-                            <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalReclamaciones">Libro de reclamaciones</button></li>
-                        </ul>
-                        <img class="libro-reclamaciones-img img-fluid" src="imagenes/libro-de-reclamaciones.jpg" alt="Libro de Reclamaciones">
-                    </section>
-
-                    <section class="col-12 col-md-6 col-lg-3">
-                        <h3>Newsletter</h3>
-                        <p>Regístrate para conocer lanzamientos, descuentos y novedades.</p>
-
-                        <form class="newsletter-form">
-                            <label class="visually-hidden" for="correo-newsletter">Correo electrónico</label>
-                            <input id="correo-newsletter" class="form-control" type="email" placeholder="Correo electrónico" required>
-                            <button class="btn btn-primary w-100" type="submit">Suscribirse</button>
-                        </form>
-                    </section>
+    </div>
+    <!-- Modal blusa 2 -->
+    <div class="modal fade" id="modalBlusa2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-producto-ajustado">
+            <div class="modal-content modal-producto-contenido">
+                <!-- CABECERA -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Blusa de Hilo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
                 </div>
-
-                <div class="footer-bottom">
-                    <div class="redes">
-                        <p>Síguenos en nuestras <strong>redes sociales</strong></p>
-                        <div class="redes__link">
-                            <a href="https://web.facebook.com/RyRClothingstore/about">Facebook</a>
-                            <span>TikTok</span>
-                            <span>Instagram</span>
+                <!-- CONTENIDO -->
+                <div class="modal-body modal-producto-cuerpo">
+                    <!-- CARRUSEL -->
+                    <div id="carouselBlusa2" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/mujer/blusa-mujer/blusa-2.jpg"
+                                    class="img-fluid d-block w-100 modal-producto-imagen" alt="Blusa">
+                            </div>
                         </div>
+                        <!-- FLECHA IZQUIERDA -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselBlusa2"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon">
+                            </span>
+                        </button>
+                        <!-- FLECHA DERECHA -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselBlusa2"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon">
+                            </span>
+                        </button>
                     </div>
-
-                    <p class="copyright">&copy; 2026 R&R Clothing Store - Todos los derechos reservados.</p>
+                    <!-- INFORMACION -->
+                    <div class="mt-4">
+                        <h4>Blusa de Hilo</h4>
+                        <hr>
+                        <p><strong>Material:</strong> Hilo</p>
+                        <p><strong>Diseño:</strong> Tejido.</p>
+                        <p><strong>Tallas:</strong> XS, S, M y L.</p>
+                        <p><strong>Colores:</strong> Verde.</p>
+                        <p>
+                            <strong>Descripción:</strong>
+                            Blusa de hilo, con diseño elegante y cómodo, ideal para ocasiones casuales o formales.
+                        </p>
+                        <h3 class="mt-3">S/ 49.90</h3>
+                    </div>
+                </div>
+                <!-- PIE -->
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20de%20la%20Blusa%20de%20Hilo"
+                        target="_blank" class="btn btn-success w-100">
+                        <i class="bi bi-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
                 </div>
             </div>
-        </footer>
+        </div>
+    </div>
+    <!-- Modal blusa 3 -->
+    <div class="modal fade" id="modalBlusa3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-producto-ajustado">
+            <div class="modal-content modal-producto-contenido">
+                <!-- CABECERA -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Corset</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <!-- CONTENIDO -->
+                <div class="modal-body modal-producto-cuerpo">
+                    <!-- CARRUSEL -->
+                    <div id="carouselBlusa3" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/mujer/blusa-mujer/blusa-3.jpg"
+                                    class="img-fluid d-block w-100 modal-producto-imagen" alt="Blusa">
+                            </div>
+                        </div>
+                        <!-- FLECHA IZQUIERDA -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselBlusa3"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon">
+                            </span>
+                        </button>
+                        <!-- FLECHA DERECHA -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselBlusa3"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon">
+                            </span>
+                        </button>
+                    </div>
+                    <!-- INFORMACION -->
+                    <div class="mt-4">
+                        <h4>Corset</h4>
+                        <hr>
+                        <p><strong>Material:</strong> Tela</p>
+                        <p><strong>Diseño:</strong> Liso.</p>
+                        <p><strong>Tallas:</strong> M, L y XL.</p>
+                        <p><strong>Colores:</strong> Morado, Rojo.</p>
+                        <p>
+                            <strong>Descripción:</strong>
+                            Corset, con diseño elegante y cómodo, ideal para ocasiones casuales o formales.
+                        </p>
+                        <h3 class="mt-3">S/ 39.90</h3>
+                    </div>
+                </div>
+                <!-- PIE -->
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Corset"
+                        target="_blank" class="btn btn-success w-100">
+                        <i class="bi bi-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal blusa 4 -->
+    <div class="modal fade" id="modalBlusa4" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-producto-ajustado">
+            <div class="modal-content modal-producto-contenido">
+                <!-- CABECERA -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Top Bandeau Cuadriculado</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <!-- CONTENIDO -->
+                <div class="modal-body modal-producto-cuerpo">
+                    <!-- CARRUSEL -->
+                    <div id="carouselBlusa4" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/mujer/blusa-mujer/blusa-4.jpg"
+                                    class="img-fluid d-block w-100 modal-producto-imagen" alt="Blusa">
+                            </div>
+                        </div>
+                        <!-- FLECHA IZQUIERDA -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselBlusa4"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon">
+                            </span>
+                        </button>
+                        <!-- FLECHA DERECHA -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselBlusa4"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon">
+                            </span>
+                        </button>
+                    </div>
+                    <!-- INFORMACION -->
+                    <div class="mt-4">
+                        <h4>Top Bandeau Cuadriculado</h4>
+                        <hr>
+                        <p><strong>Material:</strong> Tela</p>
+                        <p><strong>Diseño:</strong> Liso.</p>
+                        <p><strong>Tallas:</strong> S, M.</p>
+                        <p><strong>Colores:</strong> Negro y Rojo.</p>
+                        <p>
+                            <strong>Descripción:</strong>
+                            Top Bandeau Cuadriculado elegante.
+                        </p>
+                        <h3 class="mt-3">S/ 79.90</h3>
+                    </div>
+                </div>
+                <!-- PIE -->
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Top%20Bandeau%20Cuadriculado"
+                        target="_blank" class="btn btn-success w-100">
+                        <i class="bi bi-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal blusa 5 -->
+    <div class="modal fade" id="modalBlusa5" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-producto-ajustado">
+            <div class="modal-content modal-producto-contenido">
+                <!-- CABECERA -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Blusa Jean Rigido - Dama</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <!-- CONTENIDO -->
+                <div class="modal-body modal-producto-cuerpo">
+                    <!-- CARRUSEL -->
+                    <div id="carouselBlusa1" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/mujer/blusa-mujer/Blusa Jean Rigido - Dama.png"
+                                    class="img-fluid d-block w-100 modal-producto-imagen" alt="Blusa">
+                            </div>
+                        </div>
+                        <!-- FLECHA IZQUIERDA -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselBlusa1"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon">
+                            </span>
+                        </button>
+                        <!-- FLECHA DERECHA -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselBlusa1"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon">
+                            </span>
+                        </button>
+                    </div>
+                    <!-- INFORMACION -->
+                    <div class="mt-4">
+                        <h4>Blusa Jean Rigido - Dama</h4>
+                        <hr>
+                        <p><strong>Material:</strong> Denim</p>
+                        <p><strong>Diseño:</strong> Liso.</p>
+                        <p><strong>Tallas:</strong> L.</p>
+                        <p><strong>Colores:</strong> Celeste.</p>
+                        <p>
+                            <strong>Descripción:</strong>
+                            Blusa de jean rígido para dama, con diseño elegante y cómodo, ideal para ocasiones casuales o formales.
+                        </p>
+                        <h3 class="mt-3">S/ 79.90</h3>
+                    </div>
+                </div>
+                <!-- PIE -->
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Blusa%20Jean%20Rigido%20-%20Dama"
+                        target="_blank" class="btn btn-success w-100">
+                        <i class="bi bi-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <!-- Bootstrap JS -->
-        <div class="modal fade" id="modalPagos" tabindex="-1" aria-labelledby="modalPagosLabel" aria-hidden="true">
+    <!-- Modal - Faldas -->
+    <!-- Modal falda 1 -->
+    <div class="modal fade" id="modalFalda1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-producto-ajustado">
+            <div class="modal-content modal-producto-contenido">
+                <!-- CABECERA -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Falda Short</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <!-- CONTENIDO -->
+                <div class="modal-body modal-producto-cuerpo">
+                    <!-- CARRUSEL -->
+                    <div id="carouselFalda1" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/mujer/falda-mujer/falda-1.jpg"
+                                    class="img-fluid d-block w-100 modal-producto-imagen" alt="Falda">
+                            </div>
+                        </div>
+                        <!-- FLECHA IZQUIERDA -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselFalda1"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon">
+                            </span>
+                        </button>
+                        <!-- FLECHA DERECHA -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselFalda1"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon">
+                            </span>
+                        </button>
+                    </div>
+                    <!-- INFORMACION -->
+                    <div class="mt-4">
+                        <h4>Falda Short</h4>
+                        <hr>
+                        <p><strong>Material:</strong> Jean</p>
+                        <p><strong>Diseño:</strong> Moderno.</p>
+                        <p><strong>Tallas:</strong> XS, S, M y L.</p>
+                        <p><strong>Colores:</strong> Azul.</p>
+                        <p>
+                            <strong>Descripción:</strong>
+                            Falda short de jean, con diseño elegante y cómodo, ideal para ocasiones casuales o formales.
+                        </p>
+                        <h3 class="mt-3">S/ 79.90</h3>
+                    </div>
+                </div>
+                <!-- PIE -->
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20de%20la%20Falda%20Short"
+                        target="_blank" class="btn btn-success w-100">
+                        <i class="bi bi-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal falda 2 -->
+    <div class="modal fade" id="modalFalda2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-producto-ajustado">
+            <div class="modal-content modal-producto-contenido">
+                <!-- CABECERA -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Falda Rasgada con Correa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <!-- CONTENIDO -->
+                <div class="modal-body modal-producto-cuerpo">
+                    <!-- CARRUSEL -->
+                    <div id="carouselFalda2" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/mujer/falda-mujer/falda-2.jpg"
+                                    class="img-fluid d-block w-100 modal-producto-imagen" alt="Falda">
+                            </div>
+                        </div>
+                        <!-- FLECHA IZQUIERDA -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselFalda2"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon">
+                            </span>
+                        </button>
+                        <!-- FLECHA DERECHA -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselFalda2"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon">
+                            </span>
+                        </button>
+                    </div>
+                    <!-- INFORMACION -->
+                    <div class="mt-4">
+                        <h4>Falda Rasgada con Correa</h4>
+                        <hr>
+                        <p><strong>Material:</strong> Jean</p>
+                        <p><strong>Diseño:</strong> Rasgado.</p>
+                        <p><strong>Tallas:</strong> M y L.</p>
+                        <p><strong>Colores:</strong> Celeste.</p>
+                        <p>
+                            <strong>Descripción:</strong>
+                            Falda rasgada con correa, con diseño elegante y cómodo, ideal para ocasiones casuales o formales.
+                        </p>
+                        <h3 class="mt-3">S/ 59.90</h3>
+                    </div>
+                </div>
+                <!-- PIE -->
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20de%20la%20Falda%20Rasgada%20con%20Correa"
+                        target="_blank" class="btn btn-success w-100">
+                        <i class="bi bi-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal falda 3 -->
+    <div class="modal fade" id="modalFalda3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-producto-ajustado">
+            <div class="modal-content modal-producto-contenido">
+                <!-- CABECERA -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Falda con Cierre</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <!-- CONTENIDO -->
+                <div class="modal-body modal-producto-cuerpo">
+                    <!-- CARRUSEL -->
+                    <div id="carouselFalda3" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/mujer/falda-mujer/falda-3.jpg"
+                                    class="img-fluid d-block w-100 modal-producto-imagen" alt="Falda">
+                            </div>
+                        </div>
+                        <!-- FLECHA IZQUIERDA -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselFalda3"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon">
+                            </span>
+                        </button>
+                        <!-- FLECHA DERECHA -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselFalda3"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon">
+                            </span>
+                        </button>
+                    </div>
+                    <!-- INFORMACION -->
+                    <div class="mt-4">
+                        <h4>Falda con Cierre</h4>
+                        <hr>
+                        <p><strong>Material:</strong> Jean</p>
+                        <p><strong>Diseño:</strong> Cierre en medio.</p>
+                        <p><strong>Tallas:</strong> S, M y XL.</p>
+                        <p><strong>Colores:</strong> Negro.</p>
+                        <p>
+                            <strong>Descripción:</strong>
+                            Falda con cierre en el centro, ideal para un estilo moderno y elegante.
+                        </p>
+                        <h3 class="mt-3">S/ 49.90</h3>
+                    </div>
+                </div>
+                <!-- PIE -->
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20de%20la%20Falda%20Con%20Cierre"
+                        target="_blank" class="btn btn-success w-100">
+                        <i class="bi bi-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal falda 4 -->
+    <div class="modal fade" id="modalFalda4" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-producto-ajustado">
+            <div class="modal-content modal-producto-contenido">
+                <!-- CABECERA -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Falda con Cadenas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <!-- CONTENIDO -->
+                <div class="modal-body modal-producto-cuerpo">
+                    <!-- CARRUSEL -->
+                    <div id="carouselFalda4" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/mujer/falda-mujer/falda-1.jpg"
+                                    class="img-fluid d-block w-100 modal-producto-imagen" alt="Falda">
+                            </div>
+                        </div>
+                        <!-- FLECHA IZQUIERDA -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselFalda4"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon">
+                            </span>
+                        </button>
+                        <!-- FLECHA DERECHA -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselFalda4"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon">
+                            </span>
+                        </button>
+                    </div>
+                    <!-- INFORMACION -->
+                    <div class="mt-4">
+                        <h4>Falda con Cadenas</h4>
+                        <hr>
+                        <p><strong>Material:</strong> Jean</p>
+                        <p><strong>Diseño:</strong> Con cadenas decorativas.</p>
+                        <p><strong>Tallas:</strong> M, L, XL.</p>
+                        <p><strong>Colores:</strong> Azul.</p>
+                        <p>
+                            <strong>Descripción:</strong>
+                            Falda con cadenas decorativas, con diseño elegante y cómodo, ideal para ocasiones casuales o formales.
+                        </p>
+                        <h3 class="mt-3">S/ 59.90</h3>
+                    </div>
+                </div>
+                <!-- PIE -->
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20de%20la%20Falda%20con%20Cadenas"
+                        target="_blank" class="btn btn-success w-100">
+                        <i class="bi bi-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal - Pantalones -->
+    <!-- Modal pantalon 1 -->
+    <div class="modal fade" id="modalPantalonM1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-producto-ajustado">
+            <div class="modal-content modal-producto-contenido">
+                <!-- CABECERA -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Pantalon Casual</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <!-- CONTENIDO -->
+                <div class="modal-body modal-producto-cuerpo">
+                    <!-- CARRUSEL -->
+                    <div id="carouselPantalonM1" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/mujer/jeans-mujer/pantalon-1.avif"
+                                    class="img-fluid d-block w-100 modal-producto-imagen" alt="Pantalon">
+                            </div>
+                        </div>
+                        <!-- FLECHA IZQUIERDA -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPantalonM1"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon">
+                            </span>
+                        </button>
+                        <!-- FLECHA DERECHA -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselPantalonM1"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon">
+                            </span>
+                        </button>
+                    </div>
+                    <!-- INFORMACION -->
+                    <div class="mt-4">
+                        <h4>Pantalon Casual</h4>
+                        <hr>
+                        <p><strong>Material:</strong> Poliéster</p>
+                        <p><strong>Diseño:</strong> Clásico.</p>
+                        <p><strong>Tallas:</strong> S, M y L.</p>
+                        <p><strong>Colores:</strong> Rosa.</p>
+                        <p>
+                            <strong>Descripción:</strong>
+                            Pantalon casual de poliéster, con diseño elegante y cómodo, ideal para ocasiones casuales o formales.
+                        </p>
+                        <h3 class="mt-3">S/ 34.90</h3>
+                    </div>
+                </div>
+                <!-- PIE -->
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Pantalón%20Casual"
+                        target="_blank" class="btn btn-success w-100">
+                        <i class="bi bi-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal pantalon 2 -->
+    <div class="modal fade" id="modalPantalonM2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-producto-ajustado">
+            <div class="modal-content modal-producto-contenido">
+                <!-- CABECERA -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Pantalon Cargo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <!-- CONTENIDO -->
+                <div class="modal-body modal-producto-cuerpo">
+                    <!-- CARRUSEL -->
+                    <div id="carouselPantalonM2" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/mujer/jeans-mujer/pantalon-2.avif"
+                                    class="img-fluid d-block w-100 modal-producto-imagen" alt="Pantalon">
+                            </div>
+                        </div>
+                        <!-- FLECHA IZQUIERDA -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPantalonM2"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon">
+                            </span>
+                        </button>
+                        <!-- FLECHA DERECHA -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselPantalonM2"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon">
+                            </span>
+                        </button>
+                    </div>
+                    <!-- INFORMACION -->
+                    <div class="mt-4">
+                        <h4>Pantalon Cargo</h4>
+                        <hr>
+                        <p><strong>Material:</strong> Algodón</p>
+                        <p><strong>Diseño:</strong> Cargo</p>
+                        <p><strong>Tallas:</strong> M.</p>
+                        <p><strong>Colores:</strong> Verde.</p>
+                        <p>
+                            <strong>Descripción:</strong>
+                            Pantalón cargo de algodón, con diseño elegante y cómodo, ideal para ocasiones casuales o formales.
+                        </p>
+                        <h3 class="mt-3">S/ 49.90</h3>
+                    </div>
+                </div>
+                <!-- PIE -->
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Pantalón%20Cargo"
+                        target="_blank" class="btn btn-success w-100">
+                        <i class="bi bi-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal pantalon 3 -->
+    <div class="modal fade" id="modalPantalonM3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-producto-ajustado">
+            <div class="modal-content modal-producto-contenido">
+                <!-- CABECERA -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Pantalón de Traje Vintage</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <!-- CONTENIDO -->
+                <div class="modal-body modal-producto-cuerpo">
+                    <!-- CARRUSEL -->
+                    <div id="carouselPantalonM3" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/mujer/jeans-mujer/pantalon-3.avif"
+                                    class="img-fluid d-block w-100 modal-producto-imagen" alt="Pantalon">
+                            </div>
+                        </div>
+                        <!-- FLECHA IZQUIERDA -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPantalonM3"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon">
+                            </span>
+                        </button>
+                        <!-- FLECHA DERECHA -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselPantalonM3"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon">
+                            </span>
+                        </button>
+                    </div>
+                    <!-- INFORMACION -->
+                    <div class="mt-4">
+                        <h4>Pantalón de Traje Vintage</h4>
+                        <hr>
+                        <p><strong>Material:</strong> Drill</p>
+                        <p><strong>Diseño:</strong> Clásico.</p>
+                        <p><strong>Tallas:</strong> S y M.</p>
+                        <p><strong>Colores:</strong> Marrón.</p>
+                        <p>
+                            <strong>Descripción:</strong>
+                            Pantalón de traje vintage de drill, con diseño elegante y cómodo, ideal para ocasiones casuales o formales.
+                        </p>
+                        <h3 class="mt-3">S/ 89.90</h3>
+                    </div>
+                </div>
+                <!-- PIE -->
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Pantalón%20de%20Traje%20Vintage"
+                        target="_blank" class="btn btn-success w-100">
+                        <i class="bi bi-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal pantalon 4 -->
+    <div class="modal fade" id="modalPantalonM4" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-producto-ajustado">
+            <div class="modal-content modal-producto-contenido">
+                <!-- CABECERA -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Pantalón Jeans Elástico</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <!-- CONTENIDO -->
+                <div class="modal-body modal-producto-cuerpo">
+                    <!-- CARRUSEL -->
+                    <div id="carouselPantalonM4" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/mujer/jeans-mujer/pantalon-4.avif"
+                                    class="img-fluid d-block w-100 modal-producto-imagen" alt="Pantalon">
+                            </div>
+                        </div>
+                        <!-- FLECHA IZQUIERDA -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPantalonM4"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon">
+                            </span>
+                        </button>
+                        <!-- FLECHA DERECHA -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselPantalonM4"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon">
+                            </span>
+                        </button>
+                    </div>
+                    <!-- INFORMACION -->
+                    <div class="mt-4">
+                        <h4>Pantalón Jeans Elástico</h4>
+                        <hr>
+                        <p><strong>Material:</strong> Jean</p>
+                        <p><strong>Diseño:</strong> Clásico.</p>
+                        <p><strong>Tallas:</strong> S y M.</p>
+                        <p><strong>Colores:</strong> Azul.</p>
+                        <p>
+                            <strong>Descripción:</strong>
+                            Pantalón jeans elástico, con diseño elegante y cómodo, ideal para ocasiones casuales o formales.
+                        </p>
+                        <h3 class="mt-3">S/ 49.90</h3>
+                    </div>
+                </div>
+                <!-- PIE -->
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Pantalón%20Jeans%20Elástico"
+                        target="_blank" class="btn btn-success w-100">
+                        <i class="bi bi-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal - Vestidos -->
+    <!-- Modal vestido 1 -->
+    <div class="modal fade" id="modalVestido1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-producto-ajustado">
+            <div class="modal-content modal-producto-contenido">
+                <!-- CABECERA -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Vestido Manga Princesa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <!-- CONTENIDO -->
+                <div class="modal-body modal-producto-cuerpo">
+                    <!-- CARRUSEL -->
+                    <div id="carouselVestido1" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/mujer/vestido-mujer/vestido-1.jpg"
+                                    class="img-fluid d-block w-100 modal-producto-imagen" alt="Vestido">
+                            </div>
+                        </div>
+                        <!-- FLECHA IZQUIERDA -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselVestido1"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon">
+                            </span>
+                        </button>
+                        <!-- FLECHA DERECHA -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselVestido1"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon">
+                            </span>
+                        </button>
+                    </div>
+                    <!-- INFORMACION -->
+                    <div class="mt-4">
+                        <h4>Vestido Manga Princesa</h4>
+                        <hr>
+                        <p><strong>Material:</strong> Algodón</p>
+                        <p><strong>Diseño:</strong> Liso.</p>
+                        <p><strong>Tallas:</strong> S, M y L.</p>
+                        <p><strong>Colores:</strong> Rojo.</p>
+                        <p>
+                            <strong>Descripción:</strong>
+                            Vestido de manga princesa, con diseño elegante y cómodo, ideal para ocasiones casuales o formales.
+                        </p>
+                        <h3 class="mt-3">S/ 49.90</h3>
+                    </div>
+                </div>
+                <!-- PIE -->
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Vestido%20de%20Manga%20Princesa"
+                        target="_blank" class="btn btn-success w-100">
+                        <i class="bi bi-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal vestido 2 -->
+    <div class="modal fade" id="modalVestido2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-producto-ajustado">
+            <div class="modal-content modal-producto-contenido">
+                <!-- CABECERA -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Vestido Manga Ángel</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <!-- CONTENIDO -->
+                <div class="modal-body modal-producto-cuerpo">
+                    <!-- CARRUSEL -->
+                    <div id="carouselVestido2" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/mujer/vestido-mujer/vestido-2.jpg"
+                                    class="img-fluid d-block w-100 modal-producto-imagen" alt="Vestido">
+                            </div>
+                        </div>
+                        <!-- FLECHA IZQUIERDA -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselVestido2"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon">
+                            </span>
+                        </button>
+                        <!-- FLECHA DERECHA -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselVestido2"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon">
+                            </span>
+                        </button>
+                    </div>
+                    <!-- INFORMACION -->
+                    <div class="mt-4">
+                        <h4>Vestido Manga Ángel</h4>
+                        <hr>
+                        <p><strong>Material:</strong> Algodón</p>
+                        <p><strong>Diseño:</strong> Liso.</p>
+                        <p><strong>Tallas:</strong> XS, M y L.</p>
+                        <p><strong>Colores:</strong> Verde.</p>
+                        <p>
+                            <strong>Descripción:</strong>
+                            Vestido de manga ángel, con diseño elegante y cómodo, ideal para ocasiones casuales o formales.
+                        </p>
+                        <h3 class="mt-3">S/ 59.90</h3>
+                    </div>
+                </div>
+                <!-- PIE -->
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Vestido%20de%20Manga%20Ángel"
+                        target="_blank" class="btn btn-success w-100">
+                        <i class="bi bi-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal vestido 3 -->
+    <div class="modal fade" id="modalVestido3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-producto-ajustado">
+            <div class="modal-content modal-producto-contenido">
+                <!-- CABECERA -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Vestido de Chalis</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <!-- CONTENIDO -->
+                <div class="modal-body modal-producto-cuerpo">
+                    <!-- CARRUSEL -->
+                    <div id="carouselVestido3" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/mujer/vestido-mujer/vestido-3.jpg"
+                                    class="img-fluid d-block w-100 modal-producto-imagen" alt="Vestido">
+                            </div>
+                        </div>
+                        <!-- FLECHA IZQUIERDA -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselVestido3"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon">
+                            </span>
+                        </button>
+                        <!-- FLECHA DERECHA -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselVestido3"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon">
+                            </span>
+                        </button>
+                    </div>
+                    <!-- INFORMACION -->
+                    <div class="mt-4">
+                        <h4>Vestido de Chalis</h4>
+                        <hr>
+                        <p><strong>Material:</strong> Tela</p>
+                        <p><strong>Diseño:</strong> Liso.</p>
+                        <p><strong>Tallas:</strong> M, L y XL.</p>
+                        <p><strong>Colores:</strong> Rosa.</p>
+                        <p>
+                            <strong>Descripción:</strong>
+                            Vestido de chalis, con diseño elegante y cómodo, ideal para ocasiones casuales o formales.
+                        </p>
+                        <h3 class="mt-3">S/ 49.90</h3>
+                    </div>
+                </div>
+                <!-- PIE -->
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Vestido%20de%20Chalis"
+                        target="_blank" class="btn btn-success w-100">
+                        <i class="bi bi-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal vestido 4 -->
+    <div class="modal fade" id="modalVestido4" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-producto-ajustado">
+            <div class="modal-content modal-producto-contenido">
+                <!-- CABECERA -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Vestido Suplex Grueso Floreado</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <!-- CONTENIDO -->
+                <div class="modal-body modal-producto-cuerpo">
+                    <!-- CARRUSEL -->
+                    <div id="carouselVestido4" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/mujer/vestido-mujer/vestido-4.jpg"
+                                    class="img-fluid d-block w-100 modal-producto-imagen" alt="Vestido">
+                            </div>
+                        </div>
+                        <!-- FLECHA IZQUIERDA -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselVestido4"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon">
+                            </span>
+                        </button>
+                        <!-- FLECHA DERECHA -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselVestido4"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon">
+                            </span>
+                        </button>
+                    </div>
+                    <!-- INFORMACION -->
+                    <div class="mt-4">
+                        <h4>Vestido Suplex Grueso Floreado</h4>
+                        <hr>
+                        <p><strong>Material:</strong> Poliéster</p>
+                        <p><strong>Diseño:</strong> Liso.</p>
+                        <p><strong>Tallas:</strong> M, L y XL.</p>
+                        <p><strong>Colores:</strong> Negro.</p>
+                        <p>
+                            <strong>Descripción:</strong>
+                            Vestido suplex grueso con diseño floreado, ideal para ocasiones especiales.
+                        </p>
+                        <h3 class="mt-3">S/ 49.90</h3>
+                    </div>
+                </div>
+                <!-- PIE -->
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Vestido%20Suplex%20Grueso%20Floreado"
+                        target="_blank" class="btn btn-success w-100">
+                        <i class="bi bi-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal - Bikinis -->
+    <!-- Modal Bikini 1 -->
+    <div class="modal fade" id="modalBikini1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-producto-ajustado">
+            <div class="modal-content modal-producto-contenido">
+                <!-- CABECERA -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Bikini con Sujetador de Cuello</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <!-- CONTENIDO -->
+                <div class="modal-body modal-producto-cuerpo">
+                    <!-- CARRUSEL -->
+                    <div id="carouselBikini1" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/mujer/bikinis-mujer/bikini-1.jpg"
+                                    class="img-fluid d-block w-100 modal-producto-imagen" alt="Bikini">
+                            </div>
+                        </div>
+                        <!-- FLECHA IZQUIERDA -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselBikini1"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon">
+                            </span>
+                        </button>
+                        <!-- FLECHA DERECHA -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselBikini1"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon">
+                            </span>
+                        </button>
+                    </div>
+                    <!-- INFORMACION -->
+                    <div class="mt-4">
+                        <h4>Bikini con Sujetador de Cuello</h4>
+                        <hr>
+                        <p><strong>Material:</strong> Poliéster</p>
+                        <p><strong>Diseño:</strong> Liso.</p>
+                        <p><strong>Tallas:</strong> XS, S y M.</p>
+                        <p><strong>Colores:</strong> Rosa.</p>
+                        <p>
+                            <strong>Descripción:</strong>
+                            Bikini con sujetador de cuello, con diseño elegante y cómodo, ideal para ocasiones casuales o formales.
+                        </p>
+                        <h3 class="mt-3">S/ 69.90</h3>
+                    </div>
+                </div>
+                <!-- PIE -->
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Bikini%20con%20Sujetador%20de%20Cuello"
+                        target="_blank" class="btn btn-success w-100">
+                        <i class="bi bi-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Bikini 2 -->
+    <div class="modal fade" id="modalBikini2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-producto-ajustado">
+            <div class="modal-content modal-producto-contenido">
+                <!-- CABECERA -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Monokini de un Solo Hombro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <!-- CONTENIDO -->
+                <div class="modal-body modal-producto-cuerpo">
+                    <!-- CARRUSEL -->
+                    <div id="carouselBikini2" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/mujer/bikinis-mujer/bikini-2.jpg"
+                                    class="img-fluid d-block w-100 modal-producto-imagen" alt="Bikini">
+                            </div>
+                        </div>
+                        <!-- FLECHA IZQUIERDA -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselBikini2"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon">
+                            </span>
+                        </button>
+                        <!-- FLECHA DERECHA -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselBikini2"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon">
+                            </span>
+                        </button>
+                    </div>
+                    <!-- INFORMACION -->
+                    <div class="mt-4">
+                        <h4>Monokini de un Solo Hombro</h4>
+                        <hr>
+                        <p><strong>Material:</strong> Poliéster</p>
+                        <p><strong>Diseño:</strong> Liso.</p>
+                        <p><strong>Tallas:</strong> XS, S, M, L y XL.</p>
+                        <p><strong>Colores:</strong> Dorado.</p>
+                        <p>
+                            <strong>Descripción:</strong>
+                            Monokini de un solo hombro, con diseño elegante y cómodo, ideal para ocasiones casuales o formales.
+                        </p>
+                        <h3 class="mt-3">S/ 49.90</h3>
+                    </div>
+                </div>
+                <!-- PIE -->
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Monokini%20de%20un%20Solo%20Hombro"
+                        target="_blank" class="btn btn-success w-100">
+                        <i class="bi bi-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Bikini 3 -->
+    <div class="modal fade" id="modalBikini3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-producto-ajustado">
+            <div class="modal-content modal-producto-contenido">
+                <!-- CABECERA -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Bikini de un Solo Hombro Floreado</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <!-- CONTENIDO -->
+                <div class="modal-body modal-producto-cuerpo">
+                    <!-- CARRUSEL -->
+                    <div id="carouselBikini3" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/mujer/bikinis-mujer/bikini-3.jpg"
+                                    class="img-fluid d-block w-100 modal-producto-imagen" alt="Bikini">
+                            </div>
+                        </div>
+                        <!-- FLECHA IZQUIERDA -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselBikini3"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon">
+                            </span>
+                        </button>
+                        <!-- FLECHA DERECHA -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselBikini3"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon">
+                            </span>
+                        </button>
+                    </div>
+                    <!-- INFORMACION -->
+                    <div class="mt-4">
+                        <h4>Bikini de un Solo Hombro Floreado</h4>
+                        <hr>
+                        <p><strong>Material:</strong> Poliéster</p>
+                        <p><strong>Diseño:</strong> Liso.</p>
+                        <p><strong>Tallas:</strong> S, M y L.</p>
+                        <p><strong>Colores:</strong> Rosa.</p>
+                        <p>
+                            <strong>Descripción:</strong>
+                            Bikini de un solo hombro con diseño floreado, ideal para ocasiones casuales o formales.
+                        </p>
+                        <h3 class="mt-3">S/ 44.90</h3>
+                    </div>
+                </div>
+                <!-- PIE -->
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Bikini%20de%20un%20Solo%20Hombro%20Floreado"
+                        target="_blank" class="btn btn-success w-100">
+                        <i class="bi bi-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Bikini 4 -->
+    <div class="modal fade" id="modalBikini4" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-producto-ajustado">
+            <div class="modal-content modal-producto-contenido">
+                <!-- CABECERA -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Traje de Baño Entero</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <!-- CONTENIDO -->
+                <div class="modal-body modal-producto-cuerpo">
+                    <!-- CARRUSEL -->
+                    <div id="carouselBikini4" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/mujer/bikinis-mujer/bikini-4.jpg"
+                                    class="img-fluid d-block w-100 modal-producto-imagen" alt="Bikini">
+                            </div>
+                        </div>
+                        <!-- FLECHA IZQUIERDA -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselBikini4"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon">
+                            </span>
+                        </button>
+                        <!-- FLECHA DERECHA -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselBikini4"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon">
+                            </span>
+                        </button>
+                    </div>
+                    <!-- INFORMACION -->
+                    <div class="mt-4">
+                        <h4>Traje de Baño Entero</h4>
+                        <hr>
+                        <p><strong>Material:</strong> Poliéster</p>
+                        <p><strong>Diseño:</strong> Liso.</p>
+                        <p><strong>Tallas:</strong> M, L y XL.</p>
+                        <p><strong>Colores:</strong> Negro.</p>
+                        <p>
+                            <strong>Descripción:</strong>
+                            Traje de baño entero con corte moderno y material de alta calidad, ideal para disfrutar del sol y el agua.
+                        </p>
+                        <h3 class="mt-3">S/ 49.90</h3>
+                    </div>
+                </div>
+                <!-- PIE -->
+                <div class="modal-footer">
+                    <a href="https://wa.me/51916408971?text=Hola,%20quiero%20información%20del%20Traje%20de%20Baño%20Entero"
+                        target="_blank" class="btn btn-success w-100">
+                        <i class="bi bi-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-4">
+                <section class="col-12 col-md-6 col-lg-3">
+                    <h3>Tienda</h3>
+                    <address>
+                        <p>Jr. Lima Pst 8 parada municipal</p>
+                        <p>Bagua, Amazonas, Perú, 15004</p>
+                        <p><a href="mailto:clothingstore.rr@gmail.com">clothingstore.rr@gmail.com</a></p>
+                        <p><a href="tel:+51916408971">+51 916 408 971</a></p>
+                    </address>
+                </section>
+
+                <section class="col-12 col-md-6 col-lg-3">
+                    <h3>Atención al cliente</h3>
+                    <ul class="footer-list">
+                        <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalPagos">Formas de
+                                pago</button></li>
+                        <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalEnvios">Métodos de
+                                envío</button></li>
+                        <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalCambios">Cambios y
+                                devoluciones</button></li>
+                        <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalPreguntas">Preguntas
+                                frecuentes</button></li>
+                    </ul>
+                </section>
+
+                <section class="col-12 col-md-6 col-lg-3">
+                    <h3>Términos y condiciones</h3>
+                    <ul class="footer-list">
+                        <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalTerminos">Términos y
+                                condiciones</button></li>
+                        <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalDatos">Tratamiento de
+                                datos</button></li>
+                        <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalCookies">Política de
+                                cookies</button></li>
+                        <li><button type="button" data-bs-toggle="modal" data-bs-target="#modalReclamaciones">Libro de
+                                reclamaciones</button></li>
+                    </ul>
+                    <img class="libro-reclamaciones-img img-fluid" src="imagenes/libro-de-reclamaciones.jpg"
+                        alt="Libro de Reclamaciones">
+                </section>
+
+                <section class="col-12 col-md-6 col-lg-3">
+                    <h3>Newsletter</h3>
+                    <p>Regístrate para conocer lanzamientos, descuentos y novedades.</p>
+
+                    <form class="newsletter-form">
+                        <label class="visually-hidden" for="correo-newsletter">Correo electrónico</label>
+                        <input id="correo-newsletter" class="form-control" type="email" placeholder="Correo electrónico"
+                            required>
+                        <button class="btn btn-primary w-100" type="submit">Suscribirse</button>
+                    </form>
+                </section>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="redes">
+                    <p>Síguenos en nuestras <strong>redes sociales</strong></p>
+                    <div class="redes__link">
+                        <a href="https://web.facebook.com/RyRClothingstore/about">Facebook</a>
+                        <span>TikTok</span>
+                        <span>Instagram</span>
+                    </div>
+                </div>
+
+                <p class="copyright">&copy; 2026 R&R Clothing Store - Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <div class="modal fade" id="modalPagos" tabindex="-1" aria-labelledby="modalPagosLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-sm modal-responsive">
             <div class="modal-content">
                 <div class="modal-header">
@@ -1127,7 +2155,8 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Los cambios se coordinan dentro de las primeras 48 horas, siempre que la prenda esté en buen estado.</p>
+                    <p>Los cambios se coordinan dentro de las primeras 48 horas, siempre que la prenda esté en buen
+                        estado.</p>
                 </div>
             </div>
         </div>
@@ -1141,7 +2170,8 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Puedes consultar disponibilidad, tallas y precios por nuestros canales de contacto antes de comprar.</p>
+                    <p>Puedes consultar disponibilidad, tallas y precios por nuestros canales de contacto antes de
+                        comprar.</p>
                 </div>
             </div>
         </div>
@@ -1155,7 +2185,8 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
-                    <p>La compra confirma la aceptación de precios, disponibilidad y condiciones informadas por la tienda.</p>
+                    <p>La compra confirma la aceptación de precios, disponibilidad y condiciones informadas por la
+                        tienda.</p>
                 </div>
             </div>
         </div>
@@ -1169,7 +2200,8 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Los datos de contacto se usan únicamente para atender consultas, coordinar pedidos y confirmar entregas.</p>
+                    <p>Los datos de contacto se usan únicamente para atender consultas, coordinar pedidos y confirmar
+                        entregas.</p>
                 </div>
             </div>
         </div>
@@ -1189,7 +2221,8 @@
         </div>
     </div>
 
-    <div class="modal fade" id="modalReclamaciones" tabindex="-1" aria-labelledby="modalReclamacionesLabel" aria-hidden="true">
+    <div class="modal fade" id="modalReclamaciones" tabindex="-1" aria-labelledby="modalReclamacionesLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-sm modal-responsive">
             <div class="modal-content">
                 <div class="modal-header">
@@ -1202,7 +2235,9 @@
             </div>
         </div>
     </div>
-
+    <script src="js/formularios.js"></script>
     <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
-    </body>
+    <script src="./js/categorias.js"></script>
+</body>
+
 </html>
