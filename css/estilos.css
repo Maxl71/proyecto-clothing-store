@@ -766,7 +766,7 @@ body {
 .modal-content {
     border: 0;
     border-radius: 8px;
-}
+} 
 
 .modal-title {
     color: var(--color-texto-oscuro);
@@ -828,6 +828,38 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 12px;
+}
+
+/* Para modal de categorias (Nuevos) */
+
+.modal-producto-ajustado {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.modal-producto-contenido {
+    max-height: calc(100vh - 1.5rem);
+    overflow: hidden;
+}
+
+.modal-producto-cuerpo {
+    overflow-y: auto;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.modal-producto-imagen {
+    width: 100%;
+    height: 42vh;
+    object-fit: contain;
+}
+
+.modal-producto-cuerpo p {
+    margin-bottom: 0.35rem;
+}
+
+.modal-producto-cuerpo hr {
+    margin: 0.6rem 0;
 }
 
 @media (min-width: 768px) {
